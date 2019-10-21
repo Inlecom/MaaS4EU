@@ -1,0 +1,6401 @@
+{
+	"swagger": "2.0",
+	"info": {
+		"version": "v1",
+		"title": "MAAS.Web"
+	},
+	"host": "maas-2683-polydorosmanimanakis.app.zappdev.com",
+	"schemes": ["http"],
+	"paths": {
+		"/api/Enterprise/carsharelocation": {
+			"get": {
+				"tags": ["Enterprise"],
+				"operationId": "Enterprise_carsharelocation",
+				"consumes": [],
+				"produces": ["application/json", "text/json", "application/xml", "text/xml"],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/definitions/MAAS.ExternalStructs.Entreprise.EntrepriseRoot"
+						}
+					}
+				},
+				"deprecated": false
+			}
+		},
+		"/api/Gett/Availability_Products": {
+			"get": {
+				"tags": ["Gett"],
+				"operationId": "Gett_Availability_Products",
+				"consumes": [],
+				"produces": ["application/json", "text/json", "application/xml", "text/xml"],
+				"parameters": [{
+					"name": "latitude",
+					"in": "query",
+					"required": false,
+					"type": "number",
+					"format": "float"
+				}, {
+					"name": "longitude",
+					"in": "query",
+					"required": false,
+					"type": "number",
+					"format": "float"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/definitions/MAAS.ExternalStructs.Gett.GettAvailabilityProducts"
+						}
+					}
+				},
+				"deprecated": false
+			}
+		},
+		"/api/Gett/Availability_ETA": {
+			"get": {
+				"tags": ["Gett"],
+				"operationId": "Gett_Availability_ETA",
+				"consumes": [],
+				"produces": ["application/json", "text/json", "application/xml", "text/xml"],
+				"parameters": [{
+					"name": "latitude",
+					"in": "query",
+					"required": false,
+					"type": "number",
+					"format": "float"
+				}, {
+					"name": "longitude",
+					"in": "query",
+					"required": false,
+					"type": "number",
+					"format": "float"
+				}, {
+					"name": "product_id",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/definitions/MAAS.ExternalStructs.Gett.GettAvailabilityETA"
+						}
+					}
+				},
+				"deprecated": false
+			}
+		},
+		"/api/Gett/Availability_Price_Estimate": {
+			"get": {
+				"tags": ["Gett"],
+				"operationId": "Gett_Availability_Price_Estimate",
+				"consumes": [],
+				"produces": ["application/json", "text/json", "application/xml", "text/xml"],
+				"parameters": [{
+					"name": "pickup_latitude",
+					"in": "query",
+					"required": false,
+					"type": "number",
+					"format": "float"
+				}, {
+					"name": "pickup_longitude",
+					"in": "query",
+					"required": false,
+					"type": "number",
+					"format": "float"
+				}, {
+					"name": "destination_latitude",
+					"in": "query",
+					"required": false,
+					"type": "number",
+					"format": "float"
+				}, {
+					"name": "destination_longitude",
+					"in": "query",
+					"required": false,
+					"type": "number",
+					"format": "float"
+				}, {
+					"name": "product_id",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/definitions/MAAS.ExternalStructs.Gett.GettAvailabilityPriceEstimate"
+						}
+					}
+				},
+				"deprecated": false
+			}
+		},
+		"/api/Gett/Business_Products": {
+			"get": {
+				"tags": ["Gett"],
+				"operationId": "Gett_Business_Products",
+				"consumes": [],
+				"produces": ["application/json", "text/json", "application/xml", "text/xml"],
+				"parameters": [{
+					"name": "latitude",
+					"in": "query",
+					"required": false,
+					"type": "number",
+					"format": "float"
+				}, {
+					"name": "longitude",
+					"in": "query",
+					"required": false,
+					"type": "number",
+					"format": "float"
+				}, {
+					"name": "business_id",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/definitions/MAAS.ExternalStructs.Gett.GettBProducts"
+						}
+					}
+				},
+				"deprecated": false
+			}
+		},
+		"/api/Gett/Business_ETA": {
+			"get": {
+				"tags": ["Gett"],
+				"operationId": "Gett_Business_ETA",
+				"consumes": [],
+				"produces": ["application/json", "text/json", "application/xml", "text/xml"],
+				"parameters": [{
+					"name": "latitude",
+					"in": "query",
+					"required": false,
+					"type": "number",
+					"format": "float"
+				}, {
+					"name": "longitude",
+					"in": "query",
+					"required": false,
+					"type": "number",
+					"format": "float"
+				}, {
+					"name": "business_id",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "product_id",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/definitions/MAAS.ExternalStructs.Gett.GettBETA"
+						}
+					}
+				},
+				"deprecated": false
+			}
+		},
+		"/api/Gett/Business_Price_Estimate": {
+			"get": {
+				"tags": ["Gett"],
+				"operationId": "Gett_Business_Price_Estimate",
+				"consumes": [],
+				"produces": ["application/json", "text/json", "application/xml", "text/xml"],
+				"parameters": [{
+					"name": "pickup_latitude",
+					"in": "query",
+					"required": false,
+					"type": "number",
+					"format": "float"
+				}, {
+					"name": "pickup_longitude",
+					"in": "query",
+					"required": false,
+					"type": "number",
+					"format": "float"
+				}, {
+					"name": "destination_latitude",
+					"in": "query",
+					"required": false,
+					"type": "number",
+					"format": "float"
+				}, {
+					"name": "destination_longitude",
+					"in": "query",
+					"required": false,
+					"type": "number",
+					"format": "float"
+				}, {
+					"name": "scheduled_at",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "scheduled_local_time",
+					"in": "query",
+					"required": false,
+					"type": "boolean"
+				}, {
+					"name": "product_id",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "business_id",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/definitions/MAAS.ExternalStructs.Gett.GettBPriceEstimate"
+						}
+					}
+				},
+				"deprecated": false
+			}
+		},
+		"/api/Gett/Business_Ride_Request": {
+			"post": {
+				"tags": ["Gett"],
+				"operationId": "Gett_Business_Ride_Request",
+				"consumes": ["application/json", "text/json", "application/xml", "text/xml", "application/x-www-form-urlencoded"],
+				"produces": ["application/json", "text/json", "application/xml", "text/xml"],
+				"parameters": [{
+					"name": "business_id",
+					"in": "body",
+					"required": true,
+					"schema": {
+						"type": "string"
+					}
+				}],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/definitions/MAAS.ExternalStructs.Gett.GettBRideRequest"
+						}
+					}
+				},
+				"deprecated": false
+			}
+		},
+		"/api/Gett/Business_Ride_Details": {
+			"get": {
+				"tags": ["Gett"],
+				"operationId": "Gett_Business_Ride_Details",
+				"consumes": [],
+				"produces": ["application/json", "text/json", "application/xml", "text/xml"],
+				"parameters": [{
+					"name": "ride_id",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "business_id",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/definitions/MAAS.ExternalStructs.Gett.GettBRideDetails"
+						}
+					}
+				},
+				"deprecated": false
+			}
+		},
+		"/api/Gett/Business_Update_Ride": {
+			"put": {
+				"tags": ["Gett"],
+				"operationId": "Gett_Business_Update_Ride",
+				"consumes": ["application/json", "text/json", "application/xml", "text/xml", "application/x-www-form-urlencoded"],
+				"produces": ["application/json", "text/json", "application/xml", "text/xml"],
+				"parameters": [{
+					"name": "data",
+					"in": "body",
+					"required": true,
+					"schema": {
+						"$ref": "#/definitions/MAAS.Web.Code.WebApi.GettBusiness_Update_RideDto"
+					}
+				}],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/definitions/MAAS.ExternalStructs.Gett.GettBUpdateRide"
+						}
+					}
+				},
+				"deprecated": false
+			}
+		},
+		"/api/Gett/Business_Cancel_Ride": {
+			"post": {
+				"tags": ["Gett"],
+				"operationId": "Gett_Business_Cancel_Ride",
+				"consumes": ["application/json", "text/json", "application/xml", "text/xml", "application/x-www-form-urlencoded"],
+				"produces": [],
+				"parameters": [{
+					"name": "data",
+					"in": "body",
+					"required": true,
+					"schema": {
+						"$ref": "#/definitions/MAAS.Web.Code.WebApi.GettBusiness_Cancel_RideDto"
+					}
+				}],
+				"responses": {
+					"204": {
+						"description": "No Content"
+					}
+				},
+				"deprecated": false
+			}
+		},
+		"/api/Gett/Business_Ride_Receipt": {
+			"get": {
+				"tags": ["Gett"],
+				"operationId": "Gett_Business_Ride_Receipt",
+				"consumes": [],
+				"produces": ["application/json", "text/json", "application/xml", "text/xml"],
+				"parameters": [{
+					"name": "ride_id",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "business_id",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/definitions/MAAS.ExternalStructs.Gett.GettBRideReceipt"
+						}
+					}
+				},
+				"deprecated": false
+			}
+		},
+		"/api/GreenGo/VehicleList": {
+			"get": {
+				"tags": ["GreenGo"],
+				"operationId": "GreenGo_VehicleList",
+				"consumes": [],
+				"produces": ["application/json", "text/json", "application/xml", "text/xml"],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/definitions/MAAS.ExternalStructs.GreenGo.GreenGoRoot"
+						}
+					}
+				},
+				"deprecated": false
+			}
+		},
+		"/api/_health/check": {
+			"get": {
+				"tags": ["HealthCheck"],
+				"operationId": "HealthCheck_Check",
+				"consumes": [],
+				"produces": ["application/json", "text/json", "application/xml", "text/xml"],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/definitions/MAAS.Web.Code.WebApi.HealthCheckController.HealthCheckResult"
+						}
+					}
+				},
+				"deprecated": false
+			}
+		},
+		"/api/Metrolinks/Metrolink": {
+			"get": {
+				"tags": ["Metrolinks"],
+				"operationId": "Metrolinks_Metrolink",
+				"consumes": [],
+				"produces": ["application/json", "text/json", "application/xml", "text/xml"],
+				"parameters": [{
+					"name": "expand",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "select",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "filter",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "order_by",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "top",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "skip",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "count",
+					"in": "query",
+					"required": false,
+					"type": "boolean"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/definitions/MAAS.ExternalStructs.Metrolinks.MetrolinksRoot"
+						}
+					}
+				},
+				"deprecated": false
+			}
+		},
+		"/api/Metrolinks/Metrolinks_Id": {
+			"get": {
+				"tags": ["Metrolinks"],
+				"operationId": "Metrolinks_Metrolinks_Id",
+				"consumes": [],
+				"produces": ["application/json", "text/json", "application/xml", "text/xml"],
+				"parameters": [{
+					"name": "Id",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "select",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/definitions/MAAS.ExternalStructs.Metrolinks.Metrolinks_IdRoot"
+						}
+					}
+				},
+				"deprecated": false
+			}
+		},
+		"/api/Metrolinks/Accidents": {
+			"get": {
+				"tags": ["Metrolinks"],
+				"operationId": "Metrolinks_Accidents",
+				"consumes": [],
+				"produces": ["application/json", "text/json", "application/xml", "text/xml"],
+				"parameters": [{
+					"name": "expand",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "select",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "filter",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "order_by",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "top",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "skip",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "count",
+					"in": "query",
+					"required": false,
+					"type": "boolean"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/definitions/MAAS.ExternalStructs.Metrolinks.AccidentsRoot"
+						}
+					}
+				},
+				"deprecated": false
+			}
+		},
+		"/api/Metrolinks/Accidents_Id": {
+			"get": {
+				"tags": ["Metrolinks"],
+				"operationId": "Metrolinks_Accidents_Id",
+				"consumes": [],
+				"produces": ["application/json", "text/json", "application/xml", "text/xml"],
+				"parameters": [{
+					"name": "Id",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "select",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/definitions/MAAS.ExternalStructs.Metrolinks.Accidents_IdRoot"
+						}
+					}
+				},
+				"deprecated": false
+			}
+		},
+		"/api/Metrolinks/Carparks": {
+			"get": {
+				"tags": ["Metrolinks"],
+				"operationId": "Metrolinks_Carparks",
+				"consumes": [],
+				"produces": ["application/json", "text/json", "application/xml", "text/xml"],
+				"parameters": [{
+					"name": "expand",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "select",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "filter",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "order_by",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "top",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "skip",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "count",
+					"in": "query",
+					"required": false,
+					"type": "boolean"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/definitions/MAAS.ExternalStructs.Metrolinks.CarparksRoot"
+						}
+					}
+				},
+				"deprecated": false
+			}
+		},
+		"/api/Metrolinks/Carparks_Id": {
+			"get": {
+				"tags": ["Metrolinks"],
+				"operationId": "Metrolinks_Carparks_Id",
+				"consumes": [],
+				"produces": ["application/json", "text/json", "application/xml", "text/xml"],
+				"parameters": [{
+					"name": "Id",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "select",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/definitions/MAAS.ExternalStructs.Metrolinks.Carparks_IdRoot"
+						}
+					}
+				},
+				"deprecated": false
+			}
+		},
+		"/api/Metrolinks/Incidents": {
+			"get": {
+				"tags": ["Metrolinks"],
+				"operationId": "Metrolinks_Incidents",
+				"consumes": [],
+				"produces": ["application/json", "text/json", "application/xml", "text/xml"],
+				"parameters": [{
+					"name": "expand",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "select",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "filter",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "order_by",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "top",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "skip",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "count",
+					"in": "query",
+					"required": false,
+					"type": "boolean"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/definitions/MAAS.ExternalStructs.Metrolinks.IncidentsRoot"
+						}
+					}
+				},
+				"deprecated": false
+			}
+		},
+		"/api/Metrolinks/Incidents_Id": {
+			"get": {
+				"tags": ["Metrolinks"],
+				"operationId": "Metrolinks_Incidents_Id",
+				"consumes": [],
+				"produces": ["application/json", "text/json", "application/xml", "text/xml"],
+				"parameters": [{
+					"name": "Id",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "select",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/definitions/MAAS.ExternalStructs.Metrolinks.Incidents_IdRoot"
+						}
+					}
+				},
+				"deprecated": false
+			}
+		},
+		"/api/Metrolinks/ScootLoops": {
+			"get": {
+				"tags": ["Metrolinks"],
+				"operationId": "Metrolinks_ScootLoops",
+				"consumes": [],
+				"produces": ["application/json", "text/json", "application/xml", "text/xml"],
+				"parameters": [{
+					"name": "expand",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "select",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "filter",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "order_by",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "top",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "skip",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "count",
+					"in": "query",
+					"required": false,
+					"type": "boolean"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/definitions/MAAS.ExternalStructs.Metrolinks.ScootLoopsRoot"
+						}
+					}
+				},
+				"deprecated": false
+			}
+		},
+		"/api/Metrolinks/ScootLoops_Id": {
+			"get": {
+				"tags": ["Metrolinks"],
+				"operationId": "Metrolinks_ScootLoops_Id",
+				"consumes": [],
+				"produces": ["application/json", "text/json", "application/xml", "text/xml"],
+				"parameters": [{
+					"name": "Id",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "select",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/definitions/MAAS.ExternalStructs.Metrolinks.ScootLoops_IdRoot"
+						}
+					}
+				},
+				"deprecated": false
+			}
+		},
+		"/api/Metrolinks/TrafficSignals": {
+			"get": {
+				"tags": ["Metrolinks"],
+				"operationId": "Metrolinks_TrafficSignals",
+				"consumes": [],
+				"produces": ["application/json", "text/json", "application/xml", "text/xml"],
+				"parameters": [{
+					"name": "expand",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "select",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "filter",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "order_by",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "top",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "skip",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "count",
+					"in": "query",
+					"required": false,
+					"type": "boolean"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/definitions/MAAS.ExternalStructs.Metrolinks.TrafficSignalsRoot"
+						}
+					}
+				},
+				"deprecated": false
+			}
+		},
+		"/api/Metrolinks/TrafficSignalsId": {
+			"get": {
+				"tags": ["Metrolinks"],
+				"operationId": "Metrolinks_TrafficSignals_Id",
+				"consumes": [],
+				"produces": ["application/json", "text/json", "application/xml", "text/xml"],
+				"parameters": [{
+					"name": "Id",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "select",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/definitions/MAAS.ExternalStructs.Metrolinks.TrafficSignals_IdRoot"
+						}
+					}
+				},
+				"deprecated": false
+			}
+		},
+		"/api/Metrolinks/VenueEvents": {
+			"get": {
+				"tags": ["Metrolinks"],
+				"operationId": "Metrolinks_VenueEvents",
+				"consumes": [],
+				"produces": ["application/json", "text/json", "application/xml", "text/xml"],
+				"parameters": [{
+					"name": "expand",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "select",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "filter",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "order_by",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "top",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "skip",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "count",
+					"in": "query",
+					"required": false,
+					"type": "boolean"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/definitions/MAAS.ExternalStructs.Metrolinks.VenueEventsRoot"
+						}
+					}
+				},
+				"deprecated": false
+			}
+		},
+		"/api/ml/bikes": {
+			"get": {
+				"tags": ["ml"],
+				"operationId": "ml_bikes",
+				"consumes": [],
+				"produces": ["application/json", "text/json", "application/xml", "text/xml"],
+				"parameters": [{
+					"name": "city",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "domains",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "lat",
+					"in": "query",
+					"required": false,
+					"type": "number",
+					"format": "float"
+				}, {
+					"name": "lng",
+					"in": "query",
+					"required": false,
+					"type": "number",
+					"format": "float"
+				}, {
+					"name": "limit",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "distance",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "list_cities",
+					"in": "query",
+					"required": false,
+					"type": "boolean"
+				}, {
+					"name": "language",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/definitions/MAAS.ExternalStructs.ml.mlRoot"
+						}
+					}
+				},
+				"deprecated": false
+			}
+		},
+		"/api/MolBubi/MolBubi": {
+			"get": {
+				"tags": ["MolBubi"],
+				"operationId": "MolBubi_MolBubi",
+				"consumes": [],
+				"produces": ["application/json", "text/json", "application/xml", "text/xml"],
+				"parameters": [{
+					"name": "city",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "domains",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "lat",
+					"in": "query",
+					"required": false,
+					"type": "number",
+					"format": "float"
+				}, {
+					"name": "lng",
+					"in": "query",
+					"required": false,
+					"type": "number",
+					"format": "float"
+				}, {
+					"name": "limit",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "distance",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "list_cities",
+					"in": "query",
+					"required": false,
+					"type": "boolean"
+				}, {
+					"name": "language",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/definitions/MAAS.ExternalStructs.MolBubi.MolBubiRoot"
+						}
+					}
+				},
+				"deprecated": false
+			}
+		},
+		"/api/nextbike/Locations": {
+			"get": {
+				"tags": ["nextbike"],
+				"operationId": "nextbike_Locations",
+				"consumes": [],
+				"produces": ["application/json", "text/json", "application/xml", "text/xml"],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/definitions/MAAS.ExternalStructs.nextbike.nextbikeLocations"
+						}
+					}
+				},
+				"deprecated": false
+			}
+		},
+		"/api/Oszkar/search": {
+			"get": {
+				"tags": ["Oszkar"],
+				"operationId": "Oszkar_search",
+				"consumes": [],
+				"produces": ["application/json", "text/json", "application/xml", "text/xml"],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/definitions/MAAS.ExternalStructs.Oszkar.OszkarRoot"
+						}
+					}
+				},
+				"deprecated": false
+			}
+		},
+		"/api/Transport_for_Luxembourg/BikePoint": {
+			"get": {
+				"tags": ["Transport_for_Luxembourg"],
+				"operationId": "Transport_for_Luxembourg_BikePoint",
+				"consumes": [],
+				"produces": ["application/json", "text/json", "application/xml", "text/xml"],
+				"parameters": [{
+					"name": "id",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "open",
+					"in": "query",
+					"required": false,
+					"type": "boolean"
+				}, {
+					"name": "name",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "city",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "address",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "photo",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "docks",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "available_bikes",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "available_ebikes",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "available_docks",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "last_update",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#/definitions/MAAS.Services.Transport_for_Luxembourg.DataContracts.LocationsDTO"
+							}
+						}
+					}
+				},
+				"deprecated": false
+			}
+		},
+		"/api/Transport_for_Luxembourg/BikePoint_Id": {
+			"get": {
+				"tags": ["Transport_for_Luxembourg"],
+				"operationId": "Transport_for_Luxembourg_BikePoint_Id",
+				"consumes": [],
+				"produces": ["application/json", "text/json", "application/xml", "text/xml"],
+				"parameters": [{
+					"name": "id",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/definitions/MAAS.ExternalStructs.Transport_for_Luxembourg.Transport_for_LuxembourgBikePointID"
+						}
+					}
+				},
+				"deprecated": false
+			}
+		},
+		"/api/Transport_for_Luxembourg/BikePoint_box": {
+			"get": {
+				"tags": ["Transport_for_Luxembourg"],
+				"operationId": "Transport_for_Luxembourg_BikePoint_box",
+				"consumes": [],
+				"produces": ["application/json", "text/json", "application/xml", "text/xml"],
+				"parameters": [{
+					"name": "swLon",
+					"in": "query",
+					"required": false,
+					"type": "number",
+					"format": "float"
+				}, {
+					"name": "swLat",
+					"in": "query",
+					"required": false,
+					"type": "number",
+					"format": "float"
+				}, {
+					"name": "neLon",
+					"in": "query",
+					"required": false,
+					"type": "number",
+					"format": "float"
+				}, {
+					"name": "neLat",
+					"in": "query",
+					"required": false,
+					"type": "number",
+					"format": "float"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/definitions/MAAS.ExternalStructs.Transport_for_Luxembourg.Transport_for_LuxembourgBox"
+						}
+					}
+				},
+				"deprecated": false
+			}
+		},
+		"/api/Transport_for_Luxembourg/BikePoint_around": {
+			"get": {
+				"tags": ["Transport_for_Luxembourg"],
+				"operationId": "Transport_for_Luxembourg_BikePoint_around",
+				"consumes": [],
+				"produces": ["application/json", "text/json", "application/xml", "text/xml"],
+				"parameters": [{
+					"name": "lon",
+					"in": "query",
+					"required": false,
+					"type": "number",
+					"format": "float"
+				}, {
+					"name": "lat",
+					"in": "query",
+					"required": false,
+					"type": "number",
+					"format": "float"
+				}, {
+					"name": "radius",
+					"in": "query",
+					"required": false,
+					"type": "number",
+					"format": "float"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/definitions/MAAS.ExternalStructs.Transport_for_Luxembourg.Transport_for_LuxembourgAround"
+						}
+					}
+				},
+				"deprecated": false
+			}
+		},
+		"/api/Transport_for_Luxembourg/BikePoint_Search": {
+			"get": {
+				"tags": ["Transport_for_Luxembourg"],
+				"operationId": "Transport_for_Luxembourg_BikePoint_Search",
+				"consumes": [],
+				"produces": ["application/json", "text/json", "application/xml", "text/xml"],
+				"parameters": [{
+					"name": "query",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/definitions/MAAS.ExternalStructs.Transport_for_Luxembourg.Transport_for_LuxembourgQuery"
+						}
+					}
+				},
+				"deprecated": false
+			}
+		},
+		"/api/Transport_for_Luxembourg/StopPoint": {
+			"get": {
+				"tags": ["Transport_for_Luxembourg"],
+				"operationId": "Transport_for_Luxembourg_StopPoint",
+				"consumes": [],
+				"produces": ["application/json", "text/json", "application/xml", "text/xml"],
+				"parameters": [{
+					"name": "id",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "name",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#/definitions/MAAS.Services.Transport_for_Luxembourg.DataContracts.LocationsDTO"
+							}
+						}
+					}
+				},
+				"deprecated": false
+			}
+		},
+		"/api/Transport_for_Luxembourg/StopPoint_Id": {
+			"get": {
+				"tags": ["Transport_for_Luxembourg"],
+				"operationId": "Transport_for_Luxembourg_StopPoint_Id",
+				"consumes": [],
+				"produces": ["application/json", "text/json", "application/xml", "text/xml"],
+				"parameters": [{
+					"name": "id",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/definitions/MAAS.ExternalStructs.Transport_for_Luxembourg.Transport_for_LuxembourgStopPointId"
+						}
+					}
+				},
+				"deprecated": false
+			}
+		},
+		"/api/Transport_for_Luxembourg/StopPoint_box": {
+			"get": {
+				"tags": ["Transport_for_Luxembourg"],
+				"operationId": "Transport_for_Luxembourg_StopPoint_box",
+				"consumes": [],
+				"produces": ["application/json", "text/json", "application/xml", "text/xml"],
+				"parameters": [{
+					"name": "swLon",
+					"in": "query",
+					"required": false,
+					"type": "number",
+					"format": "float"
+				}, {
+					"name": "swLat",
+					"in": "query",
+					"required": false,
+					"type": "number",
+					"format": "float"
+				}, {
+					"name": "neLon",
+					"in": "query",
+					"required": false,
+					"type": "number",
+					"format": "float"
+				}, {
+					"name": "neLat",
+					"in": "query",
+					"required": false,
+					"type": "number",
+					"format": "float"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/definitions/MAAS.ExternalStructs.Transport_for_Luxembourg.Transport_for_LuxembourgStopPointBox"
+						}
+					}
+				},
+				"deprecated": false
+			}
+		},
+		"/api/Transport_for_Luxembourg/StopPoint_around": {
+			"get": {
+				"tags": ["Transport_for_Luxembourg"],
+				"operationId": "Transport_for_Luxembourg_StopPoint_around",
+				"consumes": [],
+				"produces": ["application/json", "text/json", "application/xml", "text/xml"],
+				"parameters": [{
+					"name": "lon",
+					"in": "query",
+					"required": false,
+					"type": "number",
+					"format": "float"
+				}, {
+					"name": "lat",
+					"in": "query",
+					"required": false,
+					"type": "number",
+					"format": "float"
+				}, {
+					"name": "radius",
+					"in": "query",
+					"required": false,
+					"type": "number",
+					"format": "float"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/definitions/MAAS.ExternalStructs.Transport_for_Luxembourg.Transport_for_LuxembourgStopPointAround"
+						}
+					}
+				},
+				"deprecated": false
+			}
+		},
+		"/api/Transport_for_Luxembourg/StopPoint_Search": {
+			"get": {
+				"tags": ["Transport_for_Luxembourg"],
+				"operationId": "Transport_for_Luxembourg_StopPoint_Search",
+				"consumes": [],
+				"produces": ["application/json", "text/json", "application/xml", "text/xml"],
+				"parameters": [{
+					"name": "query",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/definitions/MAAS.ExternalStructs.Transport_for_Luxembourg.Transport_for_LuxembourgStopPointSearch"
+						}
+					}
+				},
+				"deprecated": false
+			}
+		},
+		"/api/Transport_for_Luxembourg/StopPoint_Departures": {
+			"get": {
+				"tags": ["Transport_for_Luxembourg"],
+				"operationId": "Transport_for_Luxembourg_StopPoint_Departures",
+				"consumes": [],
+				"produces": ["application/json", "text/json", "application/xml", "text/xml"],
+				"parameters": [{
+					"name": "id",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "type",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "trainId",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "line",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "lineId",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "number",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "departure",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "delay",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "live",
+					"in": "query",
+					"required": false,
+					"type": "boolean"
+				}, {
+					"name": "departureISO",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "destination",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "destinationId",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/definitions/MAAS.ExternalStructs.Transport_for_Luxembourg.Transport_for_LuxembourgStopPointDepartures"
+						}
+					}
+				},
+				"deprecated": false
+			}
+		},
+		"/api/Transport_for_Luxembourg/StopPoint_Departures_Id": {
+			"get": {
+				"tags": ["Transport_for_Luxembourg"],
+				"operationId": "Transport_for_Luxembourg_StopPoint_Departures_Id",
+				"consumes": [],
+				"produces": ["application/json", "text/json", "application/xml", "text/xml"],
+				"parameters": [{
+					"name": "id",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/definitions/MAAS.ExternalStructs.Transport_for_Luxembourg.Transport_for_LuxembourgStopPointDeparturesId"
+						}
+					}
+				},
+				"deprecated": false
+			}
+		},
+		"/api/Transport_for_Luxembourg/StopPoint_Departures_limit": {
+			"get": {
+				"tags": ["Transport_for_Luxembourg"],
+				"operationId": "Transport_for_Luxembourg_StopPoint_Departures_limit",
+				"consumes": [],
+				"produces": ["application/json", "text/json", "application/xml", "text/xml"],
+				"parameters": [{
+					"name": "id",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "limit",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/definitions/MAAS.ExternalStructs.Transport_for_Luxembourg.Transport_for_LuxembourgLimit"
+						}
+					}
+				},
+				"deprecated": false
+			}
+		},
+		"/api/Transport_for_Luxembourg/Journey": {
+			"get": {
+				"tags": ["Transport_for_Luxembourg"],
+				"operationId": "Transport_for_Luxembourg_Journey",
+				"consumes": [],
+				"produces": ["application/json", "text/json", "application/xml", "text/xml"],
+				"parameters": [{
+					"name": "from",
+					"in": "query",
+					"required": false,
+					"type": "number",
+					"format": "float"
+				}, {
+					"name": "to",
+					"in": "query",
+					"required": false,
+					"type": "number",
+					"format": "float"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/definitions/MAAS.ExternalStructs.Transport_for_Luxembourg.Transport_for_LuxembourgJourney"
+						}
+					}
+				},
+				"deprecated": false
+			}
+		},
+		"/api/Transport_for_Luxembourg/Occupancy_CarPark": {
+			"get": {
+				"tags": ["Transport_for_Luxembourg"],
+				"operationId": "Transport_for_Luxembourg_Occupancy_CarPark",
+				"consumes": [],
+				"produces": ["application/json", "text/json", "application/xml", "text/xml"],
+				"parameters": [{
+					"name": "id",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "name",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}, {
+					"name": "total",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "free",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}, {
+					"name": "trend",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/definitions/MAAS.ExternalStructs.Transport_for_Luxembourg.Transport_for_LuxembourgCarPark"
+						}
+					}
+				},
+				"deprecated": false
+			}
+		},
+		"/api/Transport_for_Luxembourg/Occupancy_CarParkId": {
+			"get": {
+				"tags": ["Transport_for_Luxembourg"],
+				"operationId": "Transport_for_Luxembourg_Occupancy_CarParkId",
+				"consumes": [],
+				"produces": ["application/json", "text/json", "application/xml", "text/xml"],
+				"parameters": [{
+					"name": "id",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/definitions/MAAS.ExternalStructs.Transport_for_Luxembourg.Transport_for_LuxembourgCarParkId"
+						}
+					}
+				},
+				"deprecated": false
+			}
+		},
+		"/api/Transport_for_Luxembourg/Weather": {
+			"get": {
+				"tags": ["Transport_for_Luxembourg"],
+				"operationId": "Transport_for_Luxembourg_Weather",
+				"consumes": [],
+				"produces": ["application/json", "text/json", "application/xml", "text/xml"],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/definitions/MAAS.ExternalStructs.Transport_for_Luxembourg.Transport_for_LuxembourgWeather"
+						}
+					}
+				},
+				"deprecated": false
+			}
+		},
+		"/api/Transport_for_Luxembourg/Weather_AirQuality": {
+			"get": {
+				"tags": ["Transport_for_Luxembourg"],
+				"operationId": "Transport_for_Luxembourg_Weather_AirQuality",
+				"consumes": [],
+				"produces": ["application/json", "text/json", "application/xml", "text/xml"],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/definitions/MAAS.ExternalStructs.Transport_for_Luxembourg.Transport_for_LuxembourgAirQuality"
+						}
+					}
+				},
+				"deprecated": false
+			}
+		},
+		"/api/Transport_for_Luxembourg/Weather_AirQualityId": {
+			"get": {
+				"tags": ["Transport_for_Luxembourg"],
+				"operationId": "Transport_for_Luxembourg_Weather_AirQualityId",
+				"consumes": [],
+				"produces": ["application/json", "text/json", "application/xml", "text/xml"],
+				"parameters": [{
+					"name": "id",
+					"in": "query",
+					"required": false,
+					"type": "integer",
+					"format": "int32"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/definitions/MAAS.ExternalStructs.Transport_for_Luxembourg.Transport_for_LuxembourgAirQualityId"
+						}
+					}
+				},
+				"deprecated": false
+			}
+		},
+		"/api/Transport_for_Luxembourg/Highway": {
+			"get": {
+				"tags": ["Transport_for_Luxembourg"],
+				"operationId": "Transport_for_Luxembourg_Highway",
+				"consumes": [],
+				"produces": ["application/json", "text/json", "application/xml", "text/xml"],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/definitions/MAAS.ExternalStructs.Transport_for_Luxembourg.Transport_for_LuxembourgHighway"
+						}
+					}
+				},
+				"deprecated": false
+			}
+		},
+		"/api/Transport_for_Luxembourg/HighwayId": {
+			"get": {
+				"tags": ["Transport_for_Luxembourg"],
+				"operationId": "Transport_for_Luxembourg_HighwayId",
+				"consumes": [],
+				"produces": ["application/json", "text/json", "application/xml", "text/xml"],
+				"parameters": [{
+					"name": "id",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/definitions/MAAS.ExternalStructs.Transport_for_Luxembourg.Transport_for_LuxembourgHighwayId"
+						}
+					}
+				},
+				"deprecated": false
+			}
+		},
+		"/api/Transport_for_Luxembourg/Line": {
+			"get": {
+				"tags": ["Transport_for_Luxembourg"],
+				"operationId": "Transport_for_Luxembourg_Line",
+				"consumes": [],
+				"produces": ["application/json", "text/json", "application/xml", "text/xml"],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/definitions/MAAS.ExternalStructs.Transport_for_Luxembourg.Transport_for_LuxembourgLine"
+						}
+					}
+				},
+				"deprecated": false
+			}
+		},
+		"/api/Transport_for_Luxembourg/LineId": {
+			"get": {
+				"tags": ["Transport_for_Luxembourg"],
+				"operationId": "Transport_for_Luxembourg_LineId",
+				"consumes": [],
+				"produces": ["application/json", "text/json", "application/xml", "text/xml"],
+				"parameters": [{
+					"name": "id",
+					"in": "query",
+					"required": false,
+					"type": "string"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/definitions/MAAS.ExternalStructs.Transport_for_Luxembourg.Transport_for_LuxembourgLineId"
+						}
+					}
+				},
+				"deprecated": false
+			}
+		},
+		"/api/Transport_for_Luxembourg/Airport_Arrivals": {
+			"get": {
+				"tags": ["Transport_for_Luxembourg"],
+				"operationId": "Transport_for_Luxembourg_Airport_Arrivals",
+				"consumes": [],
+				"produces": ["application/json", "text/json", "application/xml", "text/xml"],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/definitions/MAAS.ExternalStructs.Transport_for_Luxembourg.Transport_for_LuxembourgAirArrivals"
+						}
+					}
+				},
+				"deprecated": false
+			}
+		},
+		"/api/Transport_for_Luxembourg/Airoport_Departures": {
+			"get": {
+				"tags": ["Transport_for_Luxembourg"],
+				"operationId": "Transport_for_Luxembourg_Airoport_Departures",
+				"consumes": [],
+				"produces": ["application/json", "text/json", "application/xml", "text/xml"],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/definitions/MAAS.ExternalStructs.Transport_for_Luxembourg.Transport_for_LuxembourgAirDep"
+						}
+					}
+				},
+				"deprecated": false
+			}
+		}
+	},
+	"definitions": {
+		"MAAS.ExternalStructs.Entreprise.EntrepriseRoot": {
+			"type": "object",
+			"properties": {
+				"lotdetailsList": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/MAAS.ExternalStructs.Entreprise.lotdetailsList"
+					}
+				},
+				"vehicledetailsList": {
+					"$ref": "#/definitions/System.Object"
+				},
+				"_CalculatedKey": {
+					"format": "int32",
+					"type": "integer"
+				}
+			}
+		},
+		"MAAS.ExternalStructs.Entreprise.lotdetailsList": {
+			"type": "object",
+			"properties": {
+				"id": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"descr": {
+					"type": "string"
+				},
+				"latitude": {
+					"format": "float",
+					"type": "number"
+				},
+				"longitude": {
+					"format": "float",
+					"type": "number"
+				},
+				"instance": {
+					"type": "string"
+				},
+				"vehicleDetails": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/MAAS.ExternalStructs.Entreprise.vehicleDetails"
+					}
+				},
+				"_CalculatedKey": {
+					"format": "int32",
+					"type": "integer"
+				}
+			}
+		},
+		"System.Object": {
+			"type": "object",
+			"properties": {}
+		},
+		"MAAS.ExternalStructs.Entreprise.vehicleDetails": {
+			"type": "object",
+			"properties": {
+				"id": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"descr": {
+					"type": "string"
+				},
+				"thumbUrl": {
+					"type": "string"
+				},
+				"_CalculatedKey": {
+					"format": "int32",
+					"type": "integer"
+				}
+			}
+		},
+		"MAAS.ExternalStructs.Gett.GettAvailabilityProducts": {
+			"type": "object",
+			"properties": {
+				"products": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/MAAS.ExternalStructs.Gett.products"
+					}
+				},
+				"_CalculatedKey": {
+					"format": "int32",
+					"type": "integer"
+				}
+			}
+		},
+		"MAAS.ExternalStructs.Gett.products": {
+			"type": "object",
+			"properties": {
+				"id": {
+					"type": "string"
+				},
+				"display_name": {
+					"type": "string"
+				},
+				"image_url": {
+					"type": "string"
+				},
+				"messages": {
+					"$ref": "#/definitions/MAAS.ExternalStructs.Gett.messages"
+				},
+				"_CalculatedKey": {
+					"format": "int32",
+					"type": "integer"
+				}
+			}
+		},
+		"MAAS.ExternalStructs.Gett.messages": {
+			"type": "object",
+			"properties": {
+				"price": {
+					"type": "string"
+				},
+				"description": {
+					"type": "string"
+				},
+				"_CalculatedKey": {
+					"format": "int32",
+					"type": "integer"
+				}
+			}
+		},
+		"MAAS.ExternalStructs.Gett.GettAvailabilityETA": {
+			"type": "object",
+			"properties": {
+				"products": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/MAAS.ExternalStructs.Gett.products"
+					}
+				},
+				"_CalculatedKey": {
+					"format": "int32",
+					"type": "integer"
+				}
+			}
+		},
+		"MAAS.ExternalStructs.Gett.GettAvailabilityPriceEstimate": {
+			"type": "object",
+			"properties": {
+				"products": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/MAAS.ExternalStructs.Gett.products"
+					}
+				},
+				"_CalculatedKey": {
+					"format": "int32",
+					"type": "integer"
+				}
+			}
+		},
+		"MAAS.ExternalStructs.Gett.GettBProducts": {
+			"type": "object",
+			"properties": {
+				"products": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/MAAS.ExternalStructs.Gett.products"
+					}
+				},
+				"_CalculatedKey": {
+					"format": "int32",
+					"type": "integer"
+				}
+			}
+		},
+		"MAAS.ExternalStructs.Gett.GettBETA": {
+			"type": "object",
+			"properties": {
+				"etas": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/MAAS.ExternalStructs.Gett.etas"
+					}
+				},
+				"_CalculatedKey": {
+					"format": "int32",
+					"type": "integer"
+				}
+			}
+		},
+		"MAAS.ExternalStructs.Gett.etas": {
+			"type": "object",
+			"properties": {
+				"product_id": {
+					"type": "string"
+				},
+				"display_name": {
+					"type": "string"
+				},
+				"eta": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"_CalculatedKey": {
+					"format": "int32",
+					"type": "integer"
+				}
+			}
+		},
+		"MAAS.ExternalStructs.Gett.GettBPriceEstimate": {
+			"type": "object",
+			"properties": {
+				"prices": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/MAAS.ExternalStructs.Gett.prices"
+					}
+				},
+				"_CalculatedKey": {
+					"format": "int32",
+					"type": "integer"
+				}
+			}
+		},
+		"MAAS.ExternalStructs.Gett.prices": {
+			"type": "object",
+			"properties": {
+				"product_id": {
+					"type": "string"
+				},
+				"display_name": {
+					"type": "string"
+				},
+				"currency": {
+					"type": "string"
+				},
+				"estimate": {
+					"type": "string"
+				},
+				"low_estimate": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"high_estimate": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"scheduled_at": {
+					"format": "date-time",
+					"type": "string"
+				},
+				"_CalculatedKey": {
+					"format": "int32",
+					"type": "integer"
+				}
+			}
+		},
+		"MAAS.ExternalStructs.Gett.GettBRideRequest": {
+			"type": "object",
+			"properties": {
+				"ride_id": {
+					"type": "string"
+				},
+				"product_id": {
+					"type": "string"
+				},
+				"status": {
+					"type": "string"
+				},
+				"rider": {
+					"$ref": "#/definitions/MAAS.ExternalStructs.Gett.rider"
+				},
+				"pickup": {
+					"$ref": "#/definitions/MAAS.ExternalStructs.Gett.pickup"
+				},
+				"destination": {
+					"$ref": "#/definitions/MAAS.ExternalStructs.Gett.destination"
+				},
+				"note_to_driver": {
+					"type": "string"
+				},
+				"reference": {
+					"type": "string"
+				},
+				"stop_points": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/MAAS.ExternalStructs.Gett.stop_points"
+					}
+				},
+				"requested_at": {
+					"format": "date-time",
+					"type": "string"
+				},
+				"scheduled_at": {
+					"format": "date-time",
+					"type": "string"
+				},
+				"_CalculatedKey": {
+					"format": "int32",
+					"type": "integer"
+				}
+			}
+		},
+		"MAAS.ExternalStructs.Gett.rider": {
+			"type": "object",
+			"properties": {
+				"name": {
+					"type": "string"
+				},
+				"phone_number": {
+					"type": "string"
+				},
+				"image_url": {
+					"type": "string"
+				},
+				"_CalculatedKey": {
+					"format": "int32",
+					"type": "integer"
+				}
+			}
+		},
+		"MAAS.ExternalStructs.Gett.pickup": {
+			"type": "object",
+			"properties": {
+				"latitude": {
+					"format": "float",
+					"type": "number"
+				},
+				"longitude": {
+					"format": "float",
+					"type": "number"
+				},
+				"address": {
+					"type": "string"
+				},
+				"_CalculatedKey": {
+					"format": "int32",
+					"type": "integer"
+				}
+			}
+		},
+		"MAAS.ExternalStructs.Gett.destination": {
+			"type": "object",
+			"properties": {
+				"latitude": {
+					"format": "float",
+					"type": "number"
+				},
+				"longitude": {
+					"format": "float",
+					"type": "number"
+				},
+				"address": {
+					"type": "string"
+				},
+				"_CalculatedKey": {
+					"format": "int32",
+					"type": "integer"
+				}
+			}
+		},
+		"MAAS.ExternalStructs.Gett.stop_points": {
+			"type": "object",
+			"properties": {
+				"name": {
+					"type": "string"
+				},
+				"latitude": {
+					"format": "float",
+					"type": "number"
+				},
+				"longitude": {
+					"format": "float",
+					"type": "number"
+				},
+				"address": {
+					"type": "string"
+				},
+				"phone_number": {
+					"type": "string"
+				},
+				"_CalculatedKey": {
+					"format": "int32",
+					"type": "integer"
+				}
+			}
+		},
+		"MAAS.ExternalStructs.Gett.GettBRideDetails": {
+			"type": "object",
+			"properties": {
+				"ride_id": {
+					"type": "string"
+				},
+				"product_id": {
+					"type": "string"
+				},
+				"status": {
+					"type": "string"
+				},
+				"rider": {
+					"$ref": "#/definitions/MAAS.ExternalStructs.Gett.rider"
+				},
+				"driver": {
+					"$ref": "#/definitions/MAAS.ExternalStructs.Gett.driver"
+				},
+				"pickup": {
+					"$ref": "#/definitions/MAAS.ExternalStructs.Gett.pickup"
+				},
+				"destination": {
+					"$ref": "#/definitions/MAAS.ExternalStructs.Gett.destination"
+				},
+				"dropoff": {
+					"$ref": "#/definitions/MAAS.ExternalStructs.Gett.dropoff"
+				},
+				"note_to_driver": {
+					"type": "string"
+				},
+				"reference": {
+					"type": "string"
+				},
+				"stop_points": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/MAAS.ExternalStructs.Gett.stop_points"
+					}
+				},
+				"requested_at": {
+					"format": "date-time",
+					"type": "string"
+				},
+				"scheduled_at": {
+					"format": "date-time",
+					"type": "string"
+				},
+				"will_arrive_at": {
+					"format": "date-time",
+					"type": "string"
+				},
+				"pickedup_at": {
+					"format": "date-time",
+					"type": "string"
+				},
+				"droppedoff_at": {
+					"format": "date-time",
+					"type": "string"
+				},
+				"_CalculatedKey": {
+					"format": "int32",
+					"type": "integer"
+				}
+			}
+		},
+		"MAAS.ExternalStructs.Gett.driver": {
+			"type": "object",
+			"properties": {
+				"name": {
+					"type": "string"
+				},
+				"phone_number": {
+					"type": "string"
+				},
+				"image_url": {
+					"type": "string"
+				},
+				"rating": {
+					"format": "float",
+					"type": "number"
+				},
+				"vehicle": {
+					"$ref": "#/definitions/MAAS.ExternalStructs.Gett.vehicle"
+				},
+				"location": {
+					"$ref": "#/definitions/MAAS.ExternalStructs.Gett.location"
+				},
+				"_CalculatedKey": {
+					"format": "int32",
+					"type": "integer"
+				}
+			}
+		},
+		"MAAS.ExternalStructs.Gett.dropoff": {
+			"type": "object",
+			"properties": {
+				"latitude": {
+					"format": "float",
+					"type": "number"
+				},
+				"longitude": {
+					"format": "float",
+					"type": "number"
+				},
+				"address": {
+					"type": "string"
+				},
+				"_CalculatedKey": {
+					"format": "int32",
+					"type": "integer"
+				}
+			}
+		},
+		"MAAS.ExternalStructs.Gett.vehicle": {
+			"type": "object",
+			"properties": {
+				"model": {
+					"type": "string"
+				},
+				"color": {
+					"type": "string"
+				},
+				"license_plate": {
+					"type": "string"
+				},
+				"_CalculatedKey": {
+					"format": "int32",
+					"type": "integer"
+				}
+			}
+		},
+		"MAAS.ExternalStructs.Gett.location": {
+			"type": "object",
+			"properties": {
+				"latitude": {
+					"format": "float",
+					"type": "number"
+				},
+				"longitude": {
+					"format": "float",
+					"type": "number"
+				},
+				"_CalculatedKey": {
+					"format": "int32",
+					"type": "integer"
+				}
+			}
+		},
+		"MAAS.Web.Code.WebApi.GettBusiness_Update_RideDto": {
+			"type": "object",
+			"properties": {
+				"ride_id": {
+					"type": "string"
+				},
+				"business_id": {
+					"type": "string"
+				}
+			}
+		},
+		"MAAS.ExternalStructs.Gett.GettBUpdateRide": {
+			"type": "object",
+			"properties": {
+				"ride_id": {
+					"type": "string"
+				},
+				"status": {
+					"type": "string"
+				},
+				"product_id": {
+					"type": "string"
+				},
+				"rider": {
+					"$ref": "#/definitions/MAAS.ExternalStructs.Gett.rider"
+				},
+				"pickup": {
+					"$ref": "#/definitions/MAAS.ExternalStructs.Gett.pickup"
+				},
+				"destination": {
+					"$ref": "#/definitions/MAAS.ExternalStructs.Gett.destination"
+				},
+				"dropoff": {
+					"$ref": "#/definitions/MAAS.ExternalStructs.Gett.dropoff"
+				},
+				"note_to_driver": {
+					"type": "string"
+				},
+				"reference": {
+					"type": "string"
+				},
+				"stop_points": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/MAAS.ExternalStructs.Gett.stop_points"
+					}
+				},
+				"requested_at": {
+					"format": "date-time",
+					"type": "string"
+				},
+				"scheduled_at": {
+					"format": "date-time",
+					"type": "string"
+				},
+				"pickedup_at": {
+					"format": "date-time",
+					"type": "string"
+				},
+				"droppedoff_at": {
+					"format": "date-time",
+					"type": "string"
+				},
+				"_CalculatedKey": {
+					"format": "int32",
+					"type": "integer"
+				}
+			}
+		},
+		"MAAS.Web.Code.WebApi.GettBusiness_Cancel_RideDto": {
+			"type": "object",
+			"properties": {
+				"ride_id": {
+					"type": "string"
+				},
+				"business_id": {
+					"type": "string"
+				}
+			}
+		},
+		"MAAS.ExternalStructs.Gett.GettBRideReceipt": {
+			"type": "object",
+			"properties": {
+				"ride_id": {
+					"type": "string"
+				},
+				"charges": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/MAAS.ExternalStructs.Gett.charges"
+					}
+				},
+				"currency_code": {
+					"type": "string"
+				},
+				"duration": {
+					"type": "string"
+				},
+				"distance": {
+					"format": "float",
+					"type": "number"
+				},
+				"distance_label": {
+					"type": "string"
+				},
+				"_CalculatedKey": {
+					"format": "int32",
+					"type": "integer"
+				}
+			}
+		},
+		"MAAS.ExternalStructs.Gett.charges": {
+			"type": "object",
+			"properties": {
+				"name": {
+					"type": "string"
+				},
+				"description": {
+					"$ref": "#/definitions/System.Object"
+				},
+				"amount": {
+					"format": "float",
+					"type": "number"
+				},
+				"type": {
+					"type": "string"
+				},
+				"_CalculatedKey": {
+					"format": "int32",
+					"type": "integer"
+				}
+			}
+		},
+		"MAAS.ExternalStructs.GreenGo.GreenGoRoot": {
+			"type": "object",
+			"properties": {
+				"vehicle_id": {
+					"type": "string"
+				},
+				"plate_number": {
+					"type": "string"
+				},
+				"make": {
+					"type": "string"
+				},
+				"make_desc": {
+					"type": "string"
+				},
+				"model": {
+					"type": "string"
+				},
+				"variant": {
+					"$ref": "#/definitions/System.Object"
+				},
+				"doors": {
+					"type": "string"
+				},
+				"seats": {
+					"type": "string"
+				},
+				"color": {
+					"type": "string"
+				},
+				"color_desc": {
+					"type": "string"
+				},
+				"max_range": {
+					"type": "string"
+				},
+				"gps_long": {
+					"type": "string"
+				},
+				"gps_lat": {
+					"type": "string"
+				},
+				"battery_level": {
+					"type": "string"
+				},
+				"battery_state": {
+					"type": "string"
+				},
+				"battery_state_desc": {
+					"type": "string"
+				},
+				"estimated_km": {
+					"type": "string"
+				},
+				"_CalculatedKey": {
+					"format": "int32",
+					"type": "integer"
+				}
+			}
+		},
+		"MAAS.Web.Code.WebApi.HealthCheckController.HealthCheckResult": {
+			"type": "object",
+			"properties": {
+				"status": {
+					"type": "string"
+				}
+			}
+		},
+		"MAAS.ExternalStructs.Metrolinks.MetrolinksRoot": {
+			"type": "object",
+			"properties": {
+				"@odata.context": {
+					"type": "string"
+				},
+				"value": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/MAAS.ExternalStructs.Metrolinks.value"
+					}
+				},
+				"_CalculatedKey": {
+					"format": "int32",
+					"type": "integer"
+				}
+			}
+		},
+		"MAAS.ExternalStructs.Metrolinks.value": {
+			"type": "object",
+			"properties": {
+				"Id": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"Line": {
+					"type": "string"
+				},
+				"TLAREF": {
+					"type": "string"
+				},
+				"PIDREF": {
+					"type": "string"
+				},
+				"StationLocation": {
+					"type": "string"
+				},
+				"AtcoCode": {
+					"type": "string"
+				},
+				"Direction": {
+					"type": "string"
+				},
+				"Dest0": {
+					"type": "string"
+				},
+				"Carriages0": {
+					"type": "string"
+				},
+				"Status0": {
+					"type": "string"
+				},
+				"Wait0": {
+					"type": "string"
+				},
+				"Dest1": {
+					"type": "string"
+				},
+				"Carriages1": {
+					"type": "string"
+				},
+				"Status1": {
+					"type": "string"
+				},
+				"Wait1": {
+					"type": "string"
+				},
+				"Dest2": {
+					"type": "string"
+				},
+				"Carriages2": {
+					"type": "string"
+				},
+				"Status2": {
+					"type": "string"
+				},
+				"Wait2": {
+					"type": "string"
+				},
+				"Dest3": {
+					"type": "string"
+				},
+				"Carriages3": {
+					"type": "string"
+				},
+				"Status3": {
+					"type": "string"
+				},
+				"MessageBoard": {
+					"type": "string"
+				},
+				"Wait3": {
+					"type": "string"
+				},
+				"LastUpdated": {
+					"format": "date-time",
+					"type": "string"
+				},
+				"SCN": {
+					"type": "string"
+				},
+				"Type": {
+					"type": "string"
+				},
+				"Description": {
+					"type": "string"
+				},
+				"LocationDescription": {
+					"$ref": "#/definitions/System.Object"
+				},
+				"CreationDate": {
+					"format": "date-time",
+					"type": "string"
+				},
+				"ConfirmedDate": {
+					"format": "date-time",
+					"type": "string"
+				},
+				"ModifiedDate": {
+					"format": "date-time",
+					"type": "string"
+				},
+				"LanesAffectedTypeRefDescription": {
+					"type": "string"
+				},
+				"Severity": {
+					"type": "string"
+				},
+				"PhaseTypeRef": {
+					"type": "string"
+				},
+				"DiversionInForce": {
+					"type": "boolean"
+				},
+				"AnticipatedStartDate": {
+					"$ref": "#/definitions/System.Object"
+				},
+				"AnticipatedEndDate": {
+					"$ref": "#/definitions/System.Object"
+				},
+				"StartDate": {
+					"$ref": "#/definitions/System.Object"
+				},
+				"EndDate": {
+					"$ref": "#/definitions/System.Object"
+				},
+				"TrafficSignals": {
+					"$ref": "#/definitions/System.Object"
+				},
+				"Contraflow": {
+					"$ref": "#/definitions/System.Object"
+				},
+				"Contractor": {
+					"$ref": "#/definitions/System.Object"
+				},
+				"DiversionRoute": {
+					"$ref": "#/definitions/System.Object"
+				},
+				"Organiser": {
+					"$ref": "#/definitions/System.Object"
+				},
+				"VenueName": {
+					"$ref": "#/definitions/System.Object"
+				},
+				"LocationId": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"TrafficeEventType": {
+					"type": "string"
+				},
+				"State": {
+					"type": "string"
+				},
+				"Capacity": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"Occupancy": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"StartLocationId": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"EndLocationId": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"DataSource": {
+					"type": "string"
+				},
+				"RoadName": {
+					"type": "string"
+				},
+				"DateCreated": {
+					"format": "date-time",
+					"type": "string"
+				},
+				"LocationID": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"_CalculatedKey": {
+					"format": "int32",
+					"type": "integer"
+				}
+			}
+		},
+		"MAAS.ExternalStructs.Metrolinks.Metrolinks_IdRoot": {
+			"type": "object",
+			"properties": {
+				"@odata.context": {
+					"type": "string"
+				},
+				"Id": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"Line": {
+					"type": "string"
+				},
+				"TLAREF": {
+					"type": "string"
+				},
+				"PIDREF": {
+					"type": "string"
+				},
+				"StationLocation": {
+					"type": "string"
+				},
+				"AtcoCode": {
+					"type": "string"
+				},
+				"Direction": {
+					"type": "string"
+				},
+				"Dest0": {
+					"type": "string"
+				},
+				"Carriages0": {
+					"type": "string"
+				},
+				"Status0": {
+					"type": "string"
+				},
+				"Wait0": {
+					"type": "string"
+				},
+				"Dest1": {
+					"type": "string"
+				},
+				"Carriages1": {
+					"type": "string"
+				},
+				"Status1": {
+					"type": "string"
+				},
+				"Wait1": {
+					"type": "string"
+				},
+				"Dest2": {
+					"type": "string"
+				},
+				"Carriages2": {
+					"type": "string"
+				},
+				"Status2": {
+					"type": "string"
+				},
+				"Wait2": {
+					"type": "string"
+				},
+				"Dest3": {
+					"type": "string"
+				},
+				"Carriages3": {
+					"type": "string"
+				},
+				"Status3": {
+					"type": "string"
+				},
+				"MessageBoard": {
+					"type": "string"
+				},
+				"Wait3": {
+					"type": "string"
+				},
+				"LastUpdated": {
+					"format": "date-time",
+					"type": "string"
+				},
+				"_CalculatedKey": {
+					"format": "int32",
+					"type": "integer"
+				}
+			}
+		},
+		"MAAS.ExternalStructs.Metrolinks.AccidentsRoot": {
+			"type": "object",
+			"properties": {
+				"@odata.context": {
+					"type": "string"
+				},
+				"value": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/MAAS.ExternalStructs.Metrolinks.value"
+					}
+				},
+				"_CalculatedKey": {
+					"format": "int32",
+					"type": "integer"
+				}
+			}
+		},
+		"MAAS.ExternalStructs.Metrolinks.Accidents_IdRoot": {
+			"type": "object",
+			"properties": {
+				"@odata.context": {
+					"type": "string"
+				},
+				"Id": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"SCN": {
+					"type": "string"
+				},
+				"Type": {
+					"type": "string"
+				},
+				"Description": {
+					"type": "string"
+				},
+				"LocationDescription": {
+					"$ref": "#/definitions/System.Object"
+				},
+				"CreationDate": {
+					"format": "date-time",
+					"type": "string"
+				},
+				"ConfirmedDate": {
+					"format": "date-time",
+					"type": "string"
+				},
+				"ModifiedDate": {
+					"format": "date-time",
+					"type": "string"
+				},
+				"LanesAffectedTypeRefDescription": {
+					"type": "string"
+				},
+				"Severity": {
+					"type": "string"
+				},
+				"PhaseTypeRef": {
+					"type": "string"
+				},
+				"DiversionInForce": {
+					"type": "boolean"
+				},
+				"AnticipatedStartDate": {
+					"$ref": "#/definitions/System.Object"
+				},
+				"AnticipatedEndDate": {
+					"$ref": "#/definitions/System.Object"
+				},
+				"StartDate": {
+					"format": "date-time",
+					"type": "string"
+				},
+				"EndDate": {
+					"format": "date-time",
+					"type": "string"
+				},
+				"TrafficSignals": {
+					"$ref": "#/definitions/System.Object"
+				},
+				"Contraflow": {
+					"$ref": "#/definitions/System.Object"
+				},
+				"Contractor": {
+					"$ref": "#/definitions/System.Object"
+				},
+				"DiversionRoute": {
+					"$ref": "#/definitions/System.Object"
+				},
+				"Organiser": {
+					"$ref": "#/definitions/System.Object"
+				},
+				"VenueName": {
+					"$ref": "#/definitions/System.Object"
+				},
+				"LocationId": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"TrafficeEventType": {
+					"type": "string"
+				},
+				"_CalculatedKey": {
+					"format": "int32",
+					"type": "integer"
+				}
+			}
+		},
+		"MAAS.ExternalStructs.Metrolinks.CarparksRoot": {
+			"type": "object",
+			"properties": {
+				"@odata.context": {
+					"type": "string"
+				},
+				"value": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/MAAS.ExternalStructs.Metrolinks.value"
+					}
+				},
+				"_CalculatedKey": {
+					"format": "int32",
+					"type": "integer"
+				}
+			}
+		},
+		"MAAS.ExternalStructs.Metrolinks.Carparks_IdRoot": {
+			"type": "object",
+			"properties": {
+				"@odata.context": {
+					"type": "string"
+				},
+				"Id": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"State": {
+					"type": "string"
+				},
+				"SCN": {
+					"type": "string"
+				},
+				"Capacity": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"Description": {
+					"type": "string"
+				},
+				"Occupancy": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"LastUpdated": {
+					"format": "date-time",
+					"type": "string"
+				},
+				"LocationId": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"_CalculatedKey": {
+					"format": "int32",
+					"type": "integer"
+				}
+			}
+		},
+		"MAAS.ExternalStructs.Metrolinks.IncidentsRoot": {
+			"type": "object",
+			"properties": {
+				"@odata.context": {
+					"type": "string"
+				},
+				"value": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/MAAS.ExternalStructs.Metrolinks.value"
+					}
+				},
+				"_CalculatedKey": {
+					"format": "int32",
+					"type": "integer"
+				}
+			}
+		},
+		"MAAS.ExternalStructs.Metrolinks.Incidents_IdRoot": {
+			"type": "object",
+			"properties": {
+				"@odata.context": {
+					"type": "string"
+				},
+				"Id": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"SCN": {
+					"type": "string"
+				},
+				"Type": {
+					"type": "string"
+				},
+				"Description": {
+					"type": "string"
+				},
+				"LocationDescription": {
+					"$ref": "#/definitions/System.Object"
+				},
+				"CreationDate": {
+					"format": "date-time",
+					"type": "string"
+				},
+				"ConfirmedDate": {
+					"format": "date-time",
+					"type": "string"
+				},
+				"ModifiedDate": {
+					"format": "date-time",
+					"type": "string"
+				},
+				"LanesAffectedTypeRefDescription": {
+					"type": "string"
+				},
+				"Severity": {
+					"type": "string"
+				},
+				"PhaseTypeRef": {
+					"type": "string"
+				},
+				"DiversionInForce": {
+					"type": "boolean"
+				},
+				"AnticipatedStartDate": {
+					"$ref": "#/definitions/System.Object"
+				},
+				"AnticipatedEndDate": {
+					"$ref": "#/definitions/System.Object"
+				},
+				"StartDate": {
+					"format": "date-time",
+					"type": "string"
+				},
+				"EndDate": {
+					"format": "date-time",
+					"type": "string"
+				},
+				"TrafficSignals": {
+					"$ref": "#/definitions/System.Object"
+				},
+				"Contraflow": {
+					"$ref": "#/definitions/System.Object"
+				},
+				"Contractor": {
+					"$ref": "#/definitions/System.Object"
+				},
+				"DiversionRoute": {
+					"$ref": "#/definitions/System.Object"
+				},
+				"Organiser": {
+					"$ref": "#/definitions/System.Object"
+				},
+				"VenueName": {
+					"$ref": "#/definitions/System.Object"
+				},
+				"LocationId": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"TrafficeEventType": {
+					"type": "string"
+				},
+				"_CalculatedKey": {
+					"format": "int32",
+					"type": "integer"
+				}
+			}
+		},
+		"MAAS.ExternalStructs.Metrolinks.ScootLoopsRoot": {
+			"type": "object",
+			"properties": {
+				"@odata.context": {
+					"type": "string"
+				},
+				"value": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/MAAS.ExternalStructs.Metrolinks.value"
+					}
+				},
+				"_CalculatedKey": {
+					"format": "int32",
+					"type": "integer"
+				}
+			}
+		},
+		"MAAS.ExternalStructs.Metrolinks.ScootLoops_IdRoot": {
+			"type": "object",
+			"properties": {
+				"@odata.context": {
+					"type": "string"
+				},
+				"Id": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"SCN": {
+					"type": "string"
+				},
+				"Description": {
+					"type": "string"
+				},
+				"LastUpdated": {
+					"format": "date-time",
+					"type": "string"
+				},
+				"StartLocationId": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"EndLocationId": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"_CalculatedKey": {
+					"format": "int32",
+					"type": "integer"
+				}
+			}
+		},
+		"MAAS.ExternalStructs.Metrolinks.TrafficSignalsRoot": {
+			"type": "object",
+			"properties": {
+				"@odata.context": {
+					"type": "string"
+				},
+				"value": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/MAAS.ExternalStructs.Metrolinks.value"
+					}
+				},
+				"_CalculatedKey": {
+					"format": "int32",
+					"type": "integer"
+				}
+			}
+		},
+		"MAAS.ExternalStructs.Metrolinks.TrafficSignals_IdRoot": {
+			"type": "object",
+			"properties": {
+				"@odata.context": {
+					"type": "string"
+				},
+				"Id": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"SCN": {
+					"type": "string"
+				},
+				"Description": {
+					"type": "string"
+				},
+				"DataSource": {
+					"type": "string"
+				},
+				"RoadName": {
+					"type": "string"
+				},
+				"DateCreated": {
+					"format": "date-time",
+					"type": "string"
+				},
+				"LocationID": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"_CalculatedKey": {
+					"format": "int32",
+					"type": "integer"
+				}
+			}
+		},
+		"MAAS.ExternalStructs.Metrolinks.VenueEventsRoot": {
+			"type": "object",
+			"properties": {
+				"@odata.context": {
+					"type": "string"
+				},
+				"value": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/MAAS.ExternalStructs.Metrolinks.value"
+					}
+				},
+				"_CalculatedKey": {
+					"format": "int32",
+					"type": "integer"
+				}
+			}
+		},
+		"MAAS.ExternalStructs.ml.mlRoot": {
+			"type": "object",
+			"properties": {
+				"countries": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/MAAS.ExternalStructs.ml.countries"
+					}
+				},
+				"_CalculatedKey": {
+					"format": "int32",
+					"type": "integer"
+				}
+			}
+		},
+		"MAAS.ExternalStructs.ml.countries": {
+			"type": "object",
+			"properties": {
+				"lat": {
+					"format": "float",
+					"type": "number"
+				},
+				"lng": {
+					"format": "float",
+					"type": "number"
+				},
+				"zoom": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"name": {
+					"type": "string"
+				},
+				"hotline": {
+					"type": "string"
+				},
+				"domain": {
+					"type": "string"
+				},
+				"language": {
+					"type": "string"
+				},
+				"email": {
+					"type": "string"
+				},
+				"timezone": {
+					"type": "string"
+				},
+				"currency": {
+					"type": "string"
+				},
+				"country_calling_code": {
+					"type": "string"
+				},
+				"system_operator_address": {
+					"type": "string"
+				},
+				"country": {
+					"type": "string"
+				},
+				"country_name": {
+					"type": "string"
+				},
+				"terms": {
+					"type": "string"
+				},
+				"policy": {
+					"type": "string"
+				},
+				"website": {
+					"type": "string"
+				},
+				"show_bike_types": {
+					"type": "boolean"
+				},
+				"show_bike_type_groups": {
+					"type": "boolean"
+				},
+				"show_free_racks": {
+					"type": "boolean"
+				},
+				"booked_bikes": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"set_point_bikes": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"available_bikes": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"capped_available_bikes": {
+					"type": "boolean"
+				},
+				"no_registration": {
+					"type": "boolean"
+				},
+				"pricing": {
+					"type": "string"
+				},
+				"cities": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/MAAS.ExternalStructs.ml.cities"
+					}
+				},
+				"_CalculatedKey": {
+					"format": "int32",
+					"type": "integer"
+				}
+			}
+		},
+		"MAAS.ExternalStructs.ml.cities": {
+			"type": "object",
+			"properties": {
+				"uid": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"lat": {
+					"format": "float",
+					"type": "number"
+				},
+				"lng": {
+					"format": "float",
+					"type": "number"
+				},
+				"zoom": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"maps_icon": {
+					"type": "string"
+				},
+				"alias": {
+					"type": "string"
+				},
+				"break": {
+					"type": "boolean"
+				},
+				"name": {
+					"type": "string"
+				},
+				"num_places": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"refresh_rate": {
+					"type": "string"
+				},
+				"bounds": {
+					"$ref": "#/definitions/MAAS.ExternalStructs.ml.bounds"
+				},
+				"booked_bikes": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"set_point_bikes": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"available_bikes": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"return_to_official_only": {
+					"type": "boolean"
+				},
+				"bike_types": {
+					"$ref": "#/definitions/MAAS.ExternalStructs.ml.bike_types"
+				},
+				"places": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/MAAS.ExternalStructs.ml.places"
+					}
+				},
+				"_CalculatedKey": {
+					"format": "int32",
+					"type": "integer"
+				}
+			}
+		},
+		"MAAS.ExternalStructs.ml.bounds": {
+			"type": "object",
+			"properties": {
+				"south_west": {
+					"$ref": "#/definitions/MAAS.ExternalStructs.ml.south_west"
+				},
+				"north_east": {
+					"$ref": "#/definitions/MAAS.ExternalStructs.ml.north_east"
+				},
+				"_CalculatedKey": {
+					"format": "int32",
+					"type": "integer"
+				}
+			}
+		},
+		"MAAS.ExternalStructs.ml.bike_types": {
+			"type": "object",
+			"properties": {
+				"15": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"_CalculatedKey": {
+					"format": "int32",
+					"type": "integer"
+				}
+			}
+		},
+		"MAAS.ExternalStructs.ml.places": {
+			"type": "object",
+			"properties": {
+				"uid": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"lat": {
+					"format": "float",
+					"type": "number"
+				},
+				"lng": {
+					"format": "float",
+					"type": "number"
+				},
+				"bike": {
+					"type": "boolean"
+				},
+				"name": {
+					"type": "string"
+				},
+				"address": {
+					"$ref": "#/definitions/System.Object"
+				},
+				"spot": {
+					"type": "boolean"
+				},
+				"number": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"bikes": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"booked_bikes": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"bike_racks": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"free_racks": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"special_racks": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"free_special_racks": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"maintenance": {
+					"type": "boolean"
+				},
+				"terminal_type": {
+					"type": "string"
+				},
+				"bike_list": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/MAAS.ExternalStructs.ml.bike_list"
+					}
+				},
+				"bike_numbers": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				},
+				"bike_types": {
+					"$ref": "#/definitions/MAAS.ExternalStructs.ml.placesBike_types"
+				},
+				"place_type": {
+					"type": "string"
+				},
+				"rack_locks": {
+					"type": "boolean"
+				},
+				"_CalculatedKey": {
+					"format": "int32",
+					"type": "integer"
+				}
+			}
+		},
+		"MAAS.ExternalStructs.ml.south_west": {
+			"type": "object",
+			"properties": {
+				"lat": {
+					"format": "float",
+					"type": "number"
+				},
+				"lng": {
+					"format": "float",
+					"type": "number"
+				},
+				"_CalculatedKey": {
+					"format": "int32",
+					"type": "integer"
+				}
+			}
+		},
+		"MAAS.ExternalStructs.ml.north_east": {
+			"type": "object",
+			"properties": {
+				"lat": {
+					"format": "float",
+					"type": "number"
+				},
+				"lng": {
+					"format": "float",
+					"type": "number"
+				},
+				"_CalculatedKey": {
+					"format": "int32",
+					"type": "integer"
+				}
+			}
+		},
+		"MAAS.ExternalStructs.ml.bike_list": {
+			"type": "object",
+			"properties": {
+				"number": {
+					"type": "string"
+				},
+				"bike_type": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"lock_types": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				},
+				"active": {
+					"type": "boolean"
+				},
+				"state": {
+					"type": "string"
+				},
+				"electric_lock": {
+					"type": "boolean"
+				},
+				"boardcomputer": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"pedelec_battery": {
+					"$ref": "#/definitions/System.Object"
+				},
+				"battery_pack": {
+					"$ref": "#/definitions/System.Object"
+				},
+				"_CalculatedKey": {
+					"format": "int32",
+					"type": "integer"
+				}
+			}
+		},
+		"MAAS.ExternalStructs.ml.placesBike_types": {
+			"type": "object",
+			"properties": {
+				"15": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"_CalculatedKey": {
+					"format": "int32",
+					"type": "integer"
+				}
+			}
+		},
+		"MAAS.ExternalStructs.MolBubi.MolBubiRoot": {
+			"type": "object",
+			"properties": {
+				"countries": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/MAAS.ExternalStructs.MolBubi.countries"
+					}
+				},
+				"_CalculatedKey": {
+					"format": "int32",
+					"type": "integer"
+				}
+			}
+		},
+		"MAAS.ExternalStructs.MolBubi.countries": {
+			"type": "object",
+			"properties": {
+				"lat": {
+					"format": "float",
+					"type": "number"
+				},
+				"lng": {
+					"format": "float",
+					"type": "number"
+				},
+				"zoom": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"name": {
+					"type": "string"
+				},
+				"hotline": {
+					"type": "string"
+				},
+				"domain": {
+					"type": "string"
+				},
+				"language": {
+					"type": "string"
+				},
+				"email": {
+					"type": "string"
+				},
+				"timezone": {
+					"type": "string"
+				},
+				"currency": {
+					"type": "string"
+				},
+				"country_calling_code": {
+					"type": "string"
+				},
+				"system_operator_address": {
+					"type": "string"
+				},
+				"country": {
+					"type": "string"
+				},
+				"country_name": {
+					"type": "string"
+				},
+				"terms": {
+					"type": "string"
+				},
+				"policy": {
+					"type": "string"
+				},
+				"website": {
+					"type": "string"
+				},
+				"show_bike_types": {
+					"type": "boolean"
+				},
+				"show_bike_type_groups": {
+					"type": "boolean"
+				},
+				"show_free_racks": {
+					"type": "boolean"
+				},
+				"booked_bikes": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"set_point_bikes": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"available_bikes": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"capped_available_bikes": {
+					"type": "boolean"
+				},
+				"pricing": {
+					"type": "string"
+				},
+				"cities": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/MAAS.ExternalStructs.MolBubi.cities"
+					}
+				},
+				"_CalculatedKey": {
+					"format": "int32",
+					"type": "integer"
+				}
+			}
+		},
+		"MAAS.ExternalStructs.MolBubi.cities": {
+			"type": "object",
+			"properties": {
+				"uid": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"lat": {
+					"format": "float",
+					"type": "number"
+				},
+				"lng": {
+					"format": "float",
+					"type": "number"
+				},
+				"zoom": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"maps_icon": {
+					"type": "string"
+				},
+				"alias": {
+					"type": "string"
+				},
+				"break": {
+					"type": "boolean"
+				},
+				"name": {
+					"type": "string"
+				},
+				"num_places": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"refresh_rate": {
+					"type": "string"
+				},
+				"bounds": {
+					"$ref": "#/definitions/MAAS.ExternalStructs.MolBubi.bounds"
+				},
+				"booked_bikes": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"set_point_bikes": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"available_bikes": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"return_to_official_only": {
+					"type": "boolean"
+				},
+				"bike_types": {
+					"$ref": "#/definitions/MAAS.ExternalStructs.MolBubi.bike_types"
+				},
+				"places": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/MAAS.ExternalStructs.MolBubi.places"
+					}
+				},
+				"_CalculatedKey": {
+					"format": "int32",
+					"type": "integer"
+				}
+			}
+		},
+		"MAAS.ExternalStructs.MolBubi.bounds": {
+			"type": "object",
+			"properties": {
+				"south_west": {
+					"$ref": "#/definitions/MAAS.ExternalStructs.MolBubi.south_west"
+				},
+				"north_east": {
+					"$ref": "#/definitions/MAAS.ExternalStructs.MolBubi.north_east"
+				},
+				"_CalculatedKey": {
+					"format": "int32",
+					"type": "integer"
+				}
+			}
+		},
+		"MAAS.ExternalStructs.MolBubi.bike_types": {
+			"type": "object",
+			"properties": {
+				"14": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"71": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"_CalculatedKey": {
+					"format": "int32",
+					"type": "integer"
+				}
+			}
+		},
+		"MAAS.ExternalStructs.MolBubi.places": {
+			"type": "object",
+			"properties": {
+				"uid": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"lat": {
+					"format": "float",
+					"type": "number"
+				},
+				"lng": {
+					"format": "float",
+					"type": "number"
+				},
+				"bike": {
+					"type": "boolean"
+				},
+				"name": {
+					"type": "string"
+				},
+				"address": {
+					"type": "string"
+				},
+				"spot": {
+					"type": "boolean"
+				},
+				"number": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"bikes": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"booked_bikes": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"bike_racks": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"free_racks": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"special_racks": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"free_special_racks": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"maintenance": {
+					"type": "boolean"
+				},
+				"terminal_type": {
+					"type": "string"
+				},
+				"bike_list": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/MAAS.ExternalStructs.MolBubi.bike_list"
+					}
+				},
+				"bike_numbers": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				},
+				"bike_types": {
+					"$ref": "#/definitions/MAAS.ExternalStructs.MolBubi.placesBike_types"
+				},
+				"place_type": {
+					"type": "string"
+				},
+				"rack_locks": {
+					"type": "boolean"
+				},
+				"dist": {
+					"format": "float",
+					"type": "number"
+				},
+				"_CalculatedKey": {
+					"format": "int32",
+					"type": "integer"
+				}
+			}
+		},
+		"MAAS.ExternalStructs.MolBubi.south_west": {
+			"type": "object",
+			"properties": {
+				"lat": {
+					"format": "float",
+					"type": "number"
+				},
+				"lng": {
+					"format": "float",
+					"type": "number"
+				},
+				"_CalculatedKey": {
+					"format": "int32",
+					"type": "integer"
+				}
+			}
+		},
+		"MAAS.ExternalStructs.MolBubi.north_east": {
+			"type": "object",
+			"properties": {
+				"lat": {
+					"format": "float",
+					"type": "number"
+				},
+				"lng": {
+					"format": "float",
+					"type": "number"
+				},
+				"_CalculatedKey": {
+					"format": "int32",
+					"type": "integer"
+				}
+			}
+		},
+		"MAAS.ExternalStructs.MolBubi.bike_list": {
+			"type": "object",
+			"properties": {
+				"number": {
+					"type": "string"
+				},
+				"bike_type": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"lock_types": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				},
+				"active": {
+					"type": "boolean"
+				},
+				"state": {
+					"type": "string"
+				},
+				"electric_lock": {
+					"type": "boolean"
+				},
+				"boardcomputer": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"pedelec_battery": {
+					"$ref": "#/definitions/System.Object"
+				},
+				"battery_pack": {
+					"$ref": "#/definitions/System.Object"
+				},
+				"_CalculatedKey": {
+					"format": "int32",
+					"type": "integer"
+				}
+			}
+		},
+		"MAAS.ExternalStructs.MolBubi.placesBike_types": {
+			"type": "object",
+			"properties": {
+				"71": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"_CalculatedKey": {
+					"format": "int32",
+					"type": "integer"
+				}
+			}
+		},
+		"MAAS.ExternalStructs.nextbike.nextbikeLocations": {
+			"type": "object",
+			"properties": {
+				"countries": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/MAAS.ExternalStructs.nextbike.countries"
+					}
+				},
+				"_CalculatedKey": {
+					"format": "int32",
+					"type": "integer"
+				}
+			}
+		},
+		"MAAS.ExternalStructs.nextbike.countries": {
+			"type": "object",
+			"properties": {
+				"lat": {
+					"format": "float",
+					"type": "number"
+				},
+				"lng": {
+					"format": "float",
+					"type": "number"
+				},
+				"zoom": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"name": {
+					"type": "string"
+				},
+				"hotline": {
+					"type": "string"
+				},
+				"domain": {
+					"type": "string"
+				},
+				"language": {
+					"type": "string"
+				},
+				"email": {
+					"type": "string"
+				},
+				"timezone": {
+					"type": "string"
+				},
+				"currency": {
+					"type": "string"
+				},
+				"country_calling_code": {
+					"type": "string"
+				},
+				"system_operator_address": {
+					"type": "string"
+				},
+				"country": {
+					"type": "string"
+				},
+				"country_name": {
+					"type": "string"
+				},
+				"terms": {
+					"type": "string"
+				},
+				"policy": {
+					"type": "string"
+				},
+				"website": {
+					"type": "string"
+				},
+				"show_bike_types": {
+					"type": "boolean"
+				},
+				"show_bike_type_groups": {
+					"type": "boolean"
+				},
+				"show_free_racks": {
+					"type": "boolean"
+				},
+				"booked_bikes": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"set_point_bikes": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"available_bikes": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"capped_available_bikes": {
+					"type": "boolean"
+				},
+				"no_registration": {
+					"type": "boolean"
+				},
+				"pricing": {
+					"type": "string"
+				},
+				"cities": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/MAAS.ExternalStructs.nextbike.cities"
+					}
+				},
+				"_CalculatedKey": {
+					"format": "int32",
+					"type": "integer"
+				}
+			}
+		},
+		"MAAS.ExternalStructs.nextbike.cities": {
+			"type": "object",
+			"properties": {
+				"uid": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"lat": {
+					"format": "float",
+					"type": "number"
+				},
+				"lng": {
+					"format": "float",
+					"type": "number"
+				},
+				"zoom": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"maps_icon": {
+					"type": "string"
+				},
+				"alias": {
+					"type": "string"
+				},
+				"break": {
+					"type": "boolean"
+				},
+				"name": {
+					"type": "string"
+				},
+				"num_places": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"refresh_rate": {
+					"type": "string"
+				},
+				"bounds": {
+					"$ref": "#/definitions/MAAS.ExternalStructs.nextbike.bounds"
+				},
+				"booked_bikes": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"set_point_bikes": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"available_bikes": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"return_to_official_only": {
+					"type": "boolean"
+				},
+				"bike_types": {
+					"$ref": "#/definitions/MAAS.ExternalStructs.nextbike.bike_types"
+				},
+				"website": {
+					"type": "string"
+				},
+				"places": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/MAAS.ExternalStructs.nextbike.places"
+					}
+				},
+				"_CalculatedKey": {
+					"format": "int32",
+					"type": "integer"
+				}
+			}
+		},
+		"MAAS.ExternalStructs.nextbike.bounds": {
+			"type": "object",
+			"properties": {
+				"south_west": {
+					"$ref": "#/definitions/MAAS.ExternalStructs.nextbike.south_west"
+				},
+				"north_east": {
+					"$ref": "#/definitions/MAAS.ExternalStructs.nextbike.north_east"
+				},
+				"_CalculatedKey": {
+					"format": "int32",
+					"type": "integer"
+				}
+			}
+		},
+		"MAAS.ExternalStructs.nextbike.bike_types": {
+			"type": "object",
+			"properties": {
+				"4": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"14": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"15": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"undefined": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"_CalculatedKey": {
+					"format": "int32",
+					"type": "integer"
+				}
+			}
+		},
+		"MAAS.ExternalStructs.nextbike.places": {
+			"type": "object",
+			"properties": {
+				"uid": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"lat": {
+					"format": "float",
+					"type": "number"
+				},
+				"lng": {
+					"format": "float",
+					"type": "number"
+				},
+				"bike": {
+					"type": "boolean"
+				},
+				"name": {
+					"type": "string"
+				},
+				"address": {
+					"$ref": "#/definitions/System.Object"
+				},
+				"spot": {
+					"type": "boolean"
+				},
+				"number": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"bikes": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"booked_bikes": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"bike_racks": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"free_racks": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"special_racks": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"free_special_racks": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"maintenance": {
+					"type": "boolean"
+				},
+				"terminal_type": {
+					"type": "string"
+				},
+				"bike_list": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/MAAS.ExternalStructs.nextbike.bike_list"
+					}
+				},
+				"bike_numbers": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				},
+				"bike_types": {
+					"$ref": "#/definitions/MAAS.ExternalStructs.nextbike.placesBike_types"
+				},
+				"place_type": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"rack_locks": {
+					"type": "boolean"
+				},
+				"_CalculatedKey": {
+					"format": "int32",
+					"type": "integer"
+				}
+			}
+		},
+		"MAAS.ExternalStructs.nextbike.south_west": {
+			"type": "object",
+			"properties": {
+				"lat": {
+					"format": "float",
+					"type": "number"
+				},
+				"lng": {
+					"format": "float",
+					"type": "number"
+				},
+				"_CalculatedKey": {
+					"format": "int32",
+					"type": "integer"
+				}
+			}
+		},
+		"MAAS.ExternalStructs.nextbike.north_east": {
+			"type": "object",
+			"properties": {
+				"lat": {
+					"format": "float",
+					"type": "number"
+				},
+				"lng": {
+					"format": "float",
+					"type": "number"
+				},
+				"_CalculatedKey": {
+					"format": "int32",
+					"type": "integer"
+				}
+			}
+		},
+		"MAAS.ExternalStructs.nextbike.bike_list": {
+			"type": "object",
+			"properties": {
+				"number": {
+					"type": "string"
+				},
+				"bike_type": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"lock_types": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				},
+				"active": {
+					"type": "boolean"
+				},
+				"state": {
+					"type": "string"
+				},
+				"electric_lock": {
+					"type": "boolean"
+				},
+				"boardcomputer": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"pedelec_battery": {
+					"$ref": "#/definitions/System.Object"
+				},
+				"battery_pack": {
+					"$ref": "#/definitions/System.Object"
+				},
+				"_CalculatedKey": {
+					"format": "int32",
+					"type": "integer"
+				}
+			}
+		},
+		"MAAS.ExternalStructs.nextbike.placesBike_types": {
+			"type": "object",
+			"properties": {
+				"15": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"_CalculatedKey": {
+					"format": "int32",
+					"type": "integer"
+				}
+			}
+		},
+		"MAAS.ExternalStructs.Oszkar.OszkarRoot": {
+			"type": "object",
+			"properties": {
+				"exact_offers": {
+					"$ref": "#/definitions/MAAS.ExternalStructs.Oszkar.exact_offers"
+				},
+				"_CalculatedKey": {
+					"format": "int32",
+					"type": "integer"
+				}
+			}
+		},
+		"MAAS.ExternalStructs.Oszkar.exact_offers": {
+			"type": "object",
+			"properties": {
+				"data": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/MAAS.ExternalStructs.Oszkar.data"
+					}
+				},
+				"count_of_result": {
+					"type": "string"
+				},
+				"_CalculatedKey": {
+					"format": "int32",
+					"type": "integer"
+				}
+			}
+		},
+		"MAAS.ExternalStructs.Oszkar.data": {
+			"type": "object",
+			"properties": {
+				"caroffer_id": {
+					"type": "string"
+				},
+				"caroffer_driver_name": {
+					"type": "string"
+				},
+				"caroffer_userbase_id": {
+					"type": "string"
+				},
+				"caroffer_fee": {
+					"type": "string"
+				},
+				"caroffer_min_price": {
+					"type": "string"
+				},
+				"caroffer_currency": {
+					"type": "string"
+				},
+				"caroffer_free_place_count": {
+					"type": "string"
+				},
+				"caroffer_old_type_id": {
+					"type": "string"
+				},
+				"caroffer_flag": {
+					"type": "string"
+				},
+				"ajanlido": {
+					"type": "string"
+				},
+				"caroffer_distance": {
+					"type": "string"
+				},
+				"caroffer_driver_userbase_feature": {
+					"type": "string"
+				},
+				"user_score": {
+					"type": "string"
+				},
+				"caroffer_create_timestamp": {
+					"type": "string"
+				},
+				"caroffer_departure": {
+					"$ref": "#/definitions/MAAS.ExternalStructs.Oszkar.caroffer_departure"
+				},
+				"caroffer_arrival": {
+					"$ref": "#/definitions/MAAS.ExternalStructs.Oszkar.caroffer_arrival"
+				},
+				"caroffer_fee_base": {
+					"type": "string"
+				},
+				"caroffer_fee_commission": {
+					"type": "string"
+				},
+				"caroffer_min_price_base": {
+					"type": "string"
+				},
+				"caroffer_min_price_commission": {
+					"type": "string"
+				},
+				"_CalculatedKey": {
+					"format": "int32",
+					"type": "integer"
+				}
+			}
+		},
+		"MAAS.ExternalStructs.Oszkar.caroffer_departure": {
+			"type": "object",
+			"properties": {
+				"country_code": {
+					"type": "string"
+				},
+				"city": {
+					"type": "string"
+				},
+				"city_full": {
+					"type": "string"
+				},
+				"district": {
+					"type": "string"
+				},
+				"districtpart": {
+					"type": "string"
+				},
+				"datetime": {
+					"type": "string"
+				},
+				"date": {
+					"type": "string"
+				},
+				"time_json": {
+					"format": "date-time",
+					"type": "string"
+				},
+				"timestamp": {
+					"type": "string"
+				},
+				"_CalculatedKey": {
+					"format": "int32",
+					"type": "integer"
+				}
+			}
+		},
+		"MAAS.ExternalStructs.Oszkar.caroffer_arrival": {
+			"type": "object",
+			"properties": {
+				"country_code": {
+					"type": "string"
+				},
+				"city": {
+					"type": "string"
+				},
+				"city_full": {
+					"type": "string"
+				},
+				"district": {
+					"type": "string"
+				},
+				"districtpart": {
+					"type": "string"
+				},
+				"datetime": {
+					"type": "string"
+				},
+				"date": {
+					"type": "string"
+				},
+				"time_json": {
+					"format": "date-time",
+					"type": "string"
+				},
+				"timestamp": {
+					"type": "string"
+				},
+				"_CalculatedKey": {
+					"format": "int32",
+					"type": "integer"
+				}
+			}
+		},
+		"MAAS.Services.Transport_for_Luxembourg.DataContracts.LocationsDTO": {
+			"type": "object",
+			"properties": {
+				"Id": {
+					"format": "int64",
+					"type": "integer"
+				},
+				"Name": {
+					"type": "string"
+				},
+				"GeoCoordinates": {
+					"$ref": "#/definitions/MAAS.Services.Transport_for_Luxembourg.DataContracts.GeoCoordinatesDTO"
+				}
+			}
+		},
+		"MAAS.Services.Transport_for_Luxembourg.DataContracts.GeoCoordinatesDTO": {
+			"type": "object",
+			"properties": {
+				"Latitude": {
+					"format": "double",
+					"type": "number"
+				},
+				"Longitude": {
+					"format": "double",
+					"type": "number"
+				}
+			}
+		},
+		"MAAS.ExternalStructs.Transport_for_Luxembourg.Transport_for_LuxembourgBikePointID": {
+			"type": "object",
+			"properties": {
+				"type": {
+					"type": "string"
+				},
+				"geometry": {
+					"$ref": "#/definitions/MAAS.ExternalStructs.Transport_for_Luxembourg.geometry"
+				},
+				"properties": {
+					"$ref": "#/definitions/MAAS.ExternalStructs.Transport_for_Luxembourg.properties"
+				},
+				"_CalculatedKey": {
+					"format": "int32",
+					"type": "integer"
+				}
+			}
+		},
+		"MAAS.ExternalStructs.Transport_for_Luxembourg.geometry": {
+			"type": "object",
+			"properties": {
+				"type": {
+					"type": "string"
+				},
+				"coordinates": {
+					"type": "array",
+					"items": {
+						"format": "float",
+						"type": "number"
+					}
+				},
+				"_CalculatedKey": {
+					"format": "int32",
+					"type": "integer"
+				}
+			}
+		},
+		"MAAS.ExternalStructs.Transport_for_Luxembourg.properties": {
+			"type": "object",
+			"properties": {
+				"id": {
+					"type": "string"
+				},
+				"open": {
+					"type": "boolean"
+				},
+				"name": {
+					"type": "string"
+				},
+				"city": {
+					"type": "string"
+				},
+				"address": {
+					"type": "string"
+				},
+				"photo": {
+					"type": "string"
+				},
+				"docks": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"available_bikes": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"available_ebikes": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"available_docks": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"last_update": {
+					"type": "string"
+				},
+				"dock_status": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/MAAS.ExternalStructs.Transport_for_Luxembourg.dock_status"
+					}
+				},
+				"distance": {
+					"format": "float",
+					"type": "number"
+				},
+				"total": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"free": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"trend": {
+					"type": "string"
+				},
+				"meta": {
+					"$ref": "#/definitions/MAAS.ExternalStructs.Transport_for_Luxembourg.meta"
+				},
+				"temp": {
+					"$ref": "#/definitions/System.Object"
+				},
+				"pm10": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"no2": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"o3": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"so2": {
+					"format": "float",
+					"type": "number"
+				},
+				"co": {
+					"format": "float",
+					"type": "number"
+				},
+				"_CalculatedKey": {
+					"format": "int32",
+					"type": "integer"
+				}
+			}
+		},
+		"MAAS.ExternalStructs.Transport_for_Luxembourg.dock_status": {
+			"type": "object",
+			"properties": {
+				"status": {
+					"type": "string"
+				},
+				"bikeType": {
+					"type": "string"
+				},
+				"_CalculatedKey": {
+					"format": "int32",
+					"type": "integer"
+				}
+			}
+		},
+		"MAAS.ExternalStructs.Transport_for_Luxembourg.meta": {
+			"type": "object",
+			"properties": {
+				"open": {
+					"type": "boolean"
+				},
+				"elevator": {
+					"type": "boolean"
+				},
+				"link": {
+					"type": "string"
+				},
+				"address": {
+					"$ref": "#/definitions/MAAS.ExternalStructs.Transport_for_Luxembourg.address"
+				},
+				"phone": {
+					"$ref": "#/definitions/System.Object"
+				},
+				"reserved_for_disabled": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"reserved_for_women": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"motorbike_lots": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"bus_lots": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"bicycle_docks": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"payment_methods": {
+					"$ref": "#/definitions/MAAS.ExternalStructs.Transport_for_Luxembourg.payment_methods"
+				},
+				"restrictions": {
+					"$ref": "#/definitions/MAAS.ExternalStructs.Transport_for_Luxembourg.restrictions"
+				},
+				"_CalculatedKey": {
+					"format": "int32",
+					"type": "integer"
+				}
+			}
+		},
+		"MAAS.ExternalStructs.Transport_for_Luxembourg.address": {
+			"type": "object",
+			"properties": {
+				"street": {
+					"type": "string"
+				},
+				"exit": {
+					"type": "string"
+				},
+				"_CalculatedKey": {
+					"format": "int32",
+					"type": "integer"
+				}
+			}
+		},
+		"MAAS.ExternalStructs.Transport_for_Luxembourg.payment_methods": {
+			"type": "object",
+			"properties": {
+				"cash": {
+					"type": "boolean"
+				},
+				"vpay": {
+					"type": "boolean"
+				},
+				"visa": {
+					"type": "boolean"
+				},
+				"mastercard": {
+					"type": "boolean"
+				},
+				"eurocard": {
+					"type": "boolean"
+				},
+				"amex": {
+					"type": "boolean"
+				},
+				"call2park": {
+					"type": "boolean"
+				},
+				"_CalculatedKey": {
+					"format": "int32",
+					"type": "integer"
+				}
+			}
+		},
+		"MAAS.ExternalStructs.Transport_for_Luxembourg.restrictions": {
+			"type": "object",
+			"properties": {
+				"allowed_gpl": {
+					"type": "boolean"
+				},
+				"allowed_trailor": {
+					"type": "boolean"
+				},
+				"allowed_truck": {
+					"type": "boolean"
+				},
+				"max_height": {
+					"$ref": "#/definitions/System.Object"
+				},
+				"_CalculatedKey": {
+					"format": "int32",
+					"type": "integer"
+				}
+			}
+		},
+		"MAAS.ExternalStructs.Transport_for_Luxembourg.Transport_for_LuxembourgBox": {
+			"type": "object",
+			"properties": {
+				"type": {
+					"type": "string"
+				},
+				"features": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/MAAS.ExternalStructs.Transport_for_Luxembourg.features"
+					}
+				},
+				"_CalculatedKey": {
+					"format": "int32",
+					"type": "integer"
+				}
+			}
+		},
+		"MAAS.ExternalStructs.Transport_for_Luxembourg.features": {
+			"type": "object",
+			"properties": {
+				"type": {
+					"type": "string"
+				},
+				"geometry": {
+					"$ref": "#/definitions/MAAS.ExternalStructs.Transport_for_Luxembourg.geometry"
+				},
+				"properties": {
+					"$ref": "#/definitions/MAAS.ExternalStructs.Transport_for_Luxembourg.properties"
+				},
+				"_CalculatedKey": {
+					"format": "int32",
+					"type": "integer"
+				}
+			}
+		},
+		"MAAS.ExternalStructs.Transport_for_Luxembourg.Transport_for_LuxembourgAround": {
+			"type": "object",
+			"properties": {
+				"type": {
+					"type": "string"
+				},
+				"features": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/MAAS.ExternalStructs.Transport_for_Luxembourg.features"
+					}
+				},
+				"_CalculatedKey": {
+					"format": "int32",
+					"type": "integer"
+				}
+			}
+		},
+		"MAAS.ExternalStructs.Transport_for_Luxembourg.Transport_for_LuxembourgQuery": {
+			"type": "object",
+			"properties": {
+				"type": {
+					"type": "string"
+				},
+				"features": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/MAAS.ExternalStructs.Transport_for_Luxembourg.features"
+					}
+				},
+				"_CalculatedKey": {
+					"format": "int32",
+					"type": "integer"
+				}
+			}
+		},
+		"MAAS.ExternalStructs.Transport_for_Luxembourg.Transport_for_LuxembourgStopPointId": {
+			"type": "object",
+			"properties": {
+				"type": {
+					"type": "string"
+				},
+				"geometry": {
+					"$ref": "#/definitions/MAAS.ExternalStructs.Transport_for_Luxembourg.geometry"
+				},
+				"properties": {
+					"$ref": "#/definitions/MAAS.ExternalStructs.Transport_for_Luxembourg.properties"
+				},
+				"_CalculatedKey": {
+					"format": "int32",
+					"type": "integer"
+				}
+			}
+		},
+		"MAAS.ExternalStructs.Transport_for_Luxembourg.Transport_for_LuxembourgStopPointBox": {
+			"type": "object",
+			"properties": {
+				"type": {
+					"type": "string"
+				},
+				"features": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/MAAS.ExternalStructs.Transport_for_Luxembourg.features"
+					}
+				},
+				"_CalculatedKey": {
+					"format": "int32",
+					"type": "integer"
+				}
+			}
+		},
+		"MAAS.ExternalStructs.Transport_for_Luxembourg.Transport_for_LuxembourgStopPointAround": {
+			"type": "object",
+			"properties": {
+				"type": {
+					"type": "string"
+				},
+				"features": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/MAAS.ExternalStructs.Transport_for_Luxembourg.features"
+					}
+				},
+				"_CalculatedKey": {
+					"format": "int32",
+					"type": "integer"
+				}
+			}
+		},
+		"MAAS.ExternalStructs.Transport_for_Luxembourg.Transport_for_LuxembourgStopPointSearch": {
+			"type": "object",
+			"properties": {
+				"type": {
+					"type": "string"
+				},
+				"features": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/MAAS.ExternalStructs.Transport_for_Luxembourg.features"
+					}
+				},
+				"_CalculatedKey": {
+					"format": "int32",
+					"type": "integer"
+				}
+			}
+		},
+		"MAAS.ExternalStructs.Transport_for_Luxembourg.Transport_for_LuxembourgStopPointDepartures": {
+			"type": "object",
+			"properties": {
+				"8225152": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/MAAS.ExternalStructs.Transport_for_Luxembourg.a"
+					}
+				},
+				"8225161": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/MAAS.ExternalStructs.Transport_for_Luxembourg.b"
+					}
+				},
+				"8225162": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/MAAS.ExternalStructs.Transport_for_Luxembourg.g"
+					}
+				},
+				"_CalculatedKey": {
+					"format": "int32",
+					"type": "integer"
+				}
+			}
+		},
+		"MAAS.ExternalStructs.Transport_for_Luxembourg.a": {
+			"type": "object",
+			"properties": {
+				"id": {
+					"type": "string"
+				},
+				"type": {
+					"type": "string"
+				},
+				"trainId": {
+					"$ref": "#/definitions/System.Object"
+				},
+				"lineId": {
+					"type": "string"
+				},
+				"line": {
+					"type": "string"
+				},
+				"number": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"departure": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"delay": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"live": {
+					"type": "boolean"
+				},
+				"departureISO": {
+					"format": "date-time",
+					"type": "string"
+				},
+				"destination": {
+					"type": "string"
+				},
+				"destinationId": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"_CalculatedKey": {
+					"format": "int32",
+					"type": "integer"
+				}
+			}
+		},
+		"MAAS.ExternalStructs.Transport_for_Luxembourg.b": {
+			"type": "object",
+			"properties": {
+				"id": {
+					"type": "string"
+				},
+				"type": {
+					"type": "string"
+				},
+				"trainId": {
+					"$ref": "#/definitions/System.Object"
+				},
+				"lineId": {
+					"type": "string"
+				},
+				"line": {
+					"type": "string"
+				},
+				"number": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"departure": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"delay": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"live": {
+					"type": "boolean"
+				},
+				"departureISO": {
+					"format": "date-time",
+					"type": "string"
+				},
+				"destination": {
+					"type": "string"
+				},
+				"destinationId": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"_CalculatedKey": {
+					"format": "int32",
+					"type": "integer"
+				}
+			}
+		},
+		"MAAS.ExternalStructs.Transport_for_Luxembourg.g": {
+			"type": "object",
+			"properties": {
+				"id": {
+					"type": "string"
+				},
+				"type": {
+					"type": "string"
+				},
+				"trainId": {
+					"$ref": "#/definitions/System.Object"
+				},
+				"lineId": {
+					"type": "string"
+				},
+				"line": {
+					"type": "string"
+				},
+				"number": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"departure": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"delay": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"live": {
+					"type": "boolean"
+				},
+				"departureISO": {
+					"format": "date-time",
+					"type": "string"
+				},
+				"destination": {
+					"type": "string"
+				},
+				"destinationId": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"_CalculatedKey": {
+					"format": "int32",
+					"type": "integer"
+				}
+			}
+		},
+		"MAAS.ExternalStructs.Transport_for_Luxembourg.Transport_for_LuxembourgStopPointDeparturesId": {
+			"type": "object",
+			"properties": {
+				"id": {
+					"type": "string"
+				},
+				"type": {
+					"type": "string"
+				},
+				"trainId": {
+					"$ref": "#/definitions/System.Object"
+				},
+				"lineId": {
+					"type": "string"
+				},
+				"line": {
+					"type": "string"
+				},
+				"number": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"departure": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"delay": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"live": {
+					"type": "boolean"
+				},
+				"departureISO": {
+					"format": "date-time",
+					"type": "string"
+				},
+				"destination": {
+					"type": "string"
+				},
+				"destinationId": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"_CalculatedKey": {
+					"format": "int32",
+					"type": "integer"
+				}
+			}
+		},
+		"MAAS.ExternalStructs.Transport_for_Luxembourg.Transport_for_LuxembourgLimit": {
+			"type": "object",
+			"properties": {
+				"id": {
+					"type": "string"
+				},
+				"type": {
+					"type": "string"
+				},
+				"trainId": {
+					"$ref": "#/definitions/System.Object"
+				},
+				"lineId": {
+					"type": "string"
+				},
+				"line": {
+					"type": "string"
+				},
+				"number": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"departure": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"delay": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"live": {
+					"type": "boolean"
+				},
+				"departureISO": {
+					"format": "date-time",
+					"type": "string"
+				},
+				"destination": {
+					"type": "string"
+				},
+				"destinationId": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"_CalculatedKey": {
+					"format": "int32",
+					"type": "integer"
+				}
+			}
+		},
+		"MAAS.ExternalStructs.Transport_for_Luxembourg.Transport_for_LuxembourgJourney": {
+			"type": "object",
+			"properties": {
+				"error": {
+					"type": "string"
+				},
+				"requestParameters": {
+					"$ref": "#/definitions/MAAS.ExternalStructs.Transport_for_Luxembourg.requestParameters"
+				},
+				"plan": {
+					"$ref": "#/definitions/MAAS.ExternalStructs.Transport_for_Luxembourg.plan"
+				},
+				"_CalculatedKey": {
+					"format": "int32",
+					"type": "integer"
+				}
+			}
+		},
+		"MAAS.ExternalStructs.Transport_for_Luxembourg.requestParameters": {
+			"type": "object",
+			"properties": {
+				"time": {
+					"type": "string"
+				},
+				"arriveBy": {
+					"type": "boolean"
+				},
+				"maxWalkDistance": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"fromPlace": {
+					"type": "string"
+				},
+				"toPlace": {
+					"type": "string"
+				},
+				"date": {
+					"type": "string"
+				},
+				"mode": {
+					"type": "string"
+				},
+				"_CalculatedKey": {
+					"format": "int32",
+					"type": "integer"
+				}
+			}
+		},
+		"MAAS.ExternalStructs.Transport_for_Luxembourg.plan": {
+			"type": "object",
+			"properties": {
+				"date": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"from": {
+					"$ref": "#/definitions/MAAS.ExternalStructs.Transport_for_Luxembourg.from"
+				},
+				"to": {
+					"$ref": "#/definitions/MAAS.ExternalStructs.Transport_for_Luxembourg.to"
+				},
+				"itineraries": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/MAAS.ExternalStructs.Transport_for_Luxembourg.itineraries"
+					}
+				},
+				"_CalculatedKey": {
+					"format": "int32",
+					"type": "integer"
+				}
+			}
+		},
+		"MAAS.ExternalStructs.Transport_for_Luxembourg.from": {
+			"type": "object",
+			"properties": {
+				"name": {
+					"type": "string"
+				},
+				"stopId": {
+					"$ref": "#/definitions/MAAS.ExternalStructs.Transport_for_Luxembourg.stopId"
+				},
+				"stopCode": {
+					"$ref": "#/definitions/System.Object"
+				},
+				"platformCode": {
+					"$ref": "#/definitions/System.Object"
+				},
+				"lat": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"lon": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"wheelchairBoarding": {
+					"$ref": "#/definitions/System.Object"
+				},
+				"visualAccessible": {
+					"$ref": "#/definitions/System.Object"
+				},
+				"arrival": {
+					"$ref": "#/definitions/System.Object"
+				},
+				"departure": {
+					"$ref": "#/definitions/System.Object"
+				},
+				"_CalculatedKey": {
+					"format": "int32",
+					"type": "integer"
+				}
+			}
+		},
+		"MAAS.ExternalStructs.Transport_for_Luxembourg.to": {
+			"type": "object",
+			"properties": {
+				"name": {
+					"type": "string"
+				},
+				"stopId": {
+					"$ref": "#/definitions/MAAS.ExternalStructs.Transport_for_Luxembourg.toStopId"
+				},
+				"stopCode": {
+					"$ref": "#/definitions/System.Object"
+				},
+				"platformCode": {
+					"$ref": "#/definitions/System.Object"
+				},
+				"lat": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"lon": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"wheelchairBoarding": {
+					"$ref": "#/definitions/System.Object"
+				},
+				"visualAccessible": {
+					"$ref": "#/definitions/System.Object"
+				},
+				"arrival": {
+					"$ref": "#/definitions/System.Object"
+				},
+				"departure": {
+					"$ref": "#/definitions/System.Object"
+				},
+				"_CalculatedKey": {
+					"format": "int32",
+					"type": "integer"
+				}
+			}
+		},
+		"MAAS.ExternalStructs.Transport_for_Luxembourg.itineraries": {
+			"type": "object",
+			"properties": {
+				"duration": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"startTime": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"endTime": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"transfers": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"legs": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/MAAS.ExternalStructs.Transport_for_Luxembourg.legs"
+					}
+				},
+				"walkTime": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"transitTime": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"waitingTime": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"walkDistance": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"walkLimitExceeded": {
+					"type": "boolean"
+				},
+				"elevationLost": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"elevationGained": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"occupancyStatus": {
+					"$ref": "#/definitions/System.Object"
+				},
+				"_CalculatedKey": {
+					"format": "int32",
+					"type": "integer"
+				}
+			}
+		},
+		"MAAS.ExternalStructs.Transport_for_Luxembourg.stopId": {
+			"type": "object",
+			"properties": {
+				"agencyId": {
+					"type": "string"
+				},
+				"id": {
+					"type": "string"
+				},
+				"_CalculatedKey": {
+					"format": "int32",
+					"type": "integer"
+				}
+			}
+		},
+		"MAAS.ExternalStructs.Transport_for_Luxembourg.toStopId": {
+			"type": "object",
+			"properties": {
+				"agencyId": {
+					"type": "string"
+				},
+				"id": {
+					"type": "string"
+				},
+				"_CalculatedKey": {
+					"format": "int32",
+					"type": "integer"
+				}
+			}
+		},
+		"MAAS.ExternalStructs.Transport_for_Luxembourg.legs": {
+			"type": "object",
+			"properties": {
+				"from": {
+					"$ref": "#/definitions/MAAS.ExternalStructs.Transport_for_Luxembourg.legsFrom"
+				},
+				"to": {
+					"$ref": "#/definitions/MAAS.ExternalStructs.Transport_for_Luxembourg.legsTo"
+				},
+				"mode": {
+					"type": "string"
+				},
+				"startTime": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"endTime": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"departureDelay": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"arrivalDelay": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"route": {
+					"$ref": "#/definitions/System.Object"
+				},
+				"routeShortName": {
+					"$ref": "#/definitions/System.Object"
+				},
+				"routeLongName": {
+					"$ref": "#/definitions/System.Object"
+				},
+				"routeId": {
+					"$ref": "#/definitions/System.Object"
+				},
+				"routeColor": {
+					"$ref": "#/definitions/System.Object"
+				},
+				"routeTextColor": {
+					"$ref": "#/definitions/System.Object"
+				},
+				"headsign": {
+					"$ref": "#/definitions/System.Object"
+				},
+				"tripId": {
+					"$ref": "#/definitions/System.Object"
+				},
+				"serviceDate": {
+					"type": "string"
+				},
+				"agencyId": {
+					"$ref": "#/definitions/System.Object"
+				},
+				"agencyName": {
+					"$ref": "#/definitions/System.Object"
+				},
+				"agencyUrl": {
+					"$ref": "#/definitions/System.Object"
+				},
+				"wheelchairAccessible": {
+					"$ref": "#/definitions/System.Object"
+				},
+				"productCategory": {
+					"$ref": "#/definitions/System.Object"
+				},
+				"legGeometry": {
+					"$ref": "#/definitions/MAAS.ExternalStructs.Transport_for_Luxembourg.legGeometry"
+				},
+				"intermediateStops": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/System.Object"
+					}
+				},
+				"duration": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"_CalculatedKey": {
+					"format": "int32",
+					"type": "integer"
+				}
+			}
+		},
+		"MAAS.ExternalStructs.Transport_for_Luxembourg.legsFrom": {
+			"type": "object",
+			"properties": {
+				"name": {
+					"type": "string"
+				},
+				"stopId": {
+					"$ref": "#/definitions/MAAS.ExternalStructs.Transport_for_Luxembourg.legsFromStopId"
+				},
+				"stopCode": {
+					"$ref": "#/definitions/System.Object"
+				},
+				"platformCode": {
+					"$ref": "#/definitions/System.Object"
+				},
+				"lat": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"lon": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"wheelchairBoarding": {
+					"$ref": "#/definitions/System.Object"
+				},
+				"visualAccessible": {
+					"$ref": "#/definitions/System.Object"
+				},
+				"arrival": {
+					"$ref": "#/definitions/System.Object"
+				},
+				"departure": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"_CalculatedKey": {
+					"format": "int32",
+					"type": "integer"
+				}
+			}
+		},
+		"MAAS.ExternalStructs.Transport_for_Luxembourg.legsTo": {
+			"type": "object",
+			"properties": {
+				"name": {
+					"type": "string"
+				},
+				"stopId": {
+					"$ref": "#/definitions/MAAS.ExternalStructs.Transport_for_Luxembourg.legsToStopId"
+				},
+				"stopCode": {
+					"$ref": "#/definitions/System.Object"
+				},
+				"platformCode": {
+					"type": "string"
+				},
+				"lat": {
+					"format": "float",
+					"type": "number"
+				},
+				"lon": {
+					"format": "float",
+					"type": "number"
+				},
+				"wheelchairBoarding": {
+					"$ref": "#/definitions/System.Object"
+				},
+				"visualAccessible": {
+					"$ref": "#/definitions/System.Object"
+				},
+				"arrival": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"departure": {
+					"$ref": "#/definitions/System.Object"
+				},
+				"_CalculatedKey": {
+					"format": "int32",
+					"type": "integer"
+				}
+			}
+		},
+		"MAAS.ExternalStructs.Transport_for_Luxembourg.legGeometry": {
+			"type": "object",
+			"properties": {
+				"points": {
+					"type": "string"
+				},
+				"levels": {
+					"$ref": "#/definitions/System.Object"
+				},
+				"length": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"_CalculatedKey": {
+					"format": "int32",
+					"type": "integer"
+				}
+			}
+		},
+		"MAAS.ExternalStructs.Transport_for_Luxembourg.legsFromStopId": {
+			"type": "object",
+			"properties": {
+				"agencyId": {
+					"type": "string"
+				},
+				"id": {
+					"type": "string"
+				},
+				"_CalculatedKey": {
+					"format": "int32",
+					"type": "integer"
+				}
+			}
+		},
+		"MAAS.ExternalStructs.Transport_for_Luxembourg.legsToStopId": {
+			"type": "object",
+			"properties": {
+				"agencyId": {
+					"type": "string"
+				},
+				"id": {
+					"type": "string"
+				},
+				"_CalculatedKey": {
+					"format": "int32",
+					"type": "integer"
+				}
+			}
+		},
+		"MAAS.ExternalStructs.Transport_for_Luxembourg.Transport_for_LuxembourgCarPark": {
+			"type": "object",
+			"properties": {
+				"type": {
+					"type": "string"
+				},
+				"features": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/MAAS.ExternalStructs.Transport_for_Luxembourg.features"
+					}
+				},
+				"_CalculatedKey": {
+					"format": "int32",
+					"type": "integer"
+				}
+			}
+		},
+		"MAAS.ExternalStructs.Transport_for_Luxembourg.Transport_for_LuxembourgCarParkId": {
+			"type": "object",
+			"properties": {
+				"type": {
+					"type": "string"
+				},
+				"geometry": {
+					"$ref": "#/definitions/MAAS.ExternalStructs.Transport_for_Luxembourg.geometry"
+				},
+				"properties": {
+					"$ref": "#/definitions/MAAS.ExternalStructs.Transport_for_Luxembourg.properties"
+				},
+				"_CalculatedKey": {
+					"format": "int32",
+					"type": "integer"
+				}
+			}
+		},
+		"MAAS.ExternalStructs.Transport_for_Luxembourg.Transport_for_LuxembourgWeather": {
+			"type": "object",
+			"properties": {
+				"coord": {
+					"$ref": "#/definitions/MAAS.ExternalStructs.Transport_for_Luxembourg.coord"
+				},
+				"weather": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/MAAS.ExternalStructs.Transport_for_Luxembourg.weather"
+					}
+				},
+				"base": {
+					"$ref": "#/definitions/System.Object"
+				},
+				"main": {
+					"$ref": "#/definitions/MAAS.ExternalStructs.Transport_for_Luxembourg.main"
+				},
+				"visibility": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"wind": {
+					"$ref": "#/definitions/MAAS.ExternalStructs.Transport_for_Luxembourg.wind"
+				},
+				"clouds": {
+					"$ref": "#/definitions/MAAS.ExternalStructs.Transport_for_Luxembourg.clouds"
+				},
+				"dt": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"sys": {
+					"$ref": "#/definitions/MAAS.ExternalStructs.Transport_for_Luxembourg.sys"
+				},
+				"id": {
+					"$ref": "#/definitions/System.Object"
+				},
+				"name": {
+					"type": "string"
+				},
+				"cod": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"_CalculatedKey": {
+					"format": "int32",
+					"type": "integer"
+				}
+			}
+		},
+		"MAAS.ExternalStructs.Transport_for_Luxembourg.coord": {
+			"type": "object",
+			"properties": {
+				"lat": {
+					"format": "float",
+					"type": "number"
+				},
+				"lon": {
+					"format": "float",
+					"type": "number"
+				},
+				"_CalculatedKey": {
+					"format": "int32",
+					"type": "integer"
+				}
+			}
+		},
+		"MAAS.ExternalStructs.Transport_for_Luxembourg.weather": {
+			"type": "object",
+			"properties": {
+				"id": {
+					"$ref": "#/definitions/System.Object"
+				},
+				"main": {
+					"$ref": "#/definitions/System.Object"
+				},
+				"description": {
+					"type": "string"
+				},
+				"icon": {
+					"$ref": "#/definitions/System.Object"
+				},
+				"_CalculatedKey": {
+					"format": "int32",
+					"type": "integer"
+				}
+			}
+		},
+		"MAAS.ExternalStructs.Transport_for_Luxembourg.main": {
+			"type": "object",
+			"properties": {
+				"temp": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"pressure": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"humidity": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"temp_min": {
+					"$ref": "#/definitions/System.Object"
+				},
+				"temp_max": {
+					"$ref": "#/definitions/System.Object"
+				},
+				"_CalculatedKey": {
+					"format": "int32",
+					"type": "integer"
+				}
+			}
+		},
+		"MAAS.ExternalStructs.Transport_for_Luxembourg.wind": {
+			"type": "object",
+			"properties": {
+				"speed": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"deg": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"_CalculatedKey": {
+					"format": "int32",
+					"type": "integer"
+				}
+			}
+		},
+		"MAAS.ExternalStructs.Transport_for_Luxembourg.clouds": {
+			"type": "object",
+			"properties": {
+				"all": {
+					"$ref": "#/definitions/System.Object"
+				},
+				"_CalculatedKey": {
+					"format": "int32",
+					"type": "integer"
+				}
+			}
+		},
+		"MAAS.ExternalStructs.Transport_for_Luxembourg.sys": {
+			"type": "object",
+			"properties": {
+				"type": {
+					"$ref": "#/definitions/System.Object"
+				},
+				"id": {
+					"$ref": "#/definitions/System.Object"
+				},
+				"message": {
+					"$ref": "#/definitions/System.Object"
+				},
+				"country": {
+					"$ref": "#/definitions/System.Object"
+				},
+				"sunrise": {
+					"$ref": "#/definitions/System.Object"
+				},
+				"sunset": {
+					"$ref": "#/definitions/System.Object"
+				},
+				"_CalculatedKey": {
+					"format": "int32",
+					"type": "integer"
+				}
+			}
+		},
+		"MAAS.ExternalStructs.Transport_for_Luxembourg.Transport_for_LuxembourgAirQuality": {
+			"type": "object",
+			"properties": {
+				"coord": {
+					"$ref": "#/definitions/MAAS.ExternalStructs.Transport_for_Luxembourg.coord"
+				},
+				"weather": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/MAAS.ExternalStructs.Transport_for_Luxembourg.weather"
+					}
+				},
+				"base": {
+					"$ref": "#/definitions/System.Object"
+				},
+				"main": {
+					"$ref": "#/definitions/MAAS.ExternalStructs.Transport_for_Luxembourg.main"
+				},
+				"visibility": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"wind": {
+					"$ref": "#/definitions/MAAS.ExternalStructs.Transport_for_Luxembourg.wind"
+				},
+				"clouds": {
+					"$ref": "#/definitions/MAAS.ExternalStructs.Transport_for_Luxembourg.clouds"
+				},
+				"dt": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"sys": {
+					"$ref": "#/definitions/MAAS.ExternalStructs.Transport_for_Luxembourg.sys"
+				},
+				"id": {
+					"$ref": "#/definitions/System.Object"
+				},
+				"name": {
+					"type": "string"
+				},
+				"cod": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"_CalculatedKey": {
+					"format": "int32",
+					"type": "integer"
+				}
+			}
+		},
+		"MAAS.ExternalStructs.Transport_for_Luxembourg.Transport_for_LuxembourgAirQualityId": {
+			"type": "object",
+			"properties": {
+				"type": {
+					"type": "string"
+				},
+				"geometry": {
+					"$ref": "#/definitions/MAAS.ExternalStructs.Transport_for_Luxembourg.geometry"
+				},
+				"properties": {
+					"$ref": "#/definitions/MAAS.ExternalStructs.Transport_for_Luxembourg.properties"
+				},
+				"_CalculatedKey": {
+					"format": "int32",
+					"type": "integer"
+				}
+			}
+		},
+		"MAAS.ExternalStructs.Transport_for_Luxembourg.Transport_for_LuxembourgHighway": {
+			"type": "object",
+			"properties": {
+				"id": {
+					"type": "string"
+				},
+				"transitTimes": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/MAAS.ExternalStructs.Transport_for_Luxembourg.transitTimes"
+					}
+				},
+				"_CalculatedKey": {
+					"format": "int32",
+					"type": "integer"
+				}
+			}
+		},
+		"MAAS.ExternalStructs.Transport_for_Luxembourg.transitTimes": {
+			"type": "object",
+			"properties": {
+				"origin": {
+					"type": "string"
+				},
+				"destinations": {
+					"$ref": "#/definitions/MAAS.ExternalStructs.Transport_for_Luxembourg.destinations"
+				},
+				"_CalculatedKey": {
+					"format": "int32",
+					"type": "integer"
+				}
+			}
+		},
+		"MAAS.ExternalStructs.Transport_for_Luxembourg.destinations": {
+			"type": "object",
+			"properties": {
+				"lux_sud": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"lux_est": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"belgique": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"lux_hol": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"_CalculatedKey": {
+					"format": "int32",
+					"type": "integer"
+				}
+			}
+		},
+		"MAAS.ExternalStructs.Transport_for_Luxembourg.Transport_for_LuxembourgHighwayId": {
+			"type": "object",
+			"properties": {
+				"id": {
+					"type": "string"
+				},
+				"transitTimes": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/MAAS.ExternalStructs.Transport_for_Luxembourg.transitTimes"
+					}
+				},
+				"_CalculatedKey": {
+					"format": "int32",
+					"type": "integer"
+				}
+			}
+		},
+		"MAAS.ExternalStructs.Transport_for_Luxembourg.Transport_for_LuxembourgLine": {
+			"type": "object",
+			"properties": {
+				"id": {
+					"type": "string"
+				},
+				"type": {
+					"type": "string"
+				},
+				"name": {
+					"type": "string"
+				},
+				"long_name": {
+					"type": "string"
+				},
+				"_CalculatedKey": {
+					"format": "int32",
+					"type": "integer"
+				}
+			}
+		},
+		"MAAS.ExternalStructs.Transport_for_Luxembourg.Transport_for_LuxembourgLineId": {
+			"type": "object",
+			"properties": {
+				"id": {
+					"type": "string"
+				},
+				"type": {
+					"type": "string"
+				},
+				"name": {
+					"type": "string"
+				},
+				"long_name": {
+					"type": "string"
+				},
+				"_CalculatedKey": {
+					"format": "int32",
+					"type": "integer"
+				}
+			}
+		},
+		"MAAS.ExternalStructs.Transport_for_Luxembourg.Transport_for_LuxembourgAirArrivals": {
+			"type": "object",
+			"properties": {
+				"id": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"airline": {
+					"type": "string"
+				},
+				"flight": {
+					"type": "string"
+				},
+				"destination": {
+					"type": "string"
+				},
+				"via": {
+					"$ref": "#/definitions/System.Object"
+				},
+				"scheduled": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"real": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"status": {
+					"type": "string"
+				},
+				"statusCode": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"_CalculatedKey": {
+					"format": "int32",
+					"type": "integer"
+				}
+			}
+		},
+		"MAAS.ExternalStructs.Transport_for_Luxembourg.Transport_for_LuxembourgAirDep": {
+			"type": "object",
+			"properties": {
+				"id": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"airline": {
+					"type": "string"
+				},
+				"flight": {
+					"type": "string"
+				},
+				"destination": {
+					"type": "string"
+				},
+				"via": {
+					"$ref": "#/definitions/System.Object"
+				},
+				"scheduled": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"real": {
+					"$ref": "#/definitions/System.Object"
+				},
+				"status": {
+					"$ref": "#/definitions/System.Object"
+				},
+				"statusCode": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"_CalculatedKey": {
+					"format": "int32",
+					"type": "integer"
+				}
+			}
+		}
+	},
+	"tags": [{
+		"name": "Gett",
+		"description": ""
+	}, {
+		"name": "Metrolinks",
+		"description": ""
+	}, {
+		"name": "Transport_for_Luxembourg",
+		"description": ""
+	}, {
+		"name": "nextbike",
+		"description": ""
+	}, {
+		"name": "Enterprise",
+		"description": ""
+	}, {
+		"name": "GreenGo",
+		"description": ""
+	}, {
+		"name": "MolBubi",
+		"description": ""
+	}, {
+		"name": "ml",
+		"description": ""
+	}, {
+		"name": "Oszkar",
+		"description": ""
+	}]
+}
