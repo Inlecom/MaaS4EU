@@ -1,0 +1,158 @@
+<BusinessObject Model_Name="BookingContext" Model_Description="" Model_Creator="">
+  <Associations>
+    <Association ModelName="BookingContext" Class1="BookingQuery" Class2="Vehicle" Role1="BookingQuery_1" Role2="Vehicle" Multiplicity1="ZeroOrOne" Multiplicity2="ZeroOrOne" Navigable1="false" Navigable2="true" IsExternal="false" Persisted="true" OrderByProperty1="" OrderByDirection1="Asc" OrderByProperty2="" OrderByDirection2="Asc" OnDelete1="Dissasociate" OnDelete2="Restricted" IsShadow="false" IsInherited="false">
+      <DiagramInfo Edge1="Bottom" Edge2="Top" Percent1="0.4614187967823319" Percent2="0.49992763719003447" Path="M 490 1081 L 490 1100 L 538 1100 L 538 1119" />
+    </Association>
+    <Association ModelName="BookingContext" Class1="BookingQuery" Class2="Person" Role1="BookingQuery_3" Role2="Person" Multiplicity1="ZeroOrOne" Multiplicity2="Many" Navigable1="false" Navigable2="true" IsExternal="false" Persisted="true" OrderByProperty1="" OrderByDirection1="Asc" OrderByProperty2="" OrderByDirection2="Asc" OnDelete1="Dissasociate" OnDelete2="Restricted" IsShadow="false" IsInherited="false">
+      <DiagramInfo Edge1="Right" Edge2="Left" Percent1="0.49976671006944445" Percent2="0.33485194203808105" Path="M 599 991 L 670 991 L 670 901 L 745 901" />
+    </Association>
+    <Association ModelName="BookingContext" Class1="OnDemand" Class2="BookingQuery" Role1="OnDemand" Role2="BookingQuery" Multiplicity1="Many" Multiplicity2="Many" Navigable1="false" Navigable2="true" IsExternal="false" Persisted="true" OrderByProperty1="" OrderByDirection1="Asc" OrderByProperty2="" OrderByDirection2="Asc" OnDelete1="Dissasociate" OnDelete2="CascadeDelete" IsShadow="false" IsInherited="false">
+      <DiagramInfo Edge1="Bottom" Edge2="Top" Percent1="0.864536429230185" Percent2="0.07703449910972637" Path="M 601 856 L 601 870 L 412 870 L 412 901" />
+    </Association>
+    <Association ModelName="TransportMeans" Class1="VehicleType" Class2="Vehicle" Role1="VehicleType" Role2="Vehicle" Multiplicity1="One" Multiplicity2="Many" Navigable1="true" Navigable2="false" IsExternal="true" Persisted="true" OrderByProperty1="" OrderByDirection1="Asc" OrderByProperty2="" OrderByDirection2="Asc" OnDelete1="Restricted" OnDelete2="Dissasociate" IsShadow="false" IsInherited="false">
+      <DiagramInfo Edge1="Left" Edge2="Right" Percent1="0.24945020924214145" Percent2="0.6222222222222222" Path="M 595 583 L 560 583 L 560 555 L 540 555" />
+    </Association>
+    <Association ModelName="Person" Class1="Identification" Class2="Person" Role1="Identification" Role2="Person" Multiplicity1="Many" Multiplicity2="One" Navigable1="true" Navigable2="true" IsExternal="true" Persisted="true" OrderByProperty1="" OrderByDirection1="Asc" OrderByProperty2="" OrderByDirection2="Asc" OnDelete1="Dissasociate" OnDelete2="Restricted" IsShadow="false" IsInherited="false">
+      <DiagramInfo Edge1="Bottom" Edge2="Top" Percent1="0.15806231360217843" Percent2="0.8732642884467071" Path="M 630 852 L 630 890 L 556 890 L 556 930" />
+    </Association>
+    <Association ModelName="Person" Class1="Prefixes" Class2="Person" Role1="Prefix" Role2="Person" Multiplicity1="ZeroOrOne" Multiplicity2="Many" Navigable1="true" Navigable2="false" IsExternal="true" Persisted="true" OrderByProperty1="" OrderByDirection1="Asc" OrderByProperty2="" OrderByDirection2="Asc" OnDelete1="Restricted" OnDelete2="Dissasociate" IsShadow="false" IsInherited="false">
+      <DiagramInfo Edge1="Right" Edge2="Left" Percent1="0.7804999457465278" Percent2="0.061486022760255415" Path="M 293 952 L 293 971 L 307 971" />
+    </Association>
+    <Association ModelName="Person" Class1="Suffixes" Class2="Person" Role1="Sufix" Role2="Person" Multiplicity1="ZeroOrOne" Multiplicity2="Many" Navigable1="true" Navigable2="false" IsExternal="true" Persisted="true" OrderByProperty1="" OrderByDirection1="Asc" OrderByProperty2="" OrderByDirection2="Asc" OnDelete1="Restricted" OnDelete2="Dissasociate" IsShadow="false" IsInherited="false">
+      <DiagramInfo Edge1="Left" Edge2="Right" Percent1="0.3101221720377781" Percent2="0.9144271992308437" Path="M 735 1503 L 670 1503 L 670 1701 L 601 1701" />
+    </Association>
+    <Association ModelName="Person" Class1="Person" Class2="Country" Role1="Person_1" Role2="Nationality" Multiplicity1="Many" Multiplicity2="ZeroOrOne" Navigable1="false" Navigable2="true" IsExternal="true" Persisted="true" OrderByProperty1="" OrderByDirection1="Asc" OrderByProperty2="" OrderByDirection2="Asc" OnDelete1="Dissasociate" OnDelete2="Restricted" IsShadow="false" IsInherited="false">
+      <DiagramInfo Edge1="Top" Edge2="Bottom" Percent1="0.43423299873824783" Percent2="0.24303890480605456" Path="M 431 930 L 431 630 L 527 630 L 527 457" />
+    </Association>
+    <Association ModelName="PlanningContext" Class1="PlanningQuery" Class2="Person" Role1="PlanningQuery_1" Role2="Person" Multiplicity1="Many" Multiplicity2="ZeroOrOne" Navigable1="false" Navigable2="true" IsExternal="true" Persisted="true" OrderByProperty1="" OrderByDirection1="Asc" OrderByProperty2="" OrderByDirection2="Asc" OnDelete1="Dissasociate" OnDelete2="Restricted" IsShadow="false" IsInherited="false">
+      <DiagramInfo Edge1="Top" Edge2="Bottom" Percent1="0.6984107144316234" Percent2="0.25646496426527704" Path="M 588 1114 L 588 990 L 551 990 L 551 885" />
+    </Association>
+    <Association ModelName="ApplicationSystemBO" Class1="ApplicationUser" Class2="ApplicationPermission" Role1="Users" Role2="Permissions" Multiplicity1="Many" Multiplicity2="Many" Navigable1="true" Navigable2="true" IsExternal="true" Persisted="true" OrderByProperty1="" OrderByDirection1="Asc" OrderByProperty2="" OrderByDirection2="Asc" OnDelete1="Dissasociate" OnDelete2="Restricted" IsShadow="false" IsInherited="true">
+      <DiagramInfo Edge1="Top" Edge2="Top" Percent1="" Percent2="" Path="" />
+    </Association>
+    <Association ModelName="ApplicationSystemBO" Class1="ApplicationUser" Class2="ApplicationRole" Role1="Users" Role2="Roles" Multiplicity1="Many" Multiplicity2="Many" Navigable1="true" Navigable2="true" IsExternal="true" Persisted="true" OrderByProperty1="" OrderByDirection1="Asc" OrderByProperty2="" OrderByDirection2="Asc" OnDelete1="Dissasociate" OnDelete2="Restricted" IsShadow="false" IsInherited="true">
+      <DiagramInfo Edge1="Top" Edge2="Top" Percent1="" Percent2="" Path="" />
+    </Association>
+    <Association ModelName="ApplicationSystemBO" Class1="ApplicationClient" Class2="ApplicationUser" Role1="Clients" Role2="User" Multiplicity1="Many" Multiplicity2="One" Navigable1="true" Navigable2="true" IsExternal="true" Persisted="true" OrderByProperty1="" OrderByDirection1="Asc" OrderByProperty2="" OrderByDirection2="Asc" OnDelete1="Dissasociate" OnDelete2="CascadeDelete" IsShadow="false" IsInherited="true">
+      <DiagramInfo Edge1="Top" Edge2="Top" Percent1="" Percent2="" Path="" />
+    </Association>
+    <Association ModelName="ApplicationSystemBO" Class1="ApplicationUser" Class2="ApplicationUserLogin" Role1="User" Role2="Logins" Multiplicity1="One" Multiplicity2="Many" Navigable1="true" Navigable2="true" IsExternal="true" Persisted="true" OrderByProperty1="" OrderByDirection1="Asc" OrderByProperty2="" OrderByDirection2="Asc" OnDelete1="CascadeDelete" OnDelete2="Dissasociate" IsShadow="false" IsInherited="true">
+      <DiagramInfo Edge1="Top" Edge2="Top" Percent1="" Percent2="" Path="" />
+    </Association>
+    <Association ModelName="ApplicationSystemBO" Class1="ApplicationUserClaim" Class2="ApplicationUser" Role1="Claims" Role2="User" Multiplicity1="Many" Multiplicity2="One" Navigable1="true" Navigable2="true" IsExternal="true" Persisted="true" OrderByProperty1="" OrderByDirection1="Asc" OrderByProperty2="" OrderByDirection2="Asc" OnDelete1="Dissasociate" OnDelete2="CascadeDelete" IsShadow="false" IsInherited="true">
+      <DiagramInfo Edge1="Top" Edge2="Top" Percent1="" Percent2="" Path="" />
+    </Association>
+    <Association ModelName="ApplicationSystemBO" Class1="Profile" Class2="ApplicationUser" Role1="Profile" Role2="ApplicationUser" Multiplicity1="ZeroOrOne" Multiplicity2="ZeroOrOne" Navigable1="true" Navigable2="false" IsExternal="true" Persisted="true" OrderByProperty1="" OrderByDirection1="Asc" OrderByProperty2="" OrderByDirection2="Asc" OnDelete1="Restricted" OnDelete2="CascadeDelete" IsShadow="false" IsInherited="true">
+      <DiagramInfo Edge1="Top" Edge2="Top" Percent1="" Percent2="" Path="" />
+    </Association>
+  </Associations>
+  <Classes>
+    <Class ModelName="BookingContext" Name="BookingQuery" ShadowModel="" ShadowClass="" Description="" Stereotype="Class" PK="Id" ConcurencyControl="true" AutoAssignPrimaryKey="true" IdGeneratorType="HiLoGenerator" IsPersisted="true" IsStatic="false" BaseClass="" BaseClasses="" BaseModel="">
+      <DiagramInfo IsExpanded="true" Width="202.9219207763672" Height="180" Top="901.0419921875" Left="396.368011474609" />
+      <Attributes>
+        <Attribute Name="Id" IsValueClass="false" Description="" DataType="int" BaseInfo="" Length="100" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+      </Attributes>
+      <Operations>
+        <Operation Name="New" Description="" Syntax="" RuleType="Default" EventName="" ApplyToAttribute="" BaseInfo="" IsStatic="true" IsInherited="false" IsExternal="false">//static function DomainModel.BookingQuery New(
+//	DateTime depDate,
+//	int adults,
+//	int children,
+//	int infants
+//)
+//{
+//	DomainModel.ShoppingQuery sq; 
+//	sq.DepartureDate = depDate;
+//	sq.NumberOfAdults = adults;
+//	sq.NumberOfChildren = children;
+//	sq.NumberOfInfants = infants;
+//	DomainModel.BookingQuery bq;
+//	bq.ShoppingQuery = sq;
+//	return bq;
+//}</Operation>
+      </Operations>
+    </Class>
+    <Class ModelName="TransportMeans" Name="Vehicle" ShadowModel="TransportMeans" ShadowClass="Vehicle" Description="" Stereotype="Class" PK="Id" ConcurencyControl="false" AutoAssignPrimaryKey="true" IdGeneratorType="HiLoGenerator" IsPersisted="true" IsStatic="true" BaseClass="" BaseClasses="" BaseModel="">
+      <DiagramInfo IsExpanded="true" Width="216.03126525878906" Height="185.99997520446777" Top="1119" Left="430" />
+      <Attributes>
+        <Attribute Name="Id" IsValueClass="false" Description="" DataType="int" BaseInfo="" Length="100" Precision="2" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="SeatAssignable" IsValueClass="false" Description="" DataType="bool" BaseInfo="" Length="100" Precision="2" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="RegistrationID" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="100" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+      </Attributes>
+      <Operations />
+    </Class>
+    <Class ModelName="Person" Name="Person" ShadowModel="Person" ShadowClass="Person" Description="" Stereotype="Class" PK="UserName" ConcurencyControl="false" AutoAssignPrimaryKey="false" IdGeneratorType="HiLoGenerator" IsPersisted="true" IsStatic="true" BaseClass="ApplicationUser" BaseClasses="ApplicationUser" BaseModel="ApplicationSystemBO">
+      <DiagramInfo IsExpanded="true" Width="294.10943603515625" Height="877.9999847412109" Top="607" Left="745" />
+      <Attributes>
+        <Attribute Name="UserName" IsValueClass="false" Description="" DataType="string" BaseInfo="ApplicationSystemBO:ApplicationUser" Length="256" Precision="8" Scale="2" InitValue="" IsRequired="true" IsInherited="true" Persisted="true" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="PasswordHash" IsValueClass="false" Description="" DataType="string" BaseInfo="ApplicationSystemBO:ApplicationUser" Length="2147483647" Precision="2" Scale="2" InitValue="" IsRequired="false" IsInherited="true" Persisted="true" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="SecurityStamp" IsValueClass="false" Description="" DataType="string" BaseInfo="ApplicationSystemBO:ApplicationUser" Length="2147483647" Precision="2" Scale="2" InitValue="" IsRequired="false" IsInherited="true" Persisted="true" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="EmailConfirmed" IsValueClass="false" Description="" DataType="bool" BaseInfo="ApplicationSystemBO:ApplicationUser" Length="100" Precision="2" Scale="2" InitValue="" IsRequired="false" IsInherited="true" Persisted="true" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="LockoutEnabled" IsValueClass="false" Description="" DataType="bool" BaseInfo="ApplicationSystemBO:ApplicationUser" Length="100" Precision="2" Scale="2" InitValue="" IsRequired="false" IsInherited="true" Persisted="true" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="PhoneNumberConfirmed" IsValueClass="false" Description="" DataType="bool" BaseInfo="ApplicationSystemBO:ApplicationUser" Length="100" Precision="2" Scale="2" InitValue="" IsRequired="false" IsInherited="true" Persisted="true" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="TwoFactorEnabled" IsValueClass="false" Description="" DataType="bool" BaseInfo="ApplicationSystemBO:ApplicationUser" Length="100" Precision="2" Scale="2" InitValue="" IsRequired="false" IsInherited="true" Persisted="true" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="AccessFailedCount" IsValueClass="false" Description="" DataType="int" BaseInfo="ApplicationSystemBO:ApplicationUser" Length="100" Precision="2" Scale="2" InitValue="" IsRequired="false" IsInherited="true" Persisted="true" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="Name" IsValueClass="false" Description="" DataType="string" BaseInfo="ApplicationSystemBO:ApplicationUser" Length="256" Precision="2" Scale="2" InitValue="" IsRequired="false" IsInherited="true" Persisted="true" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="Email" IsValueClass="false" Description="" DataType="string" BaseInfo="ApplicationSystemBO:ApplicationUser" Length="255" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="true" Persisted="true" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="PhoneNumber" IsValueClass="false" Description="" DataType="string" BaseInfo="ApplicationSystemBO:ApplicationUser" Length="255" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="true" Persisted="true" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="LockoutEndDate" IsValueClass="false" Description="" DataType="DateTime" BaseInfo="ApplicationSystemBO:ApplicationUser" Length="100" Precision="2" Scale="2" InitValue="" IsRequired="false" IsInherited="true" Persisted="true" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="Forename" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="100" Precision="2" Scale="2" InitValue="" IsRequired="true" IsInherited="false" Persisted="true" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="Surname" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="100" Precision="2" Scale="2" InitValue="" IsRequired="true" IsInherited="false" Persisted="true" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="DateOfBirth" IsValueClass="false" Description="" DataType="DateTime" BaseInfo="" Length="100" Precision="2" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="MiddleName" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="100" Precision="2" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="FullName" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="100" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="Guest" IsValueClass="false" Description="" DataType="bool" BaseInfo="" Length="100" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="IPAddress" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="100" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="Gender" IsValueClass="true" Description="" DataType="Gender" BaseInfo="" Length="100" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" Path="M 453 930 L 453 780 L 80 780 L 80 1097" Edge1="Top" Edge2="Top" Percent1="0.5" Percent2="0.5" />
+        <Attribute Name="Age" IsValueClass="false" Description="" DataType="int" BaseInfo="" Length="100" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="Title" IsValueClass="true" Description="" DataType="TitleEnum" BaseInfo="" Length="100" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" Path="M 453 930 L 453 780 L 80 780 L 80 1040 L 180 1040 L 180 1829" Edge1="Top" Edge2="Top" Percent1="0.5" Percent2="0.5" />
+      </Attributes>
+      <Operations>
+        <Operation Name="IsInRole" Description="" Syntax="" RuleType="Default" EventName="" ApplyToAttribute="" BaseInfo="ApplicationSystemBO:ApplicationUser" IsStatic="false" IsInherited="true" IsExternal="true">function bool IsInRole(string roleName)
+{
+	return this.Roles.Any(r =&gt; r.Name == roleName);
+}            </Operation>
+        <Operation Name="HasPermission" Description="" Syntax="" RuleType="Default" EventName="" ApplyToAttribute="" BaseInfo="ApplicationSystemBO:ApplicationUser" IsStatic="false" IsInherited="true" IsExternal="true">function bool HasPermission(string permission)
+{
+  bool hasPermissionfromRoles = this.Roles.Any(rr =&gt; rr.Permissions.Any(pp =&gt; pp.Name == permission));
+	return hasPermissionfromRoles || this.Permissions.Any(pp =&gt; pp.Name == permission);
+}            </Operation>
+      </Operations>
+    </Class>
+    <Class ModelName="BookingContext" Name="BookingResponse" ShadowModel="" ShadowClass="" Description="" Stereotype="Class" PK="Id" ConcurencyControl="true" AutoAssignPrimaryKey="true" IdGeneratorType="HiLoGenerator" IsPersisted="true" IsStatic="false" BaseClass="" BaseClasses="" BaseModel="">
+      <DiagramInfo IsExpanded="true" Width="236.04685974121094" Height="180" Top="1328" Left="420" />
+      <Attributes>
+        <Attribute Name="Id" IsValueClass="false" Description="" DataType="int" BaseInfo="" Length="100" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="Message" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="100" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="PNR" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="100" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="Provider" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="100" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+      </Attributes>
+      <Operations />
+    </Class>
+    <Class ModelName="BookingContext" Name="FerryGatewayCostDetails" ShadowModel="" ShadowClass="" Description="" Stereotype="Class" PK="Id" ConcurencyControl="true" AutoAssignPrimaryKey="true" IdGeneratorType="HiLoGenerator" IsPersisted="true" IsStatic="false" BaseClass="" BaseClasses="" BaseModel="">
+      <DiagramInfo IsExpanded="true" Width="313.2967834472656" Height="214" Top="2" Left="513" />
+      <Attributes>
+        <Attribute Name="Id" IsValueClass="false" Description="" DataType="int" BaseInfo="" Length="100" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="SailingId" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="100" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="GrossAmount" IsValueClass="false" Description="" DataType="decimal" BaseInfo="" Length="100" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="Label" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="100" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="Category" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="100" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="TotalAmount" IsValueClass="false" Description="" DataType="decimal" BaseInfo="" Length="100" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+      </Attributes>
+      <Operations />
+    </Class>
+    <Class ModelName="BookingContext" Name="OnDemand" ShadowModel="" ShadowClass="" Description="" Stereotype="Class" PK="Id" ConcurencyControl="true" AutoAssignPrimaryKey="true" IdGeneratorType="HiLoGenerator" IsPersisted="true" IsStatic="false" BaseClass="" BaseClasses="" BaseModel="">
+      <DiagramInfo IsExpanded="true" Width="288.015625" Height="190.00005340576172" Top="666" Left="352" />
+      <Attributes>
+        <Attribute Name="Id" IsValueClass="false" Description="" DataType="int" BaseInfo="" Length="100" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="Availability" IsValueClass="false" Description="" DataType="bool" BaseInfo="" Length="100" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="Price_Estimate" IsValueClass="false" Description="" DataType="float" BaseInfo="" Length="100" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="ETA" IsValueClass="false" Description="" DataType="long" BaseInfo="" Length="100" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+      </Attributes>
+      <Operations />
+    </Class>
+  </Classes>
+  <Resources>
+    <Resource Type="S" Key="BookingContext_Res_ASSOC_Vehicle_BookingQuery_Vehicle" en-us="At least one BookingQuery exists so Vehicle cannot be deleted" />
+    <Resource Type="S" Key="BookingContext_Res_ASSOC_Person_BookingQuery_Person" en-us="At least one BookingQuery exists so Person cannot be deleted" />
+  </Resources>
+</BusinessObject>

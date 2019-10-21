@@ -1,0 +1,57 @@
+<BusinessObject Model_Name="Registry" Model_Description="" Model_Creator="">
+  <Associations>
+    <Association ModelName="Registry" Class1="Providers" Class2="API" Role1="Provider" Role2="API" Multiplicity1="ZeroOrOne" Multiplicity2="Many" Navigable1="true" Navigable2="true" IsExternal="false" Persisted="true" OrderByProperty1="" OrderByDirection1="Asc" OrderByProperty2="" OrderByDirection2="Asc" OnDelete1="CascadeDelete" OnDelete2="Dissasociate" IsShadow="false" IsInherited="false">
+      <DiagramInfo Edge1="Right" Edge2="Right" Percent1="0.39444444444444443" Percent2="0.47058823529411764" Path="M 1119 107 L 1140 107 L 1140 0 L 790 0 L 790 112 L 659 112" />
+    </Association>
+    <Association ModelName="Registry" Class1="API" Class2="Service" Role1="API" Role2="Service" Multiplicity1="ZeroOrOne" Multiplicity2="Many" Navigable1="false" Navigable2="true" IsExternal="false" Persisted="true" OrderByProperty1="" OrderByDirection1="Asc" OrderByProperty2="" OrderByDirection2="Asc" OnDelete1="Dissasociate" OnDelete2="CascadeDelete" IsShadow="false" IsInherited="false">
+      <DiagramInfo Edge1="Bottom" Edge2="Top" Percent1="0.4681818181818182" Percent2="0.47029702970297027" Path="M 542 238 L 542 436" />
+    </Association>
+  </Associations>
+  <Classes>
+    <Class ModelName="Registry" Name="Providers" ShadowModel="" ShadowClass="" Description="" Stereotype="Class" PK="Id" ConcurencyControl="true" AutoAssignPrimaryKey="true" IdGeneratorType="HiLoGenerator" IsPersisted="true" IsStatic="false" BaseClass="" BaseClasses="" BaseModel="">
+      <DiagramInfo IsExpanded="true" Width="183.625" Height="180" Top="36" Left="936" />
+      <Attributes>
+        <Attribute Name="Id" IsValueClass="false" Description="" DataType="int" BaseInfo="" Length="100" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" />
+        <Attribute Name="Name" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="100" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" />
+        <Attribute Name="WebSite" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="100" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" />
+      </Attributes>
+      <Operations />
+    </Class>
+    <Class ModelName="Registry" Name="API" ShadowModel="" ShadowClass="" Description="" Stereotype="Class" PK="Id" ConcurencyControl="true" AutoAssignPrimaryKey="true" IdGeneratorType="HiLoGenerator" IsPersisted="true" IsStatic="false" BaseClass="" BaseClasses="" BaseModel="">
+      <DiagramInfo IsExpanded="true" Width="220.578125" Height="238" Top="0" Left="439" />
+      <Attributes>
+        <Attribute Name="Id" IsValueClass="false" Description="" DataType="int" BaseInfo="" Length="100" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" />
+        <Attribute Name="TypeOfService" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="100" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" />
+        <Attribute Name="Stops" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="100" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" />
+        <Attribute Name="ServiceType" IsValueClass="true" Description="" DataType="TypeOfAPI" BaseInfo="" Length="100" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" />
+        <Attribute Name="BaseUrl" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="100" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" />
+      </Attributes>
+      <Operations />
+    </Class>
+    <Class ModelName="Registry" Name="Service" ShadowModel="" ShadowClass="" Description="" Stereotype="Class" PK="Id" ConcurencyControl="true" AutoAssignPrimaryKey="true" IdGeneratorType="HiLoGenerator" IsPersisted="true" IsStatic="false" BaseClass="" BaseClasses="" BaseModel="">
+      <DiagramInfo IsExpanded="true" Width="202.796875" Height="180" Top="436" Left="447" />
+      <Attributes>
+        <Attribute Name="Id" IsValueClass="false" Description="" DataType="int" BaseInfo="" Length="100" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" />
+        <Attribute Name="Destination" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="100" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" />
+        <Attribute Name="Price" IsValueClass="false" Description="" DataType="float" BaseInfo="" Length="100" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" />
+      </Attributes>
+      <Operations />
+    </Class>
+    <Class ModelName="Registry" Name="TypeOfAPI" ShadowModel="" ShadowClass="" Description="" Stereotype="Enumeration" PK="" ConcurencyControl="true" AutoAssignPrimaryKey="true" IdGeneratorType="HiLoGenerator" IsPersisted="true" IsStatic="false" BaseClass="" BaseClasses="" BaseModel="">
+      <DiagramInfo IsExpanded="true" Width="159.234375" Height="142" Top="9" Left="17" />
+      <Literals>
+        <Literal Name="REST" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="100" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="false" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="">
+          <DiagramInfo Edge1="Top" Edge2="Top" Percent1="0.5" Percent2="0.5" Path="M 0 0 L 0 0" />
+        </Literal>
+        <Literal Name="SOAP" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="100" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="false" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="">
+          <DiagramInfo Edge1="Top" Edge2="Top" Percent1="0.5" Percent2="0.5" Path="M 0 0 L 0 0" />
+        </Literal>
+        <Literal Name="CSV" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="100" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="false" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="">
+          <DiagramInfo Edge1="Top" Edge2="Top" Percent1="0.5" Percent2="0.5" Path="M 0 0 L 0 0" />
+        </Literal>
+      </Literals>
+      <Operations />
+    </Class>
+  </Classes>
+  <Resources />
+</BusinessObject>

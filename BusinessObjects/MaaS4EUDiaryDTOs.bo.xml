@@ -1,0 +1,88 @@
+<BusinessObject Model_Name="MaaS4EUDiaryDTOs" Model_Description="" Model_Creator="">
+  <Associations>
+    <Association ModelName="EuTravelDiaryDTOs" Class1="MaaS4EUDiaryPhotographDTO" Class2="MaaS4EUDiaryGeoCoordinatesDTO" Role1="PhotographDTO" Role2="GeoCoordinatesDTO" Multiplicity1="Many" Multiplicity2="ZeroOrOne" Navigable1="false" Navigable2="true" IsExternal="false" Persisted="false" OrderByProperty1="" OrderByDirection1="Asc" OrderByProperty2="" OrderByDirection2="Asc" OnDelete1="Dissasociate" OnDelete2="Dissasociate" IsShadow="false" IsInherited="false">
+      <DiagramInfo Edge1="Right" Edge2="Top" Percent1="0.26635514018691586" Percent2="0.406828449206413" Path="M 451 126.78504672897195 L 456 126.78504672897195 L 456 71 L 604.5791788270101 71 L 604.5791788270101 91" />
+    </Association>
+    <Association ModelName="EuTravelDiaryDTOs" Class1="MaaS4EUDiaryPhotographDTO" Class2="MaaS4EUDiaryPersonDTO" Role1="PhotographDTO" Role2="TakenBy" Multiplicity1="ZeroOrOne" Multiplicity2="ZeroOrOne" Navigable1="false" Navigable2="true" IsExternal="false" Persisted="false" OrderByProperty1="" OrderByDirection1="Asc" OrderByProperty2="" OrderByDirection2="Asc" OnDelete1="Dissasociate" OnDelete2="Dissasociate" IsShadow="false" IsInherited="false">
+      <DiagramInfo Edge1="Bottom" Edge2="Top" Percent1="0.538860103626943" Percent2="0.43670886075949367" Path="M 273 319 L 273 360" />
+    </Association>
+    <Association ModelName="EuTravelDiaryDTOs" Class1="PersonResponse" Class2="MaaS4EUDiaryPersonDTO" Role1="PersonResponse" Role2="Persons" Multiplicity1="ZeroOrOne" Multiplicity2="Many" Navigable1="false" Navigable2="true" IsExternal="false" Persisted="false" OrderByProperty1="" OrderByDirection1="Asc" OrderByProperty2="" OrderByDirection2="Asc" OnDelete1="Dissasociate" OnDelete2="Dissasociate" IsShadow="false" IsInherited="false">
+      <DiagramInfo Edge1="Bottom" Edge2="Top" Percent1="0.2563291139240506" Percent2="0.5791139240506329" Path="M 1079 258 L 1079 340 L 318 340 L 318 360" />
+    </Association>
+    <Association ModelName="EuTravelDiaryDTOs" Class1="PersonResponse" Class2="MaaS4EUDiaryPersonDTO" Role1="PersonResponse_1" Role2="Person" Multiplicity1="ZeroOrOne" Multiplicity2="ZeroOrOne" Navigable1="false" Navigable2="true" IsExternal="false" Persisted="false" OrderByProperty1="" OrderByDirection1="Asc" OrderByProperty2="" OrderByDirection2="Asc" OnDelete1="Dissasociate" OnDelete2="Dissasociate" IsShadow="false" IsInherited="false">
+      <DiagramInfo Edge1="Bottom" Edge2="Right" Percent1="0.6107594936708861" Percent2="0.5210526315789473" Path="M 1191 258 L 1191 459 L 451 459" />
+    </Association>
+    <Association ModelName="EuTravelDiaryDTOs" Class1="MaaS4EUDiaryNoteDTO" Class2="MaaS4EUDiaryPersonDTO" Role1="EuTravelDiaryNoteDTO" Role2="CreatedBy" Multiplicity1="ZeroOrOne" Multiplicity2="ZeroOrOne" Navigable1="false" Navigable2="true" IsExternal="false" Persisted="false" OrderByProperty1="" OrderByDirection1="Asc" OrderByProperty2="" OrderByDirection2="Asc" OnDelete1="Dissasociate" OnDelete2="Dissasociate" IsShadow="false" IsInherited="false">
+      <DiagramInfo Edge1="Top" Edge2="Bottom" Percent1="0.189873417721519" Percent2="0.5221518987341772" Path="M 270 651 L 270 600 L 300 600 L 300 550" />
+    </Association>
+    <Association ModelName="EuTravelDiaryDTOs" Class1="MaaS4EUDiaryPOIDTO" Class2="MaaS4EUDiaryPhotographDTO" Role1="EuTravelDiaryPOIDTO" Role2="MaaS4EUDiaryPhotographDTO" Multiplicity1="ZeroOrOne" Multiplicity2="Many" Navigable1="true" Navigable2="true" IsExternal="false" Persisted="false" OrderByProperty1="" OrderByDirection1="Asc" OrderByProperty2="" OrderByDirection2="Asc" OnDelete1="Dissasociate" OnDelete2="Dissasociate" IsShadow="false" IsInherited="false">
+      <DiagramInfo Edge1="Top" Edge2="Bottom" Percent1="0.42448979591836733" Percent2="0.8704663212435233" Path="M 861 634 L 861 330 L 401 330 L 401 319" />
+    </Association>
+    <Association ModelName="EuTravelDiaryDTOs" Class1="MaaS4EUDiaryPOIDTO" Class2="MaaS4EUDiaryNoteDTO" Role1="EuTravelDiaryPOIDTO" Role2="MaaS4EUDiaryNoteDTO" Multiplicity1="ZeroOrOne" Multiplicity2="Many" Navigable1="true" Navigable2="true" IsExternal="false" Persisted="false" OrderByProperty1="" OrderByDirection1="Asc" OrderByProperty2="" OrderByDirection2="Asc" OnDelete1="Dissasociate" OnDelete2="Dissasociate" IsShadow="false" IsInherited="false">
+      <DiagramInfo Edge1="Left" Edge2="Right" Percent1="0.23949579831932774" Percent2="0.2570093457943925" Path="M 653 691 L 590 691 L 590 706 L 526 706" />
+    </Association>
+    <Association ModelName="EuTravelDiaryDTOs" Class1="MaaS4EUDiaryPOIDTO" Class2="MaaS4EUDiaryGeoCoordinatesDTO" Role1="EuTravelDiaryPOIDTO" Role2="MaaS4EUDiaryGeoCoordinatesDTO" Multiplicity1="ZeroOrOne" Multiplicity2="ZeroOrOne" Navigable1="false" Navigable2="true" IsExternal="false" Persisted="false" OrderByProperty1="" OrderByDirection1="Asc" OrderByProperty2="" OrderByDirection2="Asc" OnDelete1="Dissasociate" OnDelete2="Dissasociate" IsShadow="false" IsInherited="false">
+      <DiagramInfo Edge1="Top" Edge2="Bottom" Percent1="0.2571428571428571" Percent2="0.6707616707616708" Path="M 779 634 L 779 450 L 712 450 L 712 271" />
+    </Association>
+  </Associations>
+  <Classes>
+    <Class ModelName="EuTravelDiaryDTOs" Name="MaaS4EUDiaryPhotographDTO" ShadowModel="" ShadowClass="" Description="" Stereotype="Class" PK="" ConcurencyControl="false" AutoAssignPrimaryKey="false" IdGeneratorType="HiLoGenerator" IsPersisted="false" IsStatic="false" BaseClass="" BaseClasses="" BaseModel="">
+      <DiagramInfo IsExpanded="true" Width="386.09375" Height="262" Top="57" Left="65" />
+      <Attributes>
+        <Attribute Name="Name" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="100" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="false" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="Description" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="100" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="false" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="IsPublic" IsValueClass="false" Description="" DataType="bool" BaseInfo="" Length="100" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="false" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="File" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="1000" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="false" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="Id" IsValueClass="false" Description="" DataType="int" BaseInfo="" Length="100" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="false" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+      </Attributes>
+      <Operations />
+    </Class>
+    <Class ModelName="EuTravelDiaryDTOs" Name="MaaS4EUDiaryGeoCoordinatesDTO" ShadowModel="" ShadowClass="" Description="" Stereotype="Class" PK="" ConcurencyControl="false" AutoAssignPrimaryKey="false" IdGeneratorType="HiLoGenerator" IsPersisted="false" IsStatic="false" BaseClass="" BaseClasses="" BaseModel="">
+      <DiagramInfo IsExpanded="true" Width="407.203125" Height="180" Top="91" Left="439" />
+      <Attributes>
+        <Attribute Name="Latitude" IsValueClass="false" Description="" DataType="double" BaseInfo="" Length="100" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="false" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="Longitude" IsValueClass="false" Description="" DataType="double" BaseInfo="" Length="100" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="false" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+      </Attributes>
+      <Operations />
+    </Class>
+    <Class ModelName="EuTravelDiaryDTOs" Name="MaaS4EUDiaryPersonDTO" ShadowModel="" ShadowClass="" Description="" Stereotype="Class" PK="" ConcurencyControl="false" AutoAssignPrimaryKey="false" IdGeneratorType="HiLoGenerator" IsPersisted="false" IsStatic="false" BaseClass="" BaseClasses="" BaseModel="">
+      <DiagramInfo IsExpanded="true" Width="316.4375" Height="190" Top="360" Left="135" />
+      <Attributes>
+        <Attribute Name="Username" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="100" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="false" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="Name" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="100" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="false" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="Email" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="100" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="false" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="PhoneNumber" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="100" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="false" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="Surname" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="100" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="false" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+      </Attributes>
+      <Operations />
+    </Class>
+    <Class ModelName="EuTravelDiaryDTOs" Name="PersonResponse" ShadowModel="" ShadowClass="" Description="" Stereotype="Class" PK="" ConcurencyControl="false" AutoAssignPrimaryKey="false" IdGeneratorType="HiLoGenerator" IsPersisted="false" IsStatic="false" BaseClass="" BaseClasses="" BaseModel="">
+      <DiagramInfo IsExpanded="true" Width="316.625" Height="180" Top="78" Left="998" />
+      <Attributes>
+        <Attribute Name="Message" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="100" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="false" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+      </Attributes>
+      <Operations />
+    </Class>
+    <Class ModelName="EuTravelDiaryDTOs" Name="MaaS4EUDiaryNoteDTO" ShadowModel="" ShadowClass="" Description="" Stereotype="Class" PK="" ConcurencyControl="false" AutoAssignPrimaryKey="false" IdGeneratorType="HiLoGenerator" IsPersisted="false" IsStatic="false" BaseClass="" BaseClasses="" BaseModel="">
+      <DiagramInfo IsExpanded="true" Width="316.390625" Height="214" Top="651" Left="210" />
+      <Attributes>
+        <Attribute Name="Title" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="100" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="false" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="Description" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="100" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="false" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="IsPublic" IsValueClass="false" Description="" DataType="bool" BaseInfo="" Length="100" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="false" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="Id" IsValueClass="false" Description="" DataType="int" BaseInfo="" Length="100" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="false" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+      </Attributes>
+      <Operations />
+    </Class>
+    <Class ModelName="EuTravelDiaryDTOs" Name="MaaS4EUDiaryPOIDTO" ShadowModel="" ShadowClass="" Description="" Stereotype="Class" PK="Id" ConcurencyControl="false" AutoAssignPrimaryKey="false" IdGeneratorType="HiLoGenerator" IsPersisted="false" IsStatic="false" BaseClass="" BaseClasses="" BaseModel="">
+      <DiagramInfo IsExpanded="true" Width="490.4375" Height="238" Top="634" Left="653" />
+      <Attributes>
+        <Attribute Name="Id" IsValueClass="false" Description="" DataType="int" BaseInfo="" Length="100" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="false" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="IsPublic" IsValueClass="false" Description="" DataType="bool" BaseInfo="" Length="100" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="false" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="Name" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="100" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="false" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="Description" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="100" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="false" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+      </Attributes>
+      <Operations />
+    </Class>
+  </Classes>
+  <Resources />
+</BusinessObject>

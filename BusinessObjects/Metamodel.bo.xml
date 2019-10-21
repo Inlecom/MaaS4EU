@@ -1,0 +1,76 @@
+<BusinessObject Model_Name="Metamodel" Model_Description="" Model_Creator="">
+  <Associations>
+    <Association ModelName="Metamodel" Class1="WebService" Class2="Datasource" Role1="Service" Role2="Datasource" Multiplicity1="Many" Multiplicity2="One" Navigable1="true" Navigable2="true" IsExternal="false" Persisted="true" OrderByProperty1="" OrderByDirection1="Asc" OrderByProperty2="" OrderByDirection2="Asc" OnDelete1="Dissasociate" OnDelete2="CascadeDelete" IsShadow="false" IsInherited="false">
+      <DiagramInfo Edge1="Top" Edge2="Left" Percent1="0.5441176470588235" Percent2="0.6055555555555555" Path="M 314 75 L 314 40 L 530 40 L 530 157 L 660 157" />
+    </Association>
+    <Association ModelName="Location" Class1="Datasource" Class2="Location" Role1="Datasources" Role2="Location_1" Multiplicity1="Many" Multiplicity2="Many" Navigable1="true" Navigable2="false" IsExternal="true" Persisted="true" OrderByProperty1="" OrderByDirection1="Asc" OrderByProperty2="" OrderByDirection2="Asc" OnDelete1="Dissasociate" OnDelete2="Dissasociate" IsShadow="false" IsInherited="false">
+      <DiagramInfo Edge1="Left" Edge2="Right" Percent1="0.5055555555555555" Percent2="0.4264264264264264" Path="M 898.943969726563 1736 L 765.153991699219 1736" />
+    </Association>
+    <Association ModelName="Organization" Class1="Datasource" Class2="Organization" Role1="Datasources" Role2="Organization_3" Multiplicity1="Many" Multiplicity2="Many" Navigable1="true" Navigable2="false" IsExternal="true" Persisted="true" OrderByProperty1="" OrderByDirection1="Asc" OrderByProperty2="" OrderByDirection2="Asc" OnDelete1="Restricted" OnDelete2="Dissasociate" IsShadow="false" IsInherited="false">
+      <DiagramInfo Edge1="Left" Edge2="Right" Percent1="0.36666670905219184" Percent2="0.6905306171438548" Path="M 232.261001586914 407 L 291.85400390625 407" />
+    </Association>
+    <Association ModelName="Trip" Class1="Fare" Class2="Datasource" Role1="Fare_1" Role2="Datasource" Multiplicity1="ZeroOrOne" Multiplicity2="Many" Navigable1="false" Navigable2="true" IsExternal="true" Persisted="true" OrderByProperty1="" OrderByDirection1="Asc" OrderByProperty2="" OrderByDirection2="Asc" OnDelete1="Dissasociate" OnDelete2="Dissasociate" IsShadow="false" IsInherited="false">
+      <DiagramInfo Edge1="Right" Edge2="Left" Percent1="0.779809611024816" Percent2="0.31788872612844443" Path="M 1655 1606 L 1703 1606" />
+    </Association>
+    <Association ModelName="Location" Class1="GeoCoordinates" Class2="Location" Role1="GeoCoordinates" Role2="Place" Multiplicity1="ZeroOrOne" Multiplicity2="ZeroOrOne" Navigable1="true" Navigable2="false" IsExternal="true" Persisted="true" OrderByProperty1="" OrderByDirection1="Asc" OrderByProperty2="" OrderByDirection2="Asc" OnDelete1="Dissasociate" OnDelete2="CascadeDelete" IsShadow="false" IsInherited="false">
+      <DiagramInfo Edge1="Bottom" Edge2="Top" Percent1="0.5" Percent2="0.5465587044534413" Path="M 687.172973632813 1343.97802734375 L 687.172973632813 1403.77301025391" />
+    </Association>
+    <Association ModelName="Location" Class1="UNLocode" Class2="Location" Role1="UNLocode" Role2="Location" Multiplicity1="ZeroOrOne" Multiplicity2="ZeroOrOne" Navigable1="true" Navigable2="true" IsExternal="true" Persisted="true" OrderByProperty1="" OrderByDirection1="Asc" OrderByProperty2="" OrderByDirection2="Asc" OnDelete1="Dissasociate" OnDelete2="Dissasociate" IsShadow="false" IsInherited="false">
+      <DiagramInfo Edge1="Right" Edge2="Left" Percent1="0.5862068965517241" Percent2="0.33633633633633636" Path="M 431.994995117188 1670 L 501.882995605469 1670" />
+    </Association>
+    <Association ModelName="Location" Class1="Location" Class2="LocationType" Role1="Place" Role2="LocationType" Multiplicity1="Many" Multiplicity2="ZeroOrOne" Navigable1="false" Navigable2="true" IsExternal="true" Persisted="true" OrderByProperty1="" OrderByDirection1="Asc" OrderByProperty2="" OrderByDirection2="Asc" OnDelete1="Dissasociate" OnDelete2="Restricted" IsShadow="false" IsInherited="false">
+      <DiagramInfo Edge1="Right" Edge2="Top" Percent1="0.8498498498498499" Percent2="0.06770562065972222" Path="M 704.034973144531 1762.38999938965 L 704.034973144531 1821.95199584961" />
+    </Association>
+    <Association ModelName="Location" Class1="ContactInformation" Class2="Location" Role1="ContactInformation" Role2="Location_2" Multiplicity1="ZeroOrOne" Multiplicity2="Many" Navigable1="true" Navigable2="false" IsExternal="true" Persisted="true" OrderByProperty1="" OrderByDirection1="Asc" OrderByProperty2="" OrderByDirection2="Asc" OnDelete1="Dissasociate" OnDelete2="CascadeDelete" IsShadow="false" IsInherited="false">
+      <DiagramInfo Edge1="Right" Edge2="Left" Percent1="0.9012875536480687" Percent2="0.07282913165266107" Path="M 239.061996459961 1429 L 501.880004882813 1429" />
+    </Association>
+    <Association ModelName="Trip" Class1="Location" Class2="Leg" Role1="OriginLocation" Role2="Leg_1" Multiplicity1="One" Multiplicity2="ZeroOrOne" Navigable1="true" Navigable2="false" IsExternal="true" Persisted="true" OrderByProperty1="" OrderByDirection1="Asc" OrderByProperty2="" OrderByDirection2="Asc" OnDelete1="CascadeDelete" OnDelete2="Dissasociate" IsShadow="false" IsInherited="false">
+      <DiagramInfo Edge1="Left" Edge2="Right" Percent1="0.47378523818591667" Percent2="0.7562850129049733" Path="M 1195 1286 L 1195 1334 L 1140 1334" />
+    </Association>
+    <Association ModelName="Trip" Class1="Location" Class2="Leg" Role1="DestinationLocation" Role2="Leg_2" Multiplicity1="One" Multiplicity2="ZeroOrOne" Navigable1="true" Navigable2="false" IsExternal="true" Persisted="true" OrderByProperty1="" OrderByDirection1="Asc" OrderByProperty2="" OrderByDirection2="Asc" OnDelete1="CascadeDelete" OnDelete2="Dissasociate" IsShadow="false" IsInherited="false">
+      <DiagramInfo Edge1="Left" Edge2="Right" Percent1="0.23367223866072795" Percent2="0.5020950362683987" Path="M 1195 1279 L 1160 1279 L 1160 1326 L 1140 1326" />
+    </Association>
+    <Association ModelName="PlanningContext" Class1="Location" Class2="PlanningQuery" Role1="Origin" Role2="PlanningQueryArrival" Multiplicity1="ZeroOrOne" Multiplicity2="ZeroOrOne" Navigable1="true" Navigable2="false" IsExternal="true" Persisted="true" OrderByProperty1="" OrderByDirection1="Asc" OrderByProperty2="" OrderByDirection2="Asc" OnDelete1="Restricted" OnDelete2="Dissasociate" IsShadow="false" IsInherited="false">
+      <DiagramInfo Edge1="Right" Edge2="Left" Percent1="0.49311331513920953" Percent2="0.7279579312193615" Path="M 251 950 L 280 950 L 280 969 L 317 969" />
+    </Association>
+    <Association ModelName="PlanningContext" Class1="PlanningQuery" Class2="Location" Role1="PlanningQueryDestination" Role2="Destination" Multiplicity1="ZeroOrOne" Multiplicity2="ZeroOrOne" Navigable1="false" Navigable2="true" IsExternal="true" Persisted="true" OrderByProperty1="" OrderByDirection1="Asc" OrderByProperty2="" OrderByDirection2="Asc" OnDelete1="Dissasociate" OnDelete2="Restricted" IsShadow="false" IsInherited="false">
+      <DiagramInfo Edge1="Left" Edge2="Right" Percent1="0.4646526090905099" Percent2="0.24382153043665997" Path="M 317 875 L 280 875 L 280 862 L 251 862" />
+    </Association>
+  </Associations>
+  <Classes>
+    <Class ModelName="Metamodel" Name="ServiceType" ShadowModel="" ShadowClass="" Description="" Stereotype="Enumeration" PK="" ConcurencyControl="false" AutoAssignPrimaryKey="true" IsPersisted="true" IsStatic="true" BaseClass="" BaseClasses="" BaseModel="">
+      <DiagramInfo IsExpanded="true" Width="169.03128051757812" Height="141.99999237060547" Top="325" Left="44" />
+      <Literals>
+        <Literal Name="ManuallyInsertedValue" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="100" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false">
+          <DiagramInfo Edge1="Top" Edge2="Top" Percent1="0.5" Percent2="0.5" Path="M 0 0 L 0 0" />
+        </Literal>
+        <Literal Name="DataFile" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="100" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false">
+          <DiagramInfo Edge1="Top" Edge2="Top" Percent1="0.5" Percent2="0.5" Path="M 0 0 L 0 0" />
+        </Literal>
+        <Literal Name="API" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="100" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false">
+          <DiagramInfo Edge1="Top" Edge2="Top" Percent1="0.5" Percent2="0.5" Path="M 0 0 L 0 0" />
+        </Literal>
+      </Literals>
+      <Operations />
+    </Class>
+    <Class ModelName="Metamodel" Name="Datasource" ShadowModel="" ShadowClass="" Description="" Stereotype="Class" PK="Id" ConcurencyControl="false" AutoAssignPrimaryKey="true" IsPersisted="true" IsStatic="false" BaseClass="" BaseClasses="" BaseModel="">
+      <DiagramInfo IsExpanded="true" Width="221.62489318847656" Height="180" Top="48" Left="660" />
+      <Attributes>
+        <Attribute Name="Id" IsValueClass="false" Description="" DataType="int" BaseInfo="" Length="100" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" />
+        <Attribute Name="Name" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="100" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" />
+      </Attributes>
+      <Operations />
+    </Class>
+    <Class ModelName="Metamodel" Name="WebService" ShadowModel="" ShadowClass="" Description="" Stereotype="Class" PK="Id" ConcurencyControl="false" AutoAssignPrimaryKey="true" IsPersisted="true" IsStatic="false" BaseClass="" BaseClasses="" BaseModel="">
+      <DiagramInfo IsExpanded="true" Width="204.65625" Height="190.00000762939453" Top="75" Left="203" />
+      <Attributes>
+        <Attribute Name="Id" IsValueClass="false" Description="" DataType="int" BaseInfo="" Length="100" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" />
+        <Attribute Name="MethodName" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="100" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" />
+        <Attribute Name="Description" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="100" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" />
+        <Attribute Name="ServiceType" IsValueClass="true" Description="" DataType="ServiceType" BaseInfo="" Length="100" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" />
+      </Attributes>
+      <Operations />
+    </Class>
+  </Classes>
+  <Resources />
+</BusinessObject>

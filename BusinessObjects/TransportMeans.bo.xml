@@ -1,0 +1,121 @@
+<BusinessObject Model_Name="TransportMeans" Model_Description="" Model_Creator="">
+  <Associations>
+    <Association ModelName="TransportMeans" Class1="VehicleType" Class2="Vehicle" Role1="VehicleType" Role2="Vehicle" Multiplicity1="One" Multiplicity2="Many" Navigable1="true" Navigable2="false" IsExternal="false" Persisted="true" OrderByProperty1="" OrderByDirection1="Asc" OrderByProperty2="" OrderByDirection2="Asc" OnDelete1="Restricted" OnDelete2="Dissasociate" IsShadow="false" IsInherited="false">
+      <DiagramInfo Edge1="Left" Edge2="Right" Percent1="0.24945020924214145" Percent2="0.6222222222222222" Path="M 595 583 L 560 583 L 560 555 L 540 555" />
+    </Association>
+    <Association ModelName="TransportMeans" Class1="Dimension" Class2="MeasurementUnit" Role1="Dimension" Role2="MeasurementUnit" Multiplicity1="Many" Multiplicity2="ZeroOrOne" Navigable1="false" Navigable2="true" IsExternal="false" Persisted="true" OrderByProperty1="" OrderByDirection1="Asc" OrderByProperty2="" OrderByDirection2="Asc" OnDelete1="Dissasociate" OnDelete2="Dissasociate" IsShadow="false" IsInherited="false">
+      <DiagramInfo Edge1="Right" Edge2="Bottom" Percent1="0.5024556477864555" Percent2="0.24584077257129894" Path="M 963 338 L 1038 338 L 1038 187" />
+    </Association>
+    <Association ModelName="TransportMeans" Class1="FuelType" Class2="VehicleType" Role1="FuelType" Role2="VehicleType" Multiplicity1="ZeroOrOne" Multiplicity2="Many" Navigable1="true" Navigable2="false" IsExternal="false" Persisted="true" OrderByProperty1="" OrderByDirection1="Asc" OrderByProperty2="" OrderByDirection2="Asc" OnDelete1="Dissasociate" OnDelete2="Dissasociate" IsShadow="false" IsInherited="false">
+      <DiagramInfo Edge1="Top" Edge2="Bottom" Percent1="0.6790778266059002" Percent2="0.23819478592820645" Path="M 652 930 L 652 868" />
+    </Association>
+    <Association ModelName="TransportMeans" Class1="Dimension" Class2="VehicleType" Role1="Height" Role2="VehicleType" Multiplicity1="ZeroOrOne" Multiplicity2="ZeroOrOne" Navigable1="true" Navigable2="false" IsExternal="false" Persisted="true" OrderByProperty1="" OrderByDirection1="Asc" OrderByProperty2="" OrderByDirection2="Asc" OnDelete1="Dissasociate" OnDelete2="CascadeDelete" IsShadow="false" IsInherited="false">
+      <DiagramInfo Edge1="Bottom" Edge2="Top" Percent1="0.18241885033903132" Percent2="0.741405470913795" Path="M 760 427 L 760 450 L 772 450 L 772 487" />
+    </Association>
+    <Association ModelName="TransportMeans" Class1="Dimension" Class2="VehicleType" Role1="Width" Role2="VehicleType" Multiplicity1="ZeroOrOne" Multiplicity2="ZeroOrOne" Navigable1="true" Navigable2="false" IsExternal="false" Persisted="true" OrderByProperty1="" OrderByDirection1="Asc" OrderByProperty2="" OrderByDirection2="Asc" OnDelete1="Dissasociate" OnDelete2="CascadeDelete" IsShadow="false" IsInherited="false">
+      <DiagramInfo Edge1="Bottom" Edge2="Top" Percent1="0.09029214800848848" Percent2="0.699471247164996" Path="M 737 427 L 737 450 L 762 450 L 762 487" />
+    </Association>
+    <Association ModelName="TransportMeans" Class1="VehicleType" Class2="Dimension" Role1="VehicleType" Role2="Length" Multiplicity1="ZeroOrOne" Multiplicity2="ZeroOrOne" Navigable1="false" Navigable2="true" IsExternal="false" Persisted="true" OrderByProperty1="" OrderByDirection1="Asc" OrderByProperty2="" OrderByDirection2="Asc" OnDelete1="CascadeDelete" OnDelete2="Dissasociate" IsShadow="false" IsInherited="false">
+      <DiagramInfo Edge1="Top" Edge2="Bottom" Percent1="0.8755949869099521" Percent2="0.2985786054514549" Path="M 804 487 L 804 450 L 789 450 L 789 427" />
+    </Association>
+    <Association ModelName="BookingContext" Class1="BookingQuery" Class2="Vehicle" Role1="BookingQuery_1" Role2="Vehicle" Multiplicity1="ZeroOrOne" Multiplicity2="ZeroOrOne" Navigable1="false" Navigable2="true" IsExternal="true" Persisted="true" OrderByProperty1="" OrderByDirection1="Asc" OrderByProperty2="" OrderByDirection2="Asc" OnDelete1="Dissasociate" OnDelete2="Restricted" IsShadow="false" IsInherited="false">
+      <DiagramInfo Edge1="Bottom" Edge2="Top" Percent1="0.20556745182012848" Percent2="0.5242718446601942" Path="M 370 347 L 370 420 L 150 420 L 150 505" />
+    </Association>
+    <Association ModelName="MarineTransport" Class1="Vehicle" Class2="MarineSegment" Role1="VehiclesOnboard" Role2="MarineSegment" Multiplicity1="Many" Multiplicity2="Many" Navigable1="true" Navigable2="false" IsExternal="true" Persisted="true" OrderByProperty1="" OrderByDirection1="Asc" OrderByProperty2="" OrderByDirection2="Asc" OnDelete1="Dissasociate" OnDelete2="Dissasociate" IsShadow="false" IsInherited="false">
+      <DiagramInfo Edge1="Left" Edge2="Right" Percent1="0.4806201550387597" Percent2="0.39053394107756795" Path="M 1142 588 L 1142 871 L 1098 871" />
+    </Association>
+  </Associations>
+  <Classes>
+    <Class ModelName="TransportMeans" Name="Vehicle" ShadowModel="" ShadowClass="" Description="" Stereotype="Class" PK="Id" ConcurencyControl="false" AutoAssignPrimaryKey="true" IdGeneratorType="HiLoGenerator" IsPersisted="true" IsStatic="true" BaseClass="" BaseClasses="" BaseModel="">
+      <DiagramInfo IsExpanded="true" Width="206.98439025878906" Height="180" Top="443" Left="334" />
+      <Attributes>
+        <Attribute Name="Id" IsValueClass="false" Description="" DataType="int" BaseInfo="" Length="100" Precision="2" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="SeatAssignable" IsValueClass="false" Description="" DataType="bool" BaseInfo="" Length="100" Precision="2" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="RegistrationID" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="100" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+      </Attributes>
+      <Operations />
+    </Class>
+    <Class ModelName="TransportMeans" Name="FuelType" ShadowModel="" ShadowClass="" Description="" Stereotype="Class" PK="Id" ConcurencyControl="false" AutoAssignPrimaryKey="true" IdGeneratorType="HiLoGenerator" IsPersisted="true" IsStatic="true" BaseClass="" BaseClasses="" BaseModel="">
+      <DiagramInfo IsExpanded="true" Width="180" Height="180" Top="930" Left="529.765991210938" />
+      <Attributes>
+        <Attribute Name="Id" IsValueClass="false" Description="" DataType="int" BaseInfo="" Length="100" Precision="2" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="Value" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="100" Precision="2" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+      </Attributes>
+      <Operations />
+    </Class>
+    <Class ModelName="TransportMeans" Name="VehicleType" ShadowModel="" ShadowClass="" Description="" Stereotype="Class" PK="Id" ConcurencyControl="false" AutoAssignPrimaryKey="true" IdGeneratorType="HiLoGenerator" IsPersisted="true" IsStatic="true" BaseClass="" BaseClasses="" BaseModel="">
+      <DiagramInfo IsExpanded="true" Width="238.4687042236328" Height="381.99999237060547" Top="487.710021972656" Left="595.197998046875" />
+      <Attributes>
+        <Attribute Name="Id" IsValueClass="false" Description="" DataType="int" BaseInfo="" Length="100" Precision="2" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="Code" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="100" Precision="2" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="Value" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="100" Precision="2" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="Model" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="100" Precision="2" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="Manufacturer" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="100" Precision="2" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="Capacity" IsValueClass="false" Description="" DataType="int" BaseInfo="" Length="100" Precision="2" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="Private" IsValueClass="false" Description="" DataType="bool" BaseInfo="" Length="100" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="HasTrailer" IsValueClass="false" Description="" DataType="bool" BaseInfo="" Length="100" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="TransportMode" IsValueClass="true" Description="" DataType="TransportMode" BaseInfo="" Length="100" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" Path="" Edge1="Top" Edge2="Top" Percent1="0.5" Percent2="0.5" />
+      </Attributes>
+      <Operations />
+    </Class>
+    <Class ModelName="TransportMeans" Name="Dimension" ShadowModel="" ShadowClass="" Description="" Stereotype="Class" PK="Id" ConcurencyControl="false" AutoAssignPrimaryKey="true" IdGeneratorType="HiLoGenerator" IsPersisted="true" IsStatic="true" BaseClass="" BaseClasses="" BaseModel="">
+      <DiagramInfo IsExpanded="true" Width="249.6561737060547" Height="180" Top="247.557983398438" Left="714.4580078125" />
+      <Attributes>
+        <Attribute Name="Id" IsValueClass="false" Description="" DataType="int" BaseInfo="" Length="100" Precision="2" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="Value" IsValueClass="false" Description="" DataType="decimal" BaseInfo="" Length="8" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+      </Attributes>
+      <Operations />
+    </Class>
+    <Class ModelName="TransportMeans" Name="MeasurementUnit" ShadowModel="" ShadowClass="" Description="" Stereotype="Class" PK="Id" ConcurencyControl="false" AutoAssignPrimaryKey="true" IdGeneratorType="HiLoGenerator" IsPersisted="true" IsStatic="true" BaseClass="" BaseClasses="" BaseModel="">
+      <DiagramInfo IsExpanded="true" Width="212.81251525878906" Height="180" Top="7.56005859375" Left="985.682006835938" />
+      <Attributes>
+        <Attribute Name="Id" IsValueClass="false" Description="" DataType="int" BaseInfo="" Length="100" Precision="2" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="Code" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="100" Precision="2" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="Value" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="100" Precision="2" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+      </Attributes>
+      <Operations />
+    </Class>
+    <Class ModelName="TransportMeans" Name="TransportMode" ShadowModel="" ShadowClass="" Description="" Stereotype="Enumeration" PK="" ConcurencyControl="false" AutoAssignPrimaryKey="true" IdGeneratorType="HiLoGenerator" IsPersisted="true" IsStatic="false" BaseClass="" BaseClasses="" BaseModel="">
+      <DiagramInfo IsExpanded="true" Width="189.453125" Height="334" Top="538" Left="956" />
+      <Literals>
+        <Literal Name="Aircraft" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="100" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="">
+          <DiagramInfo Edge1="Top" Edge2="Top" Percent1="0.5" Percent2="0.5" Path="M 0 0 L 0 0" />
+        </Literal>
+        <Literal Name="Ferry" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="100" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="">
+          <DiagramInfo Edge1="Top" Edge2="Top" Percent1="0.5" Percent2="0.5" Path="M 0 0 L 0 0" />
+        </Literal>
+        <Literal Name="Coach" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="100" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="">
+          <DiagramInfo Edge1="Top" Edge2="Top" Percent1="0.5" Percent2="0.5" Path="M 0 0 L 0 0" />
+        </Literal>
+        <Literal Name="Bus" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="100" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="">
+          <DiagramInfo Edge1="Top" Edge2="Top" Percent1="0.5" Percent2="0.5" Path="M 0 0 L 0 0" />
+        </Literal>
+        <Literal Name="Trolley" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="100" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="">
+          <DiagramInfo Edge1="Top" Edge2="Top" Percent1="0.5" Percent2="0.5" Path="M 0 0 L 0 0" />
+        </Literal>
+        <Literal Name="Tram" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="100" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="">
+          <DiagramInfo Edge1="Top" Edge2="Top" Percent1="0.5" Percent2="0.5" Path="M 0 0 L 0 0" />
+        </Literal>
+        <Literal Name="Rail" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="100" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="">
+          <DiagramInfo Edge1="Top" Edge2="Top" Percent1="0.5" Percent2="0.5" Path="M 0 0 L 0 0" />
+        </Literal>
+        <Literal Name="Subway" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="100" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="">
+          <DiagramInfo Edge1="Top" Edge2="Top" Percent1="0.5" Percent2="0.5" Path="M 0 0 L 0 0" />
+        </Literal>
+        <Literal Name="Car" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="100" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="">
+          <DiagramInfo Edge1="Top" Edge2="Top" Percent1="0.5" Percent2="0.5" Path="M 0 0 L 0 0" />
+        </Literal>
+        <Literal Name="Walking" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="100" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="">
+          <DiagramInfo Edge1="Top" Edge2="Top" Percent1="0.5" Percent2="0.5" Path="M 0 0 L 0 0" />
+        </Literal>
+        <Literal Name="Van" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="100" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="">
+          <DiagramInfo Edge1="Top" Edge2="Top" Percent1="0.5" Percent2="0.5" Path="M 0 0 L 0 0" />
+        </Literal>
+      </Literals>
+      <Operations />
+    </Class>
+  </Classes>
+  <Resources>
+    <Resource Type="S" Key="Res_ASSOC_VehicleType_Vehicle_VehicleType" en-us="At least one Vehicle exists so VehicleType cannot be deleted" />
+  </Resources>
+</BusinessObject>

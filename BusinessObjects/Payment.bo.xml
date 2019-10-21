@@ -1,0 +1,141 @@
+<BusinessObject Model_Name="Payment" Model_Description="" Model_Creator="">
+  <Associations>
+    <Association ModelName="Payment" Class1="Guarantee" Class2="GuaranteeType" Role1="Guarantee" Role2="GuaranteeType" Multiplicity1="Many" Multiplicity2="ZeroOrOne" Navigable1="false" Navigable2="true" IsExternal="false" Persisted="true" OrderByProperty1="" OrderByDirection1="Asc" OrderByProperty2="" OrderByDirection2="Asc" OnDelete1="Dissasociate" OnDelete2="Dissasociate" IsShadow="false" IsInherited="false">
+      <DiagramInfo Edge1="Right" Edge2="Left" Percent1="0.11666666666666667" Percent2="0.8578667534722222" Path="M 927 257 L 950 257 L 950 215 L 961 215" />
+    </Association>
+    <Association ModelName="Payment" Class1="VoucherType" Class2="Voucher" Role1="VoucherType" Role2="Voucher" Multiplicity1="ZeroOrOne" Multiplicity2="Many" Navigable1="true" Navigable2="false" IsExternal="false" Persisted="true" OrderByProperty1="" OrderByDirection1="Asc" OrderByProperty2="" OrderByDirection2="Asc" OnDelete1="Dissasociate" OnDelete2="Dissasociate" IsShadow="false" IsInherited="false">
+      <DiagramInfo Edge1="Bottom" Edge2="Top" Percent1="0.7432070011448831" Percent2="0.15907540799234662" Path="M 164 187 L 164 200 L 159 200 L 159 211" />
+    </Association>
+    <Association ModelName="Payment" Class1="Voucher" Class2="FormOfPayment" Role1="Voucher" Role2="FormOfPayment" Multiplicity1="ZeroOrOne" Multiplicity2="ZeroOrOne" Navigable1="true" Navigable2="true" IsExternal="false" Persisted="true" OrderByProperty1="" OrderByDirection1="Asc" OrderByProperty2="" OrderByDirection2="Asc" OnDelete1="Dissasociate" OnDelete2="Dissasociate" IsShadow="false" IsInherited="false">
+      <DiagramInfo Edge1="Right" Edge2="Left" Percent1="0.8890421264350079" Percent2="0.09790209006712933" Path="M 377 402 L 410 402 L 410 419 L 450 419" />
+    </Association>
+    <Association ModelName="Payment" Class1="Guarantee" Class2="FormOfPayment" Role1="Guarantee" Role2="FormOfPayment" Multiplicity1="ZeroOrOne" Multiplicity2="ZeroOrOne" Navigable1="true" Navigable2="true" IsExternal="false" Persisted="true" OrderByProperty1="" OrderByDirection1="Asc" OrderByProperty2="" OrderByDirection2="Asc" OnDelete1="Dissasociate" OnDelete2="Dissasociate" IsShadow="false" IsInherited="false">
+      <DiagramInfo Edge1="Bottom" Edge2="Right" Percent1="0.12167300380228137" Percent2="0.3951048634852005" Path="M 711 416 L 711 504 L 675 504" />
+    </Association>
+    <Association ModelName="Payment" Class1="Cash" Class2="FormOfPayment" Role1="Cash" Role2="FormOfPayment" Multiplicity1="ZeroOrOne" Multiplicity2="ZeroOrOne" Navigable1="true" Navigable2="true" IsExternal="false" Persisted="true" OrderByProperty1="" OrderByDirection1="Asc" OrderByProperty2="" OrderByDirection2="Asc" OnDelete1="Dissasociate" OnDelete2="Dissasociate" IsShadow="false" IsInherited="false">
+      <DiagramInfo Edge1="Top" Edge2="Bottom" Percent1="0.8469006985586702" Percent2="0.19903656627441452" Path="M 468.81395348837214 676.5419921875 L 468.81395348837214 656.5419921875 L 478 656.5419921875 L 478 697 L 494.8702967983174 697 L 494.8702967983174 677" />
+    </Association>
+    <Association ModelName="Payment" Class1="CreditCard" Class2="FormOfPayment" Role1="CreditCard" Role2="FormOfPayment" Multiplicity1="ZeroOrOne" Multiplicity2="ZeroOrOne" Navigable1="true" Navigable2="true" IsExternal="false" Persisted="true" OrderByProperty1="" OrderByDirection1="Asc" OrderByProperty2="" OrderByDirection2="Asc" OnDelete1="Dissasociate" OnDelete2="Dissasociate" IsShadow="false" IsInherited="false">
+      <DiagramInfo Edge1="Left" Edge2="Right" Percent1="0.046413491650852845" Percent2="0.8951048234708967" Path="M 712 595 L 700 595 L 700 647 L 675 647" />
+    </Association>
+    <Association ModelName="Payment" Class1="FormOfPayment" Class2="EnettVan" Role1="FormOfPayment" Role2="EnettVan" Multiplicity1="ZeroOrOne" Multiplicity2="ZeroOrOne" Navigable1="false" Navigable2="true" IsExternal="false" Persisted="true" OrderByProperty1="" OrderByDirection1="Asc" OrderByProperty2="" OrderByDirection2="Asc" OnDelete1="CascadeDelete" OnDelete2="Dissasociate" IsShadow="false" IsInherited="false">
+      <DiagramInfo Edge1="Right" Edge2="Top" Percent1="0.5629370178859936" Percent2="0.3982261166653512" Path="M 675 552 L 700 552 L 700 430 L 930 430 L 930 370 L 1041 370 L 1041 407" />
+    </Association>
+    <Association ModelName="Payment" Class1="Payment" Class2="FormOfPayment" Role1="Payment" Role2="FormOfPayment" Multiplicity1="ZeroOrOne" Multiplicity2="ZeroOrOne" Navigable1="true" Navigable2="true" IsExternal="false" Persisted="true" OrderByProperty1="" OrderByDirection1="Asc" OrderByProperty2="" OrderByDirection2="Asc" OnDelete1="CascadeDelete" OnDelete2="Dissasociate" IsShadow="false" IsInherited="false">
+      <DiagramInfo Edge1="Bottom" Edge2="Top" Percent1="0.6002534854245881" Percent2="0.4746327550960389" Path="M 486 191 L 486 290 L 557 290 L 557 391" />
+    </Association>
+    <Association ModelName="Payment" Class1="Payment" Class2="Status" Role1="Payment" Role2="Status" Multiplicity1="Many" Multiplicity2="ZeroOrOne" Navigable1="false" Navigable2="true" IsExternal="false" Persisted="true" OrderByProperty1="" OrderByDirection1="Asc" OrderByProperty2="" OrderByDirection2="Asc" OnDelete1="Dissasociate" OnDelete2="Dissasociate" IsShadow="false" IsInherited="false">
+      <DiagramInfo Edge1="Right" Edge2="Top" Percent1="0.25" Percent2="0.3607608698643899" Path="M 584 56 L 660 56 L 660 0 L 800 0 L 800 31" />
+    </Association>
+    <Association ModelName="Passenger" Class1="CardType" Class2="CreditCard" Role1="CardType" Role2="CreditCard" Multiplicity1="ZeroOrOne" Multiplicity2="Many" Navigable1="true" Navigable2="false" IsExternal="true" Persisted="true" OrderByProperty1="" OrderByDirection1="Asc" OrderByProperty2="" OrderByDirection2="Asc" OnDelete1="Dissasociate" OnDelete2="Dissasociate" IsShadow="false" IsInherited="false">
+      <DiagramInfo Edge1="Left" Edge2="Right" Percent1="0.6277777777777778" Percent2="0.3767772511848341" Path="M 698.002990722656 1562 L 663.3094940185545 1562 L 663.3094940185545 1561.1490177122269 L 628.615997314453 1561.1490177122269" />
+    </Association>
+    <Association ModelName="Passenger" Class1="Passenger" Class2="CreditCard" Role1="Passenger" Role2="CreditCards" Multiplicity1="One" Multiplicity2="Many" Navigable1="true" Navigable2="true" IsExternal="true" Persisted="true" OrderByProperty1="" OrderByDirection1="Asc" OrderByProperty2="ExpirationDate" OrderByDirection2="Asc" OnDelete1="CascadeDelete" OnDelete2="Dissasociate" IsShadow="false" IsInherited="false">
+      <DiagramInfo Edge1="Bottom" Edge2="Top" Percent1="0.8297101449275363" Percent2="0.4834123222748815" Path="M 504.171300605512 1378.890014648438 L 504.171300605512 1398.890014648438 L 522.8845062255859 1398.890014648438 L 522.8845062255859 1155.65698242188 L 503.2872929601114 1155.65698242188 L 503.2872929601114 1175.65698242188" />
+    </Association>
+    <Association ModelName="Passenger" Class1="PostalAddress" Class2="CreditCard" Role1="BillingAddress" Role2="CreditCard" Multiplicity1="ZeroOrOne" Multiplicity2="Many" Navigable1="true" Navigable2="false" IsExternal="true" Persisted="true" OrderByProperty1="" OrderByDirection1="Asc" OrderByProperty2="" OrderByDirection2="Asc" OnDelete1="Dissasociate" OnDelete2="Dissasociate" IsShadow="false" IsInherited="false">
+      <DiagramInfo Edge1="Bottom" Edge2="Right" Percent1="0.5944444444444444" Percent2="0.8199052132701422" Path="M 719.47998046875 1248.1374801711656 L 674.0479888916016 1248.1374801711656 L 674.0479888916016 1227.8847061320616 L 628.615997314453 1227.8847061320616" />
+    </Association>
+    <Association ModelName="Passenger" Class1="Bank" Class2="CreditCard" Role1="Bank" Role2="CreditCards" Multiplicity1="ZeroOrOne" Multiplicity2="Many" Navigable1="true" Navigable2="true" IsExternal="true" Persisted="true" OrderByProperty1="" OrderByDirection1="Asc" OrderByProperty2="" OrderByDirection2="Asc" OnDelete1="CascadeDelete" OnDelete2="Dissasociate" IsShadow="false" IsInherited="false">
+      <DiagramInfo Edge1="Right" Edge2="Left" Percent1="0.2722222222222222" Percent2="0.22037914691943128" Path="M 352 1622 L 360 1622 L 360 1630 L 378 1630 L 378 1621" />
+    </Association>
+  </Associations>
+  <Classes>
+    <Class ModelName="Payment" Name="FormOfPayment" ShadowModel="" ShadowClass="" Description="" Stereotype="Class" PK="Id" ConcurencyControl="false" AutoAssignPrimaryKey="true" IdGeneratorType="HiLoGenerator" IsPersisted="true" IsStatic="true" BaseClass="" BaseClasses="" BaseModel="">
+      <DiagramInfo IsExpanded="true" Width="225.4374542236328" Height="286.0000228881836" Top="391" Left="450" />
+      <Attributes>
+        <Attribute Name="Id" IsValueClass="false" Description="" DataType="int" BaseInfo="" Length="100" Precision="2" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="Description" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="100" Precision="2" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="Key" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="100" Precision="2" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+      </Attributes>
+      <Operations />
+    </Class>
+    <Class ModelName="Passenger" Name="CreditCard" ShadowModel="Passenger" ShadowClass="CreditCard" Description="" Stereotype="Class" PK="Id" ConcurencyControl="false" AutoAssignPrimaryKey="true" IdGeneratorType="HiLoGenerator" IsPersisted="true" IsStatic="true" BaseClass="" BaseClasses="" BaseModel="">
+      <DiagramInfo IsExpanded="true" Width="250.76565551757812" Height="474.00010681152344" Top="573" Left="712.848999023438" />
+      <Attributes>
+        <Attribute Name="Id" IsValueClass="false" Description="" DataType="int" BaseInfo="" Length="100" Precision="2" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="Number" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="100" Precision="2" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="ExpirationDate" IsValueClass="false" Description="" DataType="DateTime" BaseInfo="" Length="100" Precision="2" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="Name" IsValueClass="false" Description="Name as it appears on the card." DataType="string" BaseInfo="" Length="100" Precision="2" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="CVV" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="100" Precision="2" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="ApprovalCode" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="100" Precision="2" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="ExtendedPayment" IsValueClass="false" Description="Used for AMEX cards" DataType="string" BaseInfo="" Length="100" Precision="2" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="CustomerReference" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="100" Precision="2" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="ThirdPartyPayment" IsValueClass="false" Description="" DataType="bool" BaseInfo="" Length="100" Precision="2" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="Enett" IsValueClass="false" Description="" DataType="bool" BaseInfo="" Length="100" Precision="2" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="Active" IsValueClass="false" Description="" DataType="bool" BaseInfo="" Length="100" Precision="2" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+      </Attributes>
+      <Operations />
+    </Class>
+    <Class ModelName="Payment" Name="Guarantee" ShadowModel="" ShadowClass="" Description="" Stereotype="Class" PK="Id" ConcurencyControl="false" AutoAssignPrimaryKey="true" IdGeneratorType="HiLoGenerator" IsPersisted="true" IsStatic="true" BaseClass="" BaseClasses="" BaseModel="">
+      <DiagramInfo IsExpanded="true" Width="246.5625" Height="180" Top="236" Left="681" />
+      <Attributes>
+        <Attribute Name="Id" IsValueClass="false" Description="" DataType="int" BaseInfo="" Length="100" Precision="2" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="IATANumber" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="100" Precision="2" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+      </Attributes>
+      <Operations />
+    </Class>
+    <Class ModelName="Payment" Name="GuaranteeType" ShadowModel="" ShadowClass="" Description="" Stereotype="Class" PK="Id" ConcurencyControl="false" AutoAssignPrimaryKey="true" IdGeneratorType="HiLoGenerator" IsPersisted="true" IsStatic="true" BaseClass="" BaseClasses="" BaseModel="">
+      <DiagramInfo IsExpanded="true" Width="213.75" Height="180" Top="60.583984375" Left="961.252014160156" />
+      <Attributes>
+        <Attribute Name="Id" IsValueClass="false" Description="" DataType="int" BaseInfo="" Length="100" Precision="2" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="Code" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="100" Precision="2" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+      </Attributes>
+      <Operations />
+    </Class>
+    <Class ModelName="Payment" Name="Voucher" ShadowModel="" ShadowClass="" Description="" Stereotype="Class" PK="Id" ConcurencyControl="false" AutoAssignPrimaryKey="true" IdGeneratorType="HiLoGenerator" IsPersisted="true" IsStatic="true" BaseClass="" BaseClasses="" BaseModel="">
+      <DiagramInfo IsExpanded="true" Width="260.65623474121094" Height="213.9999885559082" Top="211.744995117188" Left="117.536003112793" />
+      <Attributes>
+        <Attribute Name="Id" IsValueClass="false" Description="" DataType="int" BaseInfo="" Length="100" Precision="2" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="ConfirmationNumber" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="100" Precision="2" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="AccountName" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="100" Precision="2" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="Number" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="100" Precision="2" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+      </Attributes>
+      <Operations />
+    </Class>
+    <Class ModelName="Payment" Name="VoucherType" ShadowModel="" ShadowClass="" Description="" Stereotype="Class" PK="Id" ConcurencyControl="false" AutoAssignPrimaryKey="true" IdGeneratorType="HiLoGenerator" IsPersisted="true" IsStatic="true" BaseClass="" BaseClasses="" BaseModel="">
+      <DiagramInfo IsExpanded="true" Width="191.18751525878906" Height="180" Top="7.5159912109375" Left="21.9081001281738" />
+      <Attributes>
+        <Attribute Name="Id" IsValueClass="false" Description="" DataType="int" BaseInfo="" Length="100" Precision="2" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="Code" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="100" Precision="2" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+      </Attributes>
+      <Operations />
+    </Class>
+    <Class ModelName="Payment" Name="Cash" ShadowModel="" ShadowClass="" Description="" Stereotype="Class" PK="Id" ConcurencyControl="false" AutoAssignPrimaryKey="true" IdGeneratorType="HiLoGenerator" IsPersisted="true" IsStatic="true" BaseClass="" BaseClasses="" BaseModel="">
+      <DiagramInfo IsExpanded="true" Width="246.5625" Height="180" Top="676.5419921875" Left="260" />
+      <Attributes>
+        <Attribute Name="Id" IsValueClass="false" Description="" DataType="int" BaseInfo="" Length="100" Precision="2" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+      </Attributes>
+      <Operations />
+    </Class>
+    <Class ModelName="Payment" Name="EnettVan" ShadowModel="" ShadowClass="" Description="" Stereotype="Class" PK="Id" ConcurencyControl="false" AutoAssignPrimaryKey="true" IdGeneratorType="HiLoGenerator" IsPersisted="true" IsStatic="true" BaseClass="" BaseClasses="" BaseModel="">
+      <DiagramInfo IsExpanded="true" Width="236.0467987060547" Height="214.00001525878906" Top="407" Left="947" />
+      <Attributes>
+        <Attribute Name="Id" IsValueClass="false" Description="" DataType="int" BaseInfo="" Length="100" Precision="2" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="MinPercentage" IsValueClass="false" Description="" DataType="decimal" BaseInfo="" Length="8" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="MaxPercentage" IsValueClass="false" Description="" DataType="decimal" BaseInfo="" Length="8" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="ExpiryDays" IsValueClass="false" Description="" DataType="int" BaseInfo="" Length="100" Precision="2" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="MultiUse" IsValueClass="false" Description="" DataType="bool" BaseInfo="" Length="100" Precision="2" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="NewAttribute" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="100" Precision="2" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+      </Attributes>
+      <Operations />
+    </Class>
+    <Class ModelName="Payment" Name="Payment" ShadowModel="" ShadowClass="" Description="" Stereotype="Class" PK="Id" ConcurencyControl="false" AutoAssignPrimaryKey="true" IdGeneratorType="HiLoGenerator" IsPersisted="true" IsStatic="true" BaseClass="" BaseClasses="" BaseModel="">
+      <DiagramInfo IsExpanded="true" Width="246.5625" Height="180" Top="11" Left="338" />
+      <Attributes>
+        <Attribute Name="Id" IsValueClass="false" Description="" DataType="int" BaseInfo="" Length="100" Precision="2" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+      </Attributes>
+      <Operations />
+    </Class>
+    <Class ModelName="Payment" Name="Status" ShadowModel="" ShadowClass="" Description="" Stereotype="Class" PK="Id" ConcurencyControl="false" AutoAssignPrimaryKey="true" IdGeneratorType="HiLoGenerator" IsPersisted="true" IsStatic="true" BaseClass="" BaseClasses="" BaseModel="">
+      <DiagramInfo IsExpanded="true" Width="199.57818603515625" Height="180" Top="31" Left="728" />
+      <Attributes>
+        <Attribute Name="Id" IsValueClass="false" Description="" DataType="int" BaseInfo="" Length="100" Precision="2" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="Code" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="100" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="Description" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="100" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+      </Attributes>
+      <Operations />
+    </Class>
+  </Classes>
+  <Resources />
+</BusinessObject>
